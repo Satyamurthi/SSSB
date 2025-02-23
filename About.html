@@ -31,6 +31,22 @@
 
   <style>
         :where([class^="ri-"])::before { content: "\f3c2"; }
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: -33px;
+            top: 50%;
+            width: 66px;
+            height: 2px;
+            background: #e5e7eb;
+        }
+        @keyframes countUp {
+            from { transform: translateY(100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .stat-number {
+            animation: countUp 1s ease-out forwards;
+        }
         
         .nav-link {
             position: relative;
