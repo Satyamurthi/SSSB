@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizon University - Shaping Tomorrow's Leaders</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1B3764',
+                        secondary: '#DAA520'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #1B3764;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .stats-counter {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .stats-counter.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .program-card {
+            perspective: 1000px;
+            transition: transform 0.6s;
+        }
+        
+        .program-card:hover {
+            transform: scale(1.02);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        .search-expand {
+            transition: width 0.3s ease;
+        }
+
+        .search-expand:focus {
+            width: 300px;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            transform: translateY(100px);
+            transition: transform 0.3s ease;
+        }
+
+        .toast.show {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-2xl font-['Pacifico'] text-primary">logo</a>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Home</a>
+                    <a href="Academics.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Academics</a>
+                    <a href="Admissions.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Admissions</a>
+                    <a href="Campus-Life.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Campus Life</a>
+                    <a href="Research.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Research</a>
+                    <a href="About.html" class="nav-link text-gray-700 hover:text-primary transition-colors">About</a>
+                    <!-- <a href="index.html" class="nav-link">Home</a>
+                    <a href="Academics.html" class="nav-link">Academics</a>
+                    <a href="Admissions.html" class="nav-link">Admissions</a>
+                    <a href="Campus-Life.html" class="nav-link">Campus Life</a>
+                    <a href="About.html" class="nav-link">About</a>-->
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <input type="text" placeholder="Search..." class="search-expand w-40 px-4 py-2 rounded-full border border-gray-200 focus:outline-none focus:border-primary text-sm">
+                        <i class="ri-search-line absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                    </div>
+                    <button class="bg-primary text-white px-6 py-2 rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">
+                        Apply Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+   <!--  <main class="pt-16">
+        <section class="relative h-[600px] flex items-center overflow-hidden" style="background-video: url('https://www.youtube.com/watch?v=zKz4QQKx_jo'); background-size: cover; background-position: center;">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-transparent"></div>
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-2xl text-white">
+                    <h1 class="text-5xl font-bold mb-6 fade-in">Shape Your Future at Horizon University</h1>
+                    <p class="text-xl mb-8 fade-in" style="animation-delay: 0.2s">Discover a world-class education that prepares you for leadership in a rapidly evolving global society.</p>
+                    <div class="flex space-x-4 fade-in" style="animation-delay: 0.4s">
+                        <button class="bg-white text-primary px-8 py-3 rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap">
+                            Explore Programs
+                        </button>
+                        <button class="border-2 border-white text-white px-8 py-3 rounded-button hover:bg-white/10 transition-colors whitespace-nowrap">
+                            Virtual Tour
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>-->
+
+<main class="pt-16">
+    <section class="relative h-[600px] flex items-center overflow-hidden">
+        <!-- Background Video -->
+        <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover">
+            <source src="https://www.youtube.com/watch?v=zKz4QQKx_jo" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-transparent"></div>
+
+        <!-- Content -->
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-2xl text-white">
+                <h1 class="text-5xl font-bold mb-6 fade-in">Shape Your Future at Horizon University</h1>
+                <p class="text-xl mb-8 fade-in" style="animation-delay: 0.2s">
+                    Discover a world-class education that prepares you for leadership in a rapidly evolving global society.
+                </p>
+                <div class="flex space-x-4 fade-in" style="animation-delay: 0.4s">
+                    <button class="bg-white text-primary px-8 py-3 rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap">
+                        Explore Programs
+                    </button>
+                    <button class="border-2 border-white text-white px-8 py-3 rounded-button hover:bg-white/10 transition-colors whitespace-nowrap">
+                        Virtual Tour
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <i class="ri-book-open-line text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Academics</h3>
+                        <p class="text-gray-600">Over 200 programs across 8 faculties designed to challenge and inspire.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <i class="ri-user-follow-line text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Admissions</h3>
+                        <p class="text-gray-600">Your journey starts here. Learn about our admission process and requirements.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <i class="ri-community-line text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Campus Life</h3>
+                        <p class="text-gray-600">Experience a vibrant community with over 100 student organizations.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                        <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                            <i class="ri-flask-line text-primary text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Research</h3>
+                        <p class="text-gray-600">Leading innovation through groundbreaking research and collaboration.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Latest News & Events</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Stay updated with the latest happenings, breakthroughs, and events at Horizon University.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="https://public.readdy.ai/ai/img_res/4fc19e3e84965ac8c5b0bed70e0b4a32.jpg" alt="News 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <span class="text-sm text-primary font-medium">Research</span>
+                                <span class="mx-2">•</span>
+                                <span class="text-sm text-gray-500">Feb 20, 2025</span>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">Breakthrough in Quantum Computing Research</h3>
+                            <p class="text-gray-600 mb-4">Our research team has achieved a significant milestone in quantum computing, paving the way for future innovations.</p>
+                            <a href="#" class="text-primary font-medium hover:text-primary/80 transition-colors">Read More →</a>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="https://public.readdy.ai/ai/img_res/ada8a28b758db88ebd0c14a492e83559.jpg" alt="News 2" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <span class="text-sm text-primary font-medium">Events</span>
+                                <span class="mx-2">•</span>
+                                <span class="text-sm text-gray-500">Feb 15, 2025</span>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">Spring Graduation Ceremony 2025</h3>
+                            <p class="text-gray-600 mb-4">Join us in celebrating the achievements of our graduating class of 2025 at our annual ceremony.</p>
+                            <a href="#" class="text-primary font-medium hover:text-primary/80 transition-colors">Read More →</a>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <img src="https://public.readdy.ai/ai/img_res/aed30588297afc590e3374f35e46ce9b.jpg" alt="News 3" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <span class="text-sm text-primary font-medium">Campus Life</span>
+                                <span class="mx-2">•</span>
+                                <span class="text-sm text-gray-500">Feb 10, 2025</span>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">New Sports Complex Opening</h3>
+                            <p class="text-gray-600 mb-4">Experience our state-of-the-art sports facility designed to enhance student wellness and athletic performance.</p>
+                            <a href="#" class="text-primary font-medium hover:text-primary/80 transition-colors">Read More →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <button class="bg-white border border-primary text-primary px-8 py-3 rounded-button hover:bg-primary/5 transition-colors whitespace-nowrap">
+                        View All News
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-primary text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold mb-4">By the Numbers</h2>
+                    <p class="text-white/80 max-w-2xl mx-auto">Our impact in numbers reflects our commitment to excellence in education and research.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center stats-counter">
+                        <div class="text-4xl font-bold mb-2" data-target="25000">0</div>
+                        <p class="text-white/80">Students Enrolled</p>
+                    </div>
+                    <div class="text-center stats-counter">
+                        <div class="text-4xl font-bold mb-2" data-target="2500">0</div>
+                        <p class="text-white/80">Faculty Members</p>
+                    </div>
+                    <div class="text-center stats-counter">
+                        <div class="text-4xl font-bold mb-2" data-target="200">0</div>
+                        <p class="text-white/80">Academic Programs</p>
+                    </div>
+                    <div class="text-center stats-counter">
+                        <div class="text-4xl font-bold mb-2" data-target="95">0</div>
+                        <p class="text-white/80">Employment Rate</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Featured Programs</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Discover our most popular and innovative academic programs designed to prepare you for success.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="program-card bg-white rounded-lg overflow-hidden shadow-sm">
+                        <img src="https://public.readdy.ai/ai/img_res/f48e7465c37ec53e8390cb3225518887.jpg" alt="Program 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">Technology</span>
+                                <span class="ml-2 text-sm text-gray-500">4 Years</span>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">Computer Science</h3>
+                            <p class="text-gray-600 mb-4">Learn cutting-edge programming, artificial intelligence, and software development.</p>
+                            <button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="program-card bg-white rounded-lg overflow-hidden shadow-sm">
+                        <img src="https://public.readdy.ai/ai/img_res/4a6d8ba92d51fe655344a86ae437f9bd.jpg" alt="Program 2" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">Business</span>
+                                <span class="ml-2 text-sm text-gray-500">4 Years</span>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">Business Administration</h3>
+                            <p class="text-gray-600 mb-4">Develop leadership skills and business acumen for the global marketplace.</p>
+                            <button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="program-card bg-white rounded-lg overflow-hidden shadow-sm">
+                        <img src="https://public.readdy.ai/ai/img_res/44af7404779fbb5fb2215215b679faf0.jpg" alt="Program 3" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <div class="flex items-center mb-4">
+                                <span class="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">Medicine</span>
+                                <span class="ml-2 text-sm text-gray-500">6 Years</span>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">Medical Sciences</h3>
+                            <p class="text-gray-600 mb-4">Prepare for a career in healthcare with our comprehensive medical program.</p>
+                            <button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">
+                                Learn More
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Campus Life</h2>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Experience the vibrant and diverse community at Horizon University.</p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <div class="relative group overflow-hidden rounded-lg">
+                        <img src="https://public.readdy.ai/ai/img_res/5f354ece8223cfd843130c2aeae4b7c8.jpg" alt="Campus 1" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <p class="text-white text-center px-4">Modern Library Facilities</p>
+                        </div>
+                    </div>
+                    <div class="relative group overflow-hidden rounded-lg">
+                        <img src="https://public.readdy.ai/ai/img_res/fd7782db51511ed804fa18121b65fca1.jpg" alt="Campus 2" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <p class="text-white text-center px-4">Student Housing</p>
+                        </div>
+                    </div>
+                    <div class="relative group overflow-hidden rounded-lg">
+                        <img src="https://public.readdy.ai/ai/img_res/0aba70da72f4ef9fe2debfa47e5b4b29.jpg" alt="Campus 3" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <p class="text-white text-center px-4">Sports Facilities</p>
+                        </div>
+                    </div>
+                    <div class="relative group overflow-hidden rounded-lg">
+                        <img src="https://public.readdy.ai/ai/img_res/c7d99d7406df2613309c674e3b567e97.jpg" alt="Campus 4" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <p class="text-white text-center px-4">Student Center</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <a href="#" class="text-2xl font-['Pacifico'] text-white mb-4 block">logo</a>
+                    <p class="text-gray-400 mb-4">Shaping tomorrow's leaders through excellence in education, research, and innovation.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-facebook-fill text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-twitter-fill text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-instagram-fill text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="ri-linkedin-fill text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Academics</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Admissions</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Research</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Campus Life</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-400">
+                            <i class="ri-map-pin-line mr-2"></i>
+                            123 University Ave, City, State 12345
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="ri-phone-line mr-2"></i>
+                            (555) 123-4567
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="ri-mail-line mr-2"></i>
+                            info@horizonuniversity.edu
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for updates and news.</p>
+                    <form class="space-y-4" id="newsletter-form">
+                        <input type="email" placeholder="Your email address" class="w-full px-4 py-2 rounded-button bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-primary">
+                        <button type="submit" class="w-full bg-primary text-white px-6 py-2 rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Horizon University. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="ri-arrow-up-line text-xl"></i>
+    </button>
+
+    <div id="toast" class="toast bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg">
+        <p class="text-sm">Successfully subscribed to newsletter!</p>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const backToTop = document.getElementById('back-to-top');
+            const toast = document.getElementById('toast');
+            const newsletterForm = document.getElementById('newsletter-form');
+            const statsCounters = document.querySelectorAll('.stats-counter');
+            let countersStarted = false;
+
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTop.classList.remove('opacity-0', 'invisible');
+                } else {
+                    backToTop.classList.add('opacity-0', 'invisible');
+                }
+
+                const statsSection = document.querySelector('.stats-counter').parentElement.parentElement;
+                const statsSectionTop = statsSection.offsetTop;
+                const statsSectionHeight = statsSection.offsetHeight;
+                const windowHeight = window.innerHeight;
+                const scrollPosition = window.pageYOffset;
+
+                if (!countersStarted && scrollPosition > statsSectionTop - windowHeight + statsSectionHeight / 2) {
+                    startCounters();
+                    countersStarted = true;
+                }
+            });
+
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            newsletterForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const email = e.target.querySelector('input[type="email"]');
+                if (email.value) {
+                    showToast();
+                    email.value = '';
+                }
+            });
+
+            function showToast() {
+                toast.classList.add('show');
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 3000);
+            }
+
+            function startCounters() {
+                statsCounters.forEach(counter => {
+                    counter.classList.add('visible');
+                    const target = parseInt(counter.querySelector('div').dataset.target);
+                    const duration = 2000;
+                    const increment = target / (duration / 16);
+                    let current = 0;
+
+                    const updateCounter = () => {
+                        current += increment;
+                        if (current < target) {
+                            counter.querySelector('div').textContent = Math.round(current);
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            counter.querySelector('div').textContent = target;
+                        }
+                    };
+
+                    requestAnimationFrame(updateCounter);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
