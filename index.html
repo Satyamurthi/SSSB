@@ -6,6 +6,7 @@
     <title>Horizon University - Shaping Tomorrow's Leaders</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
+	
         tailwind.config = {
             theme: {
                 extend: {
@@ -110,7 +111,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
-                    <a href="#" class="text-2xl font-['Pacifico'] text-primary">logo</a>
+                    <a href="#"><img src="sai baba photo png.png" style="height: 50px;"></a>
                 </div>
                 
                 <div class="hidden md:flex space-x-8">
@@ -140,26 +141,69 @@
         </div>
     </nav>
 
-    <main class="pt-16">
-        <section class="relative h-[600px] flex items-center overflow-hidden" style="background-image: url('https://public.readdy.ai/ai/img_res/cabcb87a04bb5f75a1fceba4b6650c60.jpg'); background-size: cover; background-position: center;">
-            <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-transparent"></div>
-            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="max-w-2xl text-white">
-                    <h1 class="text-5xl font-bold mb-6 fade-in">Shape Your Future at Horizon University</h1>
-                    <p class="text-xl mb-8 fade-in" style="animation-delay: 0.2s">Discover a world-class education that prepares you for leadership in a rapidly evolving global society.</p>
-                    <div class="flex space-x-4 fade-in" style="animation-delay: 0.4s">
-                        <button class="bg-white text-primary px-8 py-3 rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap">
-                            Explore Programs
-                        </button>
-                        <button class="border-2 border-white text-white px-8 py-3 rounded-button hover:bg-white/10 transition-colors whitespace-nowrap">
-                            Virtual Tour
-                        </button>
-                    </div>
+
+<main class="pt-16">
+    <section class="relative h-[600px] flex items-center overflow-hidden">
+        <!-- Background Video Container -->
+        <div id="video-container" class="absolute inset-0 w-full h-full -z-10"></div>
+
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-transparent"></div>
+
+        <!-- Content -->
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-2xl text-white">
+                <h1 class="text-5xl font-bold mb-6 fade-in">Shape Your Future at SSSBPUC</h1>
+                <p class="text-xl mb-8 fade-in" style="animation-delay: 0.2s">
+                    Discover a world-class education that prepares you for leadership in a rapidly evolving global society.
+                </p>
+                <div class="flex space-x-4 fade-in" style="animation-delay: 0.4s">
+                    <button onclick="window.location.href='Academics.html'" class="bg-white text-primary px-8 py-3 rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap">
+                        Explore Programs
+                    </button>
+                    <button onclick="window.location.href='https://www.youtube.com/watch?v=zKz4QQKx_jo'" class="border-2 border-white text-white px-8 py-3 rounded-button hover:bg-white/10 transition-colors whitespace-nowrap">
+                        Virtual Tour
+                    </button>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+</main>
 
-        <section class="py-20 bg-gray-50">
+<!-- YouTube API Script -->
+<script>
+    function onYouTubeIframeAPIReady() {
+        new YT.Player('video-container', {
+            videoId: 'zKz4QQKx_jo', // Replace with your YouTube Video ID
+            playerVars: {
+                autoplay: 1,      // Auto play video
+                mute: 1,          // Mute the video
+                loop: 1,          // Loop video
+                playlist: 'zKz4QQKx_jo', // Required for looping
+                controls: 0,      // Hide controls
+                showinfo: 0,      // Hide info
+                modestbranding: 1,// Minimal YouTube branding
+                fs: 0,            // Disable fullscreen button
+                rel: 0,           // Disable related videos
+                disablekb: 1      // Disable keyboard controls
+            },
+            events: {
+                onReady: function(event) {
+                    event.target.setPlaybackRate(5); // Set speed to 2x
+                    event.target.playVideo();
+                }
+            }
+        });
+    }
+
+    // Load YouTube Iframe API
+    let tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    document.head.appendChild(tag);
+</script>
+	
+        <section class="py-20 bg-gray-50" >
+<a href="https://yourwebsite.com/academics" class="block">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
@@ -167,8 +211,10 @@
                             <i class="ri-book-open-line text-primary text-2xl"></i>
                         </div>
                         <h3 class="text-xl font-semibold mb-2">Academics</h3>
-                        <p class="text-gray-600">Over 200 programs across 8 faculties designed to challenge and inspire.</p>
+                        <p class="text-gray-600">Over 4 programs across 15 faculties designated to 500 Students.</p>
                     </div>
+</a>
+<a href="https://yourwebsite.com/academics" class="block">
                     <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                         <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
                             <i class="ri-user-follow-line text-primary text-2xl"></i>
@@ -176,6 +222,8 @@
                         <h3 class="text-xl font-semibold mb-2">Admissions</h3>
                         <p class="text-gray-600">Your journey starts here. Learn about our admission process and requirements.</p>
                     </div>
+</a>
+<a href="https://yourwebsite.com/academics" class="block">
                     <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                         <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
                             <i class="ri-community-line text-primary text-2xl"></i>
@@ -183,6 +231,8 @@
                         <h3 class="text-xl font-semibold mb-2">Campus Life</h3>
                         <p class="text-gray-600">Experience a vibrant community with over 100 student organizations.</p>
                     </div>
+</a>
+<a href="https://yourwebsite.com/academics" class="block">
                     <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                         <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
                             <i class="ri-flask-line text-primary text-2xl"></i>
@@ -190,6 +240,7 @@
                         <h3 class="text-xl font-semibold mb-2">Research</h3>
                         <p class="text-gray-600">Leading innovation through groundbreaking research and collaboration.</p>
                     </div>
+</a>
                 </div>
             </div>
         </section>
@@ -198,52 +249,71 @@
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl font-bold text-gray-900 mb-4">Latest News & Events</h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto">Stay updated with the latest happenings, breakthroughs, and events at Horizon University.</p>
+                    <p class="text-gray-600 max-w-2xl mx-auto">Stay updated with the latest happenings, breakthroughs, and events at SSSBPUC.</p>
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                        <img src="https://public.readdy.ai/ai/img_res/4fc19e3e84965ac8c5b0bed70e0b4a32.jpg" alt="News 1" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <div class="flex items-center mb-4">
-                                <span class="text-sm text-primary font-medium">Research</span>
-                                <span class="mx-2">•</span>
-                                <span class="text-sm text-gray-500">Feb 20, 2025</span>
-                            </div>
-                            <h3 class="text-xl font-semibold mb-2">Breakthrough in Quantum Computing Research</h3>
-                            <p class="text-gray-600 mb-4">Our research team has achieved a significant milestone in quantum computing, paving the way for future innovations.</p>
-                            <a href="#" class="text-primary font-medium hover:text-primary/80 transition-colors">Read More →</a>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                        <img src="https://public.readdy.ai/ai/img_res/ada8a28b758db88ebd0c14a492e83559.jpg" alt="News 2" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <div class="flex items-center mb-4">
-                                <span class="text-sm text-primary font-medium">Events</span>
-                                <span class="mx-2">•</span>
-                                <span class="text-sm text-gray-500">Feb 15, 2025</span>
-                            </div>
-                            <h3 class="text-xl font-semibold mb-2">Spring Graduation Ceremony 2025</h3>
-                            <p class="text-gray-600 mb-4">Join us in celebrating the achievements of our graduating class of 2025 at our annual ceremony.</p>
-                            <a href="#" class="text-primary font-medium hover:text-primary/80 transition-colors">Read More →</a>
-                        </div>
-                    </div>
-                    
-                    <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                        <img src="https://public.readdy.ai/ai/img_res/aed30588297afc590e3374f35e46ce9b.jpg" alt="News 3" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <div class="flex items-center mb-4">
-                                <span class="text-sm text-primary font-medium">Campus Life</span>
-                                <span class="mx-2">•</span>
-                                <span class="text-sm text-gray-500">Feb 10, 2025</span>
-                            </div>
-                            <h3 class="text-xl font-semibold mb-2">New Sports Complex Opening</h3>
-                            <p class="text-gray-600 mb-4">Experience our state-of-the-art sports facility designed to enhance student wellness and athletic performance.</p>
-                            <a href="#" class="text-primary font-medium hover:text-primary/80 transition-colors">Read More →</a>
-                        </div>
-                    </div>
-                </div>
+                     
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+        <!-- Video instead of Image -->
+        <video class="w-full h-48 object-cover" controls autoplay muted loop>
+            <source src="https://drive.google.com/uc?export=download&id=1YEsJ4X__kzrrGLB18135lvTRXau0p7gD" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="p-6">
+            <div class="flex items-center mb-4">
+                <span class="text-sm text-primary font-medium">Research</span>
+                <span class="mx-2">•</span>
+                <span class="text-sm text-gray-500">Feb 20, 2025</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Breakthrough in Quantum Computing Research</h3>
+            <p class="text-gray-600 mb-4">Our research team has achieved a significant milestone in quantum computing, paving the way for future innovations.</p>
+            <a href="#" class="text-primary font-medium hover:text-primary/80 transition-colors">Read More →</a>
+        </div>
+    </div>
+</div>
+
+<!-- Event Video -->
+    <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+        <video class="w-full h-48 object-cover" controls autoplay muted loop>
+            <source src="https://your-video-url.com/event-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="p-6">
+            <div class="flex items-center mb-4">
+                <span class="text-sm text-primary font-medium">Events</span>
+                <span class="mx-2">•</span>
+                <span class="text-sm text-gray-500">Feb 15, 2025</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Spring Graduation Ceremony 2025</h3>
+            <p class="text-gray-600 mb-4">Join us in celebrating the achievements of our graduating class of 2025 at our annual ceremony.</p>
+            <a href="#" class="text-primary font-medium hover:text-primary/80 transition-colors">Read More →</a>
+        </div>
+    </div>
+
+    <!-- Campus Life Video -->
+    <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+        <video class="w-full h-48 object-cover" controls autoplay muted loop>
+            <source src="https://your-video-url.com/sports-complex.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="p-6">
+            <div class="flex items-center mb-4">
+                <span class="text-sm text-primary font-medium">Campus Life</span>
+                <span class="mx-2">•</span>
+                <span class="text-sm text-gray-500">Feb 10, 2025</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">New Sports Complex Opening</h3>
+            <p class="text-gray-600 mb-4">Experience our state-of-the-art sports facility designed to enhance student wellness and athletic performance.</p>
+            <a href="#" class="text-primary font-medium hover:text-primary/80 transition-colors">Read More →</a>
+        </div>
+    </div>
+
+</div>
+
+
 
                 <div class="text-center mt-12">
                     <button class="bg-white border border-primary text-primary px-8 py-3 rounded-button hover:bg-primary/5 transition-colors whitespace-nowrap">
