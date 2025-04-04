@@ -440,7 +440,7 @@
     </div>
 </section>
 
-        <section class="py-20 bg-primary text-white">
+        <!--<section class="py-20 bg-primary text-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl font-bold mb-4">By the Numbers</h2>
@@ -466,33 +466,38 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
 
 
-	<script>
-  const counters = document.querySelectorAll('.stats-counter div');
 
-  counters.forEach(counter => {
-    const updateCount = () => {
-      const target = +counter.getAttribute('data-target');
-      const count = +counter.innerText;
+	 <section style="padding: 5rem 1rem; background-color: #1B3764; color: white;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 1rem;">By the Numbers</h2>
+                <p style="color: rgba(255, 255, 255, 0.8); max-width: 600px; margin: 0 auto;">Our impact in numbers reflects our commitment to excellence in education and research.</p>
+            </div>
 
-      // Adjust the speed (higher = slower)
-      const speed = 200;
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <div class="text-center stats-counter">
+                    <div style="font-size: 2rem; font-weight: bold;" data-target="1000">0</div>
+                    <p style="color: rgba(255,255,255,0.8);">Students Enrolled</p>
+                </div>
+                <div class="text-center stats-counter">
+                    <div style="font-size: 2rem; font-weight: bold;" data-target="30">0</div>
+                    <p style="color: rgba(255,255,255,0.8);">Faculty Members</p>
+                </div>
+                <div class="text-center stats-counter">
+                    <div style="font-size: 2rem; font-weight: bold;" data-target="4">0</div>
+                    <p style="color: rgba(255,255,255,0.8);">Academic Programs</p>
+                </div>
+                <div class="text-center stats-counter">
+                    <div style="font-size: 2rem; font-weight: bold;" data-target="98">0</div>
+                    <p style="color: rgba(255,255,255,0.8);">Passing Rate (%)</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      const increment = target / speed;
-
-      if (count < target) {
-        counter.innerText = Math.ceil(count + increment);
-        setTimeout(updateCount, 10);
-      } else {
-        counter.innerText = target;
-      }
-    };
-
-    updateCount();
-  });
-</script>
 
 
         <section class="py-20">
@@ -804,7 +809,7 @@
         <p class="text-sm">Successfully subscribed to newsletter!</p>
     </div>
 
-    <script>
+  <!--  <script>
         document.addEventListener('DOMContentLoaded', function() {
             const backToTop = document.getElementById('back-to-top');
             const toast = document.getElementById('toast');
@@ -820,6 +825,84 @@
                 }
 
                 const statsSection = document.querySelector('.stats-counter').parentElement.parentElement;
+                const statsSectionTop = statsSection.offsetTop;
+                const statsSectionHeight = statsSection.offsetHeight;
+                const windowHeight = window.innerHeight;
+                const scrollPosition = window.pageYOffset;
+
+                if (!countersStarted && scrollPosition > statsSectionTop - windowHeight + statsSectionHeight / 2) {
+                    startCounters();
+                    countersStarted = true;
+                }
+            });
+
+            backToTop.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+
+            newsletterForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const email = e.target.querySelector('input[type="email"]');
+                if (email.value) {
+                    showToast();
+                    email.value = '';
+                }
+            });
+
+            function showToast() {
+                toast.classList.add('show');
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 3000);
+            }
+
+            function startCounters() {
+                statsCounters.forEach(counter => {
+                    counter.classList.add('visible');
+                    const target = parseInt(counter.querySelector('div').dataset.target);
+                    const duration = 2000;
+                    const increment = target / (duration / 16);
+                    let current = 0;
+
+                    const updateCounter = () => {
+                        current += increment;
+                        if (current < target) {
+                            counter.querySelector('div').textContent = Math.round(current);
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            counter.querySelector('div').textContent = target;
+                        }
+                    };
+
+                    requestAnimationFrame(updateCounter);
+                });
+            }
+        });
+    </script>-->
+
+
+
+	 <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const backToTop = document.getElementById('back-to-top');
+            const toast = document.getElementById('toast');
+            const newsletterForm = document.getElementById('newsletter-form');
+            const statsCounters = document.querySelectorAll('.stats-counter');
+            let countersStarted = false;
+
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTop.classList.remove('opacity-0', 'invisible');
+                } else {
+                    backToTop.classList.add('opacity-0', 'invisible');
+                }
+
+                const statsSection = document.querySelector('.stats-counter')?.parentElement?.parentElement;
+                if (!statsSection) return;
+
                 const statsSectionTop = statsSection.offsetTop;
                 const statsSectionHeight = statsSection.offsetHeight;
                 const windowHeight = window.innerHeight;
