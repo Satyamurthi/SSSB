@@ -5,7 +5,7 @@
 	 
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" type="x-icon" href="https://github.com/Satyamurthi/mbw-Photos/blob/main/Copy%20of%20sai%20school%20logo%20png.png?raw=true"> 
-     <title>Sri Sathya Sai Baba Pre-University College</title>
+     <title>Sri Sathya Sai Baba School & Pre-University College</title>
      <script src="https://cdn.tailwindcss.com"></script>
      <script>
  
@@ -239,25 +239,27 @@
   </div>
 
   <!-- Mobile Menu (Right side, half width + half height) -->
-  <div id="mobile-menu" class="fixed top-0 right-0 w-1/2 h-1/2 bg-white z-40 shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out md:hidden rounded-bl-2xl border-l border-b">
-    <div class="flex flex-col p-4 space-y-4 h-full">
-      <!-- Close Button -->
-      <button id="close-mobile-menu" class="self-end text-gray-600 text-2xl font-bold">&times;</button>
+<!-- Mobile Menu (Left Side) -->
+<div id="mobile-menu" class="fixed top-0 left-0 w-1/2 h-1/2 bg-white z-40 shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden rounded-br-2xl border-r border-b">
+  <div class="flex flex-col p-4 space-y-4 h-full">
+    <!-- Close Button -->
+    <button id="close-mobile-menu" class="self-end text-gray-600 text-2xl font-bold">&times;</button>
 
-      <!-- Links -->
-      <a href="index.html" class="text-gray-700 hover:text-primary">Home</a>
-      <a href="Academics.html" class="text-gray-700 hover:text-primary">Academics</a>
-      <a href="Admissions.html" class="text-gray-700 hover:text-primary">Admissions</a>
-      <a href="Campus-Life.html" class="text-gray-700 hover:text-primary">Campus Life</a>
-      <a href="Research.html" class="text-gray-700 hover:text-primary">Donations</a>
-      <a href="About.html" class="text-gray-700 hover:text-primary">About</a>
-      <a href="#">
-        <button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90 transition-colors">
-          APPLY FOR ADMISSIONS
-        </button>
-      </a>
-    </div>
+    <!-- Links -->
+    <a href="index.html" class="text-gray-700 hover:text-primary">Home</a>
+    <a href="Academics.html" class="text-gray-700 hover:text-primary">Academics</a>
+    <a href="Admissions.html" class="text-gray-700 hover:text-primary">Admissions</a>
+    <a href="Campus-Life.html" class="text-gray-700 hover:text-primary">Campus Life</a>
+    <a href="Research.html" class="text-gray-700 hover:text-primary">Donations</a>
+    <a href="About.html" class="text-gray-700 hover:text-primary">About</a>
+    <a href="#">
+      <button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90 transition-colors">
+        APPLY FOR ADMISSIONS
+      </button>
+    </a>
   </div>
+</div>
+
 </nav>
 
 
@@ -268,13 +270,14 @@
   const mobileMenu = document.getElementById('mobile-menu');
 
   toggleBtn.addEventListener('click', () => {
-    mobileMenu.classList.remove('translate-x-full');
+    mobileMenu.classList.remove('-translate-x-full');
   });
 
   closeBtn.addEventListener('click', () => {
-    mobileMenu.classList.add('translate-x-full');
+    mobileMenu.classList.add('-translate-x-full');
   });
 </script>
+
 
 
  
