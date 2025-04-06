@@ -236,24 +236,26 @@
     </div>
   </div>
 
-  <!-- Right Side Half-Width Mobile Menu -->
-  <div id="mobile-menu" class="fixed top-0 right-0 h-screen w-1/2 bg-white z-40 shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
-    <div class="flex flex-col p-4 space-y-4">
-      <button id="close-mobile-menu" class="self-end text-gray-600 text-2xl font-bold">&times;</button>
-      <a href="index.html" class="text-gray-700 hover:text-primary">Home</a>
-      <a href="Academics.html" class="text-gray-700 hover:text-primary">Academics</a>
-      <a href="Admissions.html" class="text-gray-700 hover:text-primary">Admissions</a>
-      <a href="Campus-Life.html" class="text-gray-700 hover:text-primary">Campus Life</a>
-      <a href="Research.html" class="text-gray-700 hover:text-primary">Donations</a>
-      <a href="About.html" class="text-gray-700 hover:text-primary">About</a>
-      <a href="#" class="block">
-        <button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90 transition-colors">
-          APPLY FOR ADMISSIONS
-        </button>
-      </a>
-    </div>
+  <!-- Mobile Menu (Right Half Width + Half Height) -->
+<div id="mobile-menu" class="fixed top-0 right-0 w-1/2 h-1/2 bg-white z-40 shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out md:hidden rounded-bl-2xl border-l border-gray-200 border-b">
+  <div class="flex flex-col p-4 space-y-4 h-full">
+    <!-- Close Button -->
+    <button id="close-mobile-menu" class="self-end text-gray-600 text-2xl font-bold">&times;</button>
+
+    <!-- Links -->
+    <a href="index.html" class="text-gray-700 hover:text-primary">Home</a>
+    <a href="Academics.html" class="text-gray-700 hover:text-primary">Academics</a>
+    <a href="Admissions.html" class="text-gray-700 hover:text-primary">Admissions</a>
+    <a href="Campus-Life.html" class="text-gray-700 hover:text-primary">Campus Life</a>
+    <a href="Research.html" class="text-gray-700 hover:text-primary">Donations</a>
+    <a href="About.html" class="text-gray-700 hover:text-primary">About</a>
+    <a href="#">
+      <button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90 transition-colors">
+        APPLY FOR ADMISSIONS
+      </button>
+    </a>
   </div>
-</nav>
+</div>
 
 
 <script>
@@ -269,6 +271,7 @@
     mobileMenu.classList.add('translate-x-full');
   });
 </script>
+
 
  
  <main class="pt-16">
