@@ -197,12 +197,24 @@
 <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
-      <!-- Left Logo -->
+
+      <!-- LEFT SECTION: Hamburger + Left Logo -->
       <div class="flex items-center space-x-4">
+        <!-- Hamburger for Mobile -->
+        <div class="md:hidden">
+          <button id="mobile-menu-toggle" class="text-gray-700 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+        <!-- Left Logo -->
         <a href="#"><img src="sai baba photo png.png" style="height: 50px;"></a>
       </div>
 
-      <!-- Center Navigation (Desktop Only) -->
+      <!-- CENTER (Only visible on desktop) -->
       <div class="hidden md:flex space-x-8 items-center">
         <a href="index.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Home</a>
         <a href="Academics.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Academics</a>
@@ -217,45 +229,37 @@
         </a>
       </div>
 
-      <!-- Right Logo + Mobile Toggle -->
-      <div class="flex items-center space-x-4">
+      <!-- RIGHT SECTION: Right Logo -->
+      <div class="flex items-center">
         <a href="#">
           <img src="https://github.com/Satyamurthi/mbw-Photos/blob/main/Copy%20of%20sai%20school%20logo%20png.png?raw=true" style="height: 50px;">
         </a>
-        <!-- Hamburger -->
-        <div class="md:hidden">
-          <button id="mobile-menu-toggle" class="text-gray-700 focus:outline-none">
-            <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2"
-              viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-        </div>
       </div>
     </div>
   </div>
 
-  <!-- Mobile Menu (Right Half Width + Half Height) -->
-<div id="mobile-menu" class="fixed top-0 right-0 w-1/2 h-1/2 bg-white z-40 shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out md:hidden rounded-bl-2xl border-l border-gray-200 border-b">
-  <div class="flex flex-col p-4 space-y-4 h-full">
-    <!-- Close Button -->
-    <button id="close-mobile-menu" class="self-end text-gray-600 text-2xl font-bold">&times;</button>
+  <!-- Mobile Menu (Right side, half width + half height) -->
+  <div id="mobile-menu" class="fixed top-0 right-0 w-1/2 h-1/2 bg-white z-40 shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out md:hidden rounded-bl-2xl border-l border-b">
+    <div class="flex flex-col p-4 space-y-4 h-full">
+      <!-- Close Button -->
+      <button id="close-mobile-menu" class="self-end text-gray-600 text-2xl font-bold">&times;</button>
 
-    <!-- Links -->
-    <a href="index.html" class="text-gray-700 hover:text-primary">Home</a>
-    <a href="Academics.html" class="text-gray-700 hover:text-primary">Academics</a>
-    <a href="Admissions.html" class="text-gray-700 hover:text-primary">Admissions</a>
-    <a href="Campus-Life.html" class="text-gray-700 hover:text-primary">Campus Life</a>
-    <a href="Research.html" class="text-gray-700 hover:text-primary">Donations</a>
-    <a href="About.html" class="text-gray-700 hover:text-primary">About</a>
-    <a href="#">
-      <button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90 transition-colors">
-        APPLY FOR ADMISSIONS
-      </button>
-    </a>
+      <!-- Links -->
+      <a href="index.html" class="text-gray-700 hover:text-primary">Home</a>
+      <a href="Academics.html" class="text-gray-700 hover:text-primary">Academics</a>
+      <a href="Admissions.html" class="text-gray-700 hover:text-primary">Admissions</a>
+      <a href="Campus-Life.html" class="text-gray-700 hover:text-primary">Campus Life</a>
+      <a href="Research.html" class="text-gray-700 hover:text-primary">Donations</a>
+      <a href="About.html" class="text-gray-700 hover:text-primary">About</a>
+      <a href="#">
+        <button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90 transition-colors">
+          APPLY FOR ADMISSIONS
+        </button>
+      </a>
+    </div>
   </div>
-</div>
+</nav>
+
 
 
 <script>
