@@ -215,7 +215,16 @@
     </div>
 </nav>
 
- 
+ <script>
+    const toggleBtn = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    toggleBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+
+	 
  
  <main class="pt-16">
      <section class="relative h-[600px] flex items-center overflow-hidden">
