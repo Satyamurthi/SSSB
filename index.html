@@ -307,15 +307,42 @@
 </script>
 
 
- <!-- Background Video -->
+  <!-- Background Video -->
   <div id="video-bg"></div>
 
   <!-- Overlay -->
   <div class="overlay"></div>
 
-  
+  <!-- Hero Section -->
+  <section class="h-screen flex items-center justify-center text-center px-4">
+    <div>
+      <h1 class="text-5xl font-bold mb-6">Welcome to SSSBPUC</h1>
+      <p class="text-xl max-w-xl mx-auto">
+        This is the hero section. The video stays in the background as you scroll down. Scroll to see it in action.
+      </p>
+    </div>
+  </section>
 
- 
+  <!-- Next Section -->
+  <section class="bg-white text-black py-20">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">Our Programs</h2>
+      <p class="text-lg mb-8">
+        Scroll continues, and the content moves over the background video.
+      </p>
+      <p class="text-gray-600">You can add cards, images, anything here...</p>
+    </div>
+  </section>
+
+  <section class="bg-gray-100 text-black py-20">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-4">Why Choose Us?</h2>
+      <p class="text-lg">
+        As you scroll back up, the background video becomes visible again.
+      </p>
+    </div>
+  </section>
+
   <!-- YouTube API Script -->
   <script>
     function onYouTubeIframeAPIReady() {
@@ -348,6 +375,7 @@
     tag.src = "https://www.youtube.com/iframe_api";
     document.head.appendChild(tag);
   </script>
+
 
  
  <!--<main class="pt-16">
