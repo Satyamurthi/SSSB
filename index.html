@@ -106,7 +106,19 @@
          .toast.show {
              transform: translateY(0);
          }
- 
+
+     #video-container iframe {
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    #parallax-wrapper {
+      transform: translateY(0);
+      transition: transform 0.1s linear;
+      will-change: transform;
+    }
+
  	   .card:hover {
              transform: translateY(-5px);
              box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
@@ -278,44 +290,28 @@
 </script>
 
 
-  <!-- Hero Section with Video Background -->
-  <section class="relative h-[600px] flex items-center overflow-hidden">
-    <!-- Background Video Container -->
-    <div class="absolute inset-0 w-full h-full overflow-hidden -z-10">
+ <!-- Hero Section with Parallax Video Background -->
+  <section class="relative h-[600px] overflow-hidden">
+    <!-- Parallax Wrapper for smooth scroll animation -->
+    <div id="parallax-wrapper" class="absolute inset-0 w-full h-full -z-10">
       <div id="video-container" class="w-full h-full"></div>
     </div>
 
     <!-- Overlay -->
     <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-transparent"></div>
 
-    <!-- Content -->
-     <!--<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-2xl text-white">
-        <h1 class="text-5xl font-bold mb-6">Shape Your Future at SSSBPUC</h1>
-        <p class="text-xl mb-8">
-          Discover a world-class education that prepares you for leadership in a rapidly evolving global society.
-        </p>
-        <div class="flex space-x-4">
-          <button onclick="window.location.href='Academics.html'" class="bg-white text-primary px-8 py-3 rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap">
-            Explore Programs
-          </button>
-          <button onclick="window.location.href='https://www.youtube.com/watch?v=zKz4QQKx_jo'" class="border-2 border-white text-white px-8 py-3 rounded-button hover:bg-white/10 transition-colors whitespace-nowrap">
-            Virtual Tour
-          </button>
-        </div>
-      </div>
-    </div>-->
   </section>
 
   <!-- Next Section -->
- <section class="bg-gray-100 py-20">
+  <section class="bg-gray-100 py-20">
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-3xl font-bold mb-4">Welcome to SSSBPUC</h2>
       <p class="text-lg text-gray-700">
-        We’re glad you’re here. This section will scroll naturally as you move past the video.
+        We’re glad you’re here. Scroll back up to see the parallax background video effect.
       </p>
     </div>
-  </section> 
+  </section>
+
 
 <!-- YouTube API Script -->
 <script>
@@ -349,6 +345,17 @@
   let tag = document.createElement('script');
   tag.src = "https://www.youtube.com/iframe_api";
   document.head.appendChild(tag);
+</script>
+
+<!-- Parallax Scroll Effect -->
+<script>
+  const parallaxWrapper = document.getElementById('parallax-wrapper');
+
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    // Move the video slower than the scroll for parallax
+    parallaxWrapper.style.transform = `translateY(${scrollY * 0.3}px)`;
+  });
 </script>
 
  
