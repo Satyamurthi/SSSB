@@ -107,31 +107,31 @@
              transform: translateY(0);
          }
 
-      /* Fullscreen background video */
-    #video-bg {
+     /* Fixed background video, clipped to 600px height */
+    .video-wrapper {
+      position: relative;
+      height: 600px;
+      overflow: hidden;
+    }
+
+    .video-bg {
       position: fixed;
       top: 0;
       left: 0;
       width: 100vw;
-      height: 50vh;
+      height: 100vh;
+      object-fit: cover;
       z-index: -1;
       pointer-events: none;
-      object-fit: cover;
     }
 
-    /* Dark overlay to improve contrast */
     .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 50vh;
-      background: linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent);
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.6), transparent);
       z-index: 0;
-      pointer-events: none;
     }
 
-    /* Content blocks */
     section {
       position: relative;
       z-index: 1;
@@ -307,30 +307,26 @@
 </script>
 
 
-  <!-- Background Video -->
+  <!-- Background YouTube Video -->
   <div id="video-bg"></div>
-
-  <!-- Overlay -->
-  <div class="overlay"></div>
 
   
 
   <!-- Next Section -->
   <section class="bg-white text-black py-20">
-    <div class="max-w-3xl mx-auto text-center">
+    <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-3xl font-bold mb-4">Our Programs</h2>
       <p class="text-lg mb-8">
-        Scroll continues, and the content moves over the background video.
+        Scroll down and this content moves in front of the fixed video.
       </p>
-      <p class="text-gray-600">You can add cards, images, anything here...</p>
     </div>
   </section>
 
   <section class="bg-gray-100 text-black py-20">
-    <div class="max-w-3xl mx-auto text-center">
+    <div class="max-w-4xl mx-auto text-center">
       <h2 class="text-3xl font-bold mb-4">Why Choose Us?</h2>
       <p class="text-lg">
-        As you scroll back up, the background video becomes visible again.
+        The background video appears again if you scroll back up.
       </p>
     </div>
   </section>
@@ -339,7 +335,7 @@
   <script>
     function onYouTubeIframeAPIReady() {
       new YT.Player('video-bg', {
-        videoId: 'zKz4QQKx_jo', // Your video ID
+        videoId: 'zKz4QQKx_jo',
         playerVars: {
           autoplay: 1,
           mute: 1,
@@ -347,11 +343,11 @@
           playlist: 'zKz4QQKx_jo',
           controls: 0,
           modestbranding: 1,
-          showinfo: 0,
+          fs: 0,
           rel: 0,
           disablekb: 1,
-          iv_load_policy: 3,
           cc_load_policy: 0,
+          iv_load_policy: 3,
           playsinline: 1
         },
         events: {
@@ -361,8 +357,7 @@
         }
       });
     }
-
-    // Load YouTube API
+	// load YouTube API
     const tag = document.createElement('script');
     tag.src = "https://www.youtube.com/iframe_api";
     document.head.appendChild(tag);
