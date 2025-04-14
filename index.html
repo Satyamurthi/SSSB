@@ -422,7 +422,47 @@
 	          </div>
 	        </div>
 	      </section>
-      
+			      <script>
+			  const counters = document.querySelectorAll('.stats-counter div[data-target]');
+			  const speed = 200;
+			
+			  const animateCounter = (counter) => {
+			    const updateCount = () => {
+			      const target = +counter.getAttribute('data-target');
+			      const count = +counter.innerText;
+			      const increment = target / speed;
+			
+			      if (count < target) {
+			        counter.innerText = Math.ceil(count + increment);
+			        setTimeout(updateCount, 15);
+			      } else {
+			        counter.innerText = target.toLocaleString();
+			      }
+			    };
+			
+			    updateCount();
+			  };
+			
+			  const observer = new IntersectionObserver((entries, obs) => {
+			    entries.forEach(entry => {
+			      if (entry.isIntersecting) {
+			        const counter = entry.target.querySelector('div[data-target]');
+			        animateCounter(counter);
+			        obs.unobserve(entry.target);
+			      }
+			    });
+			  }, { threshold: 0.6 });
+			
+			  document.querySelectorAll('.stats-counter').forEach(stat => {
+			    observer.observe(stat);
+			  });
+			</script>
+
+
+
+
+
+	 
 	<!-- Facilities Start -->
 	<section class="bg-white py-20">
 	  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
