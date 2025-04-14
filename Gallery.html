@@ -1,524 +1,412 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" type="x-icon" href="https://github.com/Satyamurthi/mbw-Photos/blob/main/Copy%20of%20sai%20school%20logo%20png.png?raw=true"> 
-     <title>SSSB Gallery</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: "#1B3764",
-              secondary: "#DAA520",
-            },
-            borderRadius: {
-              none: "0px",
-              sm: "4px",
-              DEFAULT: "8px",
-              md: "12px",
-              lg: "16px",
-              xl: "20px",
-              "2xl": "24px",
-              "3xl": "32px",
-              full: "9999px",
-              button: "8px",
-            },
-          },
-        },
-      };
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <style>
-      :where([class^="ri-"])::before { content: "\f3c2"; }
-      .gallery-track {
-        transition: transform 0.5s ease-in-out;
-      }
-      .gallery-item {
-        opacity: 0.8;
-        transition: opacity 0.3s ease;
-      }
-      .gallery-item:hover {
-        opacity: 1;
-      }
-      .gallery-tab.active {
-        position: relative;
-      }
-      .gallery-tab.active::after {
-        content: '';
-        position: absolute;
-        bottom: -4px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 20px;
-        height: 2px;
-        background-color: #fff;
-        border-radius: 2px;
-      }
-      .nav-link {
-      position: relative;
-      }
-      .nav-link::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      bottom: -4px;
-      left: 0;
-      background-color: #1B3764;
-      transition: width 0.3s ease;
-      }
-      .nav-link:hover::after {
-      width: 100%;
-      }
-      .stats-counter {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease, transform 0.6s ease;
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8"> 
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="shortcut icon" type="x-icon" href="https://github.com/Satyamurthi/mbw-Photos/blob/main/Logo/sai%20school%20logo%20png.png?raw=true"> 
+     <title>Sri Sathya Sai Baba School & Pre-University College</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+     <script>
+          tailwind.config = {
+             theme: {
+                 extend: {
+                     colors: {
+                         primary: '#1B3764',
+                         secondary: '#DAA520'
+                     },
+                     borderRadius: {
+                         'none': '0px',
+                         'sm': '4px',
+                         DEFAULT: '8px',
+                         'md': '12px',
+                         'lg': '16px',
+                         'xl': '20px',
+                         '2xl': '24px',
+                         '3xl': '32px',
+                         'full': '9999px',
+                         'button': '8px'
+                     }
+                 }
+             }
+         }
+     </script>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+     <style>
+         :where([class^="ri-"])::before { content: "\f3c2"; }
+ 
+         .nav-link {
+             position: relative;
+         }
+ 
+         .nav-link::after {
+             content: '';
+             position: absolute;
+             width: 0;
+             height: 2px;
+             bottom: -4px;
+             left: 0;
+             background-color: #1B3764;
+             transition: width 0.3s ease;
+         }
+ 
+         .nav-link:hover::after {
+             width: 100%;
+         }
+ 
+         .stats-counter {
+             opacity: 0;
+             transform: translateY(20px);
+             transition: opacity 0.6s ease, transform 0.6s ease;
+         }
+ 
+         .stats-counter.visible {
+             opacity: 1;
+             transform: translateY(0);
+         }
+	 .stats-counter {
+	      opacity: 0;
+	      transform: translateY(20px);
+	      transition: opacity 0.6s ease, transform 0.6s ease;
       }
       .stats-counter.visible {
-      opacity: 1;
-      transform: translateY(0);
+	      opacity: 1;
+	      transform: translateY(0);
       }
-      .program-card {
-      perspective: 1000px;
-      transition: transform 0.6s;
-      }
-      .program-card:hover {
-      transform: scale(1.02);
-      }
-      @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-      }
-      .fade-in {
-      animation: fadeIn 0.6s ease forwards;
-      }
-      .search-expand {
-      transition: width 0.3s ease;
-      }
-      .search-expand:focus {
-      width: 300px;
-      }
-      .toast {
-      position: fixed;
-      bottom: 24px;
-      right: 24px;
-      transform: translateY(100px);
-      transition: transform 0.3s ease;
-      }
-      .toast.show {
-      transform: translateY(0);
-      }
-    </style>
-  </head>
-  <body class="bg-white">
-    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
+         .program-card {
+             perspective: 1000px;
+             transition: transform 0.6s;
+         }
+ 
+         .program-card:hover {
+             transform: scale(1.02);
+         }
+ 
+         @keyframes fadeIn {
+             from { opacity: 0; transform: translateY(20px); }
+             to { opacity: 1; transform: translateY(0); }
+         }
+ 
+         .fade-in {
+             animation: fadeIn 0.6s ease forwards;
+         }
+ 
+         .search-expand {
+             transition: width 0.3s ease;
+         }
+ 
+         .search-expand:focus {
+             width: 300px;
+         }
+ 
+         .toast {
+             position: fixed;
+             bottom: 24px;
+             right: 24px;
+             transform: translateY(100px);
+             transition: transform 0.3s ease;
+         }
+ 
+         .toast.show {
+             transform: translateY(0);
+         }
+
+
+
+ 	   .card:hover {
+             transform: translateY(-5px);
+             box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+         }
+/*
+	 #video-container {
+	  position: fixed;
+	  top: 5VH;
+	  left: 0;
+	  width: 100VW;
+	  height: 55VH;
+	  z-index: -1;
+	  pointer-events: none;
+	  display: flex;
+	  justify-content: center;
+	}
+	
+    	/* Dark overlay to improve contrast * /
+	.overlay {
+	  position: fixed;
+	  z-index: 0;
+ 	  pointer-events: none;
+	}
+
+	    /* Content blocks * /
+	.section {
+	  position: relative;
+	  z-index: 1;
+	}*/
+     </style>
+ </head>
+ <body class="bg-white">
+	 
+ <!-- Navigation Bar -->
+ <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between items-center h-16">
 
       <!-- LEFT SECTION: Hamburger + Left Logo -->
       <div class="flex items-center space-x-4">
-        <!-- Hamburger for Mobile -->
-        <div class="md:hidden">
-          <button id="mobile-menu-toggle" class="text-gray-700 focus:outline-none">
-            <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2"
-              viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-        </div>
-        <!-- Left Logo -->
-        <a href="#"><img src="sai baba photo png.png" style="height: 50px;"></a>
+	<!-- Hamburger for Mobile -->
+	<div class="md:hidden">
+	  <button id="mobile-menu-toggle" class="text-gray-700 focus:outline-none">
+	    <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2"
+	      viewBox="0 0 24 24">
+	      <path stroke-linecap="round" stroke-linejoin="round"
+		d="M4 6h16M4 12h16M4 18h16" />
+	    </svg>
+	  </button>
+	</div>
+	<!-- Left Logo -->
+	<a href="index.html"><img src="https://github.com/Satyamurthi/mbw-Photos/blob/main/Logo/sai%20baba%20Logo.png?raw=true" style="height: 50px;"></a>
       </div>
 
       <!-- CENTER (Only visible on desktop) -->
       <div class="hidden md:flex space-x-8 items-center">
-        <a href="index.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Home</a>
-        <a href="Academics.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Academics</a>
-        <a href="Gallery.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Gallery</a>
-        <a href="Campus-Life.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Campus Life</a>
-        <!--<a href="Research.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Donations</a>-->
-        <a href="About.html" class="nav-link text-gray-700 hover:text-primary transition-colors">About</a>
-        <a href="#">
-          <button class="bg-primary text-white px-4 py-2 rounded-button hover:bg-primary/90 transition-colors">
-           FOR ADMISSIONS
-          </button>
-        </a>
+	<a href="index.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Home</a>
+	<a href="Academics.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Academics</a>
+	<a href="Gallery.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Gallery</a>
+	<a href="Campus-Life.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Campus Life</a>
+	<a href="About.html" class="nav-link text-gray-700 hover:text-primary transition-colors">About</a>
+	<a href="#">
+	  <button class="bg-primary text-white px-4 py-2 rounded-button hover:bg-primary/90 transition-colors">
+	   	FOR ADMISSIONS
+	  </button>
+	</a>
       </div>
 
       <!-- RIGHT SECTION: Right Logo -->
       <div class="flex items-center">
-        <a href="#">
-          <img src="https://github.com/Satyamurthi/mbw-Photos/blob/main/Copy%20of%20sai%20school%20logo%20png.png?raw=true" style="height: 50px;">
-        </a>
+	<a href="About.html">
+	  <img src="https://github.com/Satyamurthi/mbw-Photos/blob/main/Logo/sai%20school%20logo%20png.png?raw=true" style="height: 50px;">
+	</a>
       </div>
     </div>
   </div>
 
   <!-- Mobile Menu (Right side, half width + half height) -->
-<!-- Mobile Menu (Left Side) -->
-<div id="mobile-menu" class="fixed top-0 left-0 w-1/2 h-1/2 bg-white z-40 shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden rounded-br-2xl border-r border-b">
-  <div class="flex flex-col p-4 space-y-4 h-full">
-    <!-- Close Button -->
-    <button id="close-mobile-menu" class="self-end text-gray-600 text-2xl font-bold">&times;</button>
-
-    <!-- Links -->
-    <a href="index.html" class="text-gray-700 hover:text-primary">Home</a>
-    <a href="Academics.html" class="text-gray-700 hover:text-primary">Academics</a>
-    <a href="Gallery.html" class="text-gray-700 hover:text-primary">Gallery</a>
-    <a href="Campus-Life.html" class="text-gray-700 hover:text-primary">Campus Life</a>
-    <!--<a href="Research.html" class="text-gray-700 hover:text-primary">Donations</a>-->
-    <a href="About.html" class="text-gray-700 hover:text-primary">About</a>
-    <a href="#">
-      <button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90 transition-colors">
-        FOR ADMISSIONS
-      </button>
-    </a>
-  </div>
-</div>
-
+      <!-- Mobile Menu (Left Side) -->
+	<div id="mobile-menu" class="fixed top-0 left-0 w-1/2 h-1/2 bg-white z-40 shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden rounded-br-2xl border-r border-b">
+	  <div class="flex flex-col p-4 space-y-4 h-full">
+	    <!-- Close Button -->
+	    <button id="close-mobile-menu" class="self-end text-gray-600 text-2xl font-bold">&times;</button>
+	
+	    <!-- Links -->
+	    <a href="index.html" class="text-gray-700 hover:text-primary">Home</a>
+	    <a href="Academics.html" class="text-gray-700 hover:text-primary">Academics</a>
+	    <a href="Gallery.html" class="text-gray-700 hover:text-primary">Gallery</a>
+	    <a href="Campus-Life.html" class="text-gray-700 hover:text-primary">Campus Life</a>
+	    <!--<a href="Research.html" class="text-gray-700 hover:text-primary">Donations</a>-->
+	    <a href="About.html" class="text-gray-700 hover:text-primary">About</a>
+	    <a href="#">
+	      <button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90 transition-colors">
+		FOR ADMISSIONS
+	      </button>
+	    </a>
+	  </div>
+	</div>
 </nav>
+<!-- Mobile Menu Script -->
+	<script>
+	  const toggleBtn = document.getElementById('mobile-menu-toggle');
+	  const closeBtn = document.getElementById('close-mobile-menu');
+	  const mobileMenu = document.getElementById('mobile-menu');
+	
+	  toggleBtn.addEventListener('click', () => {
+	    mobileMenu.classList.remove('-translate-x-full');
+	  });
+	
+	  closeBtn.addEventListener('click', () => {
+	    mobileMenu.classList.add('-translate-x-full');
+	  });
+	</script>
+
+	 
     <main class="pt-16">
-  <section class="py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Gallery</h2>
-        <div class="flex flex-wrap justify-center gap-4 mb-8">
-          <button
-            class="gallery-tab active bg-primary text-white px-6 py-2 rounded-full hover:bg-primary/90 transition-colors"
-            data-tab="primary"
-          >
-            Primary
-          </button>
-          <button
-            class="gallery-tab bg-gray-200 text-gray-700 px-6 py-2 rounded-full hover:bg-gray-300 transition-colors"
-            data-tab="school"
-          >
-            School
-          </button>
-          <button
-            class="gallery-tab bg-gray-200 text-gray-700 px-6 py-2 rounded-full hover:bg-gray-300 transition-colors"
-            data-tab="college"
-          >
-            PU College
-          </button>
-        </div>
-      </div>
+      <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold mb-4">Our Gallery</h2>
+            <div class="flex flex-wrap justify-center gap-4 mb-8">
+              <button
+                class="gallery-tab bg-blue-600 text-white px-6 py-2 rounded-full transition"
+                data-tab="primary"
+              >
+                Primary
+              </button>
+              <button
+                class="gallery-tab bg-gray-200 text-gray-700 px-6 py-2 rounded-full transition"
+                data-tab="school"
+              >
+                School
+              </button>
+              <button
+                class="gallery-tab bg-gray-200 text-gray-700 px-6 py-2 rounded-full transition"
+                data-tab="college"
+              >
+                PU College
+              </button>
+            </div>
+          </div>
 
-      <!-- Primary Gallery -->
-      <div class="gallery-content" id="primary-gallery">
-        <div class="gallery-slider overflow-hidden">
-          <div class="gallery-track flex flex-wrap justify-center">
-            <!-- Primary Images -->
-            <div class="gallery-item w-full sm:w-1/2 lg:w-1/3 p-4">
-              <img
-                src="https://readdy.ai/api/search-image?query=primary%20school%20classroom%20with%20young%20students&width=800&height=600&orientation=landscape"
-                class="w-full h-64 object-cover rounded-lg shadow-md"
-                alt="Primary Education"
-              />
+          <!-- PRIMARY -->
+          <div class="gallery-content" id="primary-gallery">
+            <div class="flex flex-wrap justify-center">
+              <div class="w-full sm:w-1/2 lg:w-1/3 p-4">
+                <img
+                  src="https://via.placeholder.com/600x400?text=Primary+1"
+                  alt=""
+                  class="w-full h-64 object-cover rounded-lg shadow"
+                />
+              </div>
+              <div class="w-full sm:w-1/2 lg:w-1/3 p-4">
+                <img
+                  src="https://via.placeholder.com/600x400?text=Primary+2"
+                  alt=""
+                  class="w-full h-64 object-cover rounded-lg shadow"
+                />
+              </div>
             </div>
-            <div class="gallery-item w-full sm:w-1/2 lg:w-1/3 p-4">
-              <img
-                src="https://readdy.ai/api/search-image?query=primary%20school%20students%20in%20science%20lab&width=800&height=600&orientation=landscape"
-                class="w-full h-64 object-cover rounded-lg shadow-md"
-                alt="Primary Science Lab"
-              />
+          </div>
+
+          <!-- SCHOOL -->
+          <div class="gallery-content hidden" id="school-gallery">
+            <div class="flex flex-wrap justify-center">
+              <div class="w-full sm:w-1/2 lg:w-1/3 p-4">
+                <img
+                  src="https://via.placeholder.com/600x400?text=School+1"
+                  alt=""
+                  class="w-full h-64 object-cover rounded-lg shadow"
+                />
+              </div>
+              <div class="w-full sm:w-1/2 lg:w-1/3 p-4">
+                <img
+                  src="https://via.placeholder.com/600x400?text=School+2"
+                  alt=""
+                  class="w-full h-64 object-cover rounded-lg shadow"
+                />
+              </div>
             </div>
-            <div class="gallery-item w-full sm:w-1/2 lg:w-1/3 p-4">
-              <img
-                src="https://readdy.ai/api/search-image?query=primary%20school%20playground%20modern%20equipment&width=800&height=600&orientation=landscape"
-                class="w-full h-64 object-cover rounded-lg shadow-md"
-                alt="Primary Playground"
-              />
+          </div>
+
+          <!-- COLLEGE -->
+          <div class="gallery-content hidden" id="college-gallery">
+            <div class="flex flex-wrap justify-center">
+              <div class="w-full sm:w-1/2 lg:w-1/3 p-4">
+                <img
+                  src="https://via.placeholder.com/600x400?text=College+1"
+                  alt=""
+                  class="w-full h-64 object-cover rounded-lg shadow"
+                />
+              </div>
+              <div class="w-full sm:w-1/2 lg:w-1/3 p-4">
+                <img
+                  src="https://via.placeholder.com/600x400?text=College+2"
+                  alt=""
+                  class="w-full h-64 object-cover rounded-lg shadow"
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
+    </main>
 
-      <!-- School Gallery -->
-      <div class="gallery-content hidden" id="school-gallery">
-        <div class="gallery-slider overflow-hidden">
-          <div class="gallery-track flex flex-wrap justify-center">
-            <!-- School Images -->
-            <div class="gallery-item w-full sm:w-1/2 lg:w-1/3 p-4">
-              <img
-                src="https://readdy.ai/api/search-image?query=high%20school%20students%20in%20computer%20lab&width=800&height=600&orientation=landscape"
-                class="w-full h-64 object-cover rounded-lg shadow-md"
-                alt="School Computer Lab"
-              />
-            </div>
-            <div class="gallery-item w-full sm:w-1/2 lg:w-1/3 p-4">
-              <img
-                src="https://readdy.ai/api/search-image?query=high%20school%20sports%20field%20with%20students&width=800&height=600&orientation=landscape"
-                class="w-full h-64 object-cover rounded-lg shadow-md"
-                alt="School Sports"
-              />
-            </div>
-            <div class="gallery-item w-full sm:w-1/2 lg:w-1/3 p-4">
-              <img
-                src="https://readdy.ai/api/search-image?query=high%20school%20library%20with%20students&width=800&height=600&orientation=landscape"
-                class="w-full h-64 object-cover rounded-lg shadow-md"
-                alt="School Library"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+    <script>
+      const tabs = document.querySelectorAll(".gallery-tab");
+      const galleries = document.querySelectorAll(".gallery-content");
 
-      <!-- College Gallery -->
-      <div class="gallery-content hidden" id="college-gallery">
-        <div class="gallery-slider overflow-hidden">
-          <div class="gallery-track flex flex-wrap justify-center">
-            <!-- College Images -->
-            <div class="gallery-item w-full sm:w-1/2 lg:w-1/3 p-4">
-              <img
-                src="https://readdy.ai/api/search-image?query=pre-university%20college%20students%20in%20chemistry%20lab&width=800&height=600&orientation=landscape"
-                class="w-full h-64 object-cover rounded-lg shadow-md"
-                alt="PU College Lab"
-              />
-            </div>
-            <div class="gallery-item w-full sm:w-1/2 lg:w-1/3 p-4">
-              <img
-                src="https://readdy.ai/api/search-image?query=pre-university%20college%20seminar%20hall&width=800&height=600&orientation=landscape"
-                class="w-full h-64 object-cover rounded-lg shadow-md"
-                alt="PU College Seminar"
-              />
-            </div>
-            <div class="gallery-item w-full sm:w-1/2 lg:w-1/3 p-4">
-              <img
-                src="https://readdy.ai/api/search-image?query=pre-university%20college%20campus%20with%20green%20spaces&width=800&height=600&orientation=landscape"
-                class="w-full h-64 object-cover rounded-lg shadow-md"
-                alt="PU College Campus"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          // Reset tabs
+          tabs.forEach((t) => {
+            t.classList.remove("bg-blue-600", "text-white");
+            t.classList.add("bg-gray-200", "text-gray-700");
+          });
 
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const tabs = document.querySelectorAll(".gallery-tab");
-    const contents = document.querySelectorAll(".gallery-content");
+          // Activate clicked tab
+          tab.classList.remove("bg-gray-200", "text-gray-700");
+          tab.classList.add("bg-blue-600", "text-white");
 
-    tabs.forEach((tab) => {
-      tab.addEventListener("click", () => {
-        const target = tab.getAttribute("data-tab");
-
-        tabs.forEach((t) => {
-          t.classList.remove("active", "bg-primary", "text-white");
-          t.classList.add("bg-gray-200", "text-gray-700");
+          // Show related gallery
+          const targetId = tab.getAttribute("data-tab") + "-gallery";
+          galleries.forEach((g) => g.classList.add("hidden"));
+          document.getElementById(targetId).classList.remove("hidden");
         });
-
-        tab.classList.add("active", "bg-primary", "text-white");
-        tab.classList.remove("bg-gray-200", "text-gray-700");
-
-        contents.forEach((content) => {
-          content.classList.add("hidden");
-        });
-
-        document.getElementById(`${target}-gallery`).classList.remove("hidden");
       });
-    });
-  });
-</script>
+    </script>
 
-  <footer class="bg-gray-900 text-white py-16">
-     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-             <div>
-                 <!--<a href="#" class="text-2xl font-['Pacifico'] text-white mb-4 block">logo</a>-->
-                 <img src="sai baba photo png.png" alt="Logo" class="w-24 h-auto mb-4 block"> 
-                 <p class="text-gray-400 mb-4">Shaping tomorrow's leaders through excellence in education, research, and innovation.</p>
-                 <div class="flex space-x-4">
-                     <a href="https://www.facebook.com/people/Sathya-Sai-Baba-Puc/pfbid02EXmmdXSUpaZJE3uH5zdoHTGTsfFPjy5RK5Z6dUJ55skrdtPwmWgYpTbHbh7RwcfZl" class="text-gray-400 hover:text-white transition-colors">
-                         <i class="ri-facebook-fill text-xl"></i>
-                     </a>
-                     <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                         <i class="ri-twitter-fill text-xl"></i>
-                     </a>
-                     <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                         <i class="ri-instagram-fill text-xl"></i>
-                     </a>
-                     <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                         <i class="ri-linkedin-fill text-xl"></i>
-                     </a>
-                 </div>
-             </div>
- 
-             <div>
-                 <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-                 <ul class="space-y-2">
-                     <li><a href="About.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
-                     <li><a href="Academics.html" class="text-gray-400 hover:text-white transition-colors">Academics</a></li>
-                     <li><a href="Admissions.html" class="text-gray-400 hover:text-white transition-colors">Admissions</a></li>
-                     <li><a href="Research.html" class="text-gray-400 hover:text-white transition-colors">Research</a></li>
-                     <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Campus Life</a></li>
-                 </ul>
-             </div>
- 
-             <div>
-                 <h3 class="text-lg font-semibold mb-4">Contact</h3>
-                 <ul class="space-y-2">
-                     <li class="flex items-center text-gray-400">
-                         <i class="ri-map-pin-line mr-2"></i>
-                         Sri Sathya Sai Baba PU College, 46, 4th Main Rd, 3rd Block, Jayalakshmipuram, Mysuru, Karnataka 570012
-                     </li>
-                     <li class="flex items-center text-gray-400">
-                         <i class="ri-phone-line mr-2"></i>
-                         0821 2410856
-                     </li>
-                     <li class="flex items-center text-gray-400">
-                         <i class="ri-mail-line mr-2"></i>
-                         sssbpucnn0385@gmail.com
-                     </li>
-                 </ul>
-             </div>
-         </div>
- 
-         <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-             <p>&copy; 2025 SSSBPUC. All rights reserved.</p>
-         </div>
-     </div>
- </footer>
- 
- 
-     <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300">
-         <i class="ri-arrow-up-line text-xl"></i>
-     </button>
- 
-     <div id="toast" class="toast bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg">
-         <p class="text-sm">Successfully subscribed to newsletter!</p>
-     </div>
- 
-     <!-- <script>
-	     
-         document.addEventListener('DOMContentLoaded', function() {
-             const backToTop = document.getElementById('back-to-top');
-             const toast = document.getElementById('toast');
-             const newsletterForm = document.getElementById('newsletter-form');
-             const statsCounters = document.querySelectorAll('.stats-counter');
-             let countersStarted = false;
- 
-             window.addEventListener('scroll', () => {
-                 if (window.pageYOffset > 300) {
-                     backToTop.classList.remove('opacity-0', 'invisible');
-                 } else {
-                     backToTop.classList.add('opacity-0', 'invisible');
-                 }
- 
-                 const statsSection = document.querySelector('.stats-counter').parentElement.parentElement;
-                 const statsSectionTop = statsSection.offsetTop;
-                 const statsSectionHeight = statsSection.offsetHeight;
-                 const windowHeight = window.innerHeight;
-                 const scrollPosition = window.pageYOffset;
- 
-                 if (!countersStarted && scrollPosition > statsSectionTop - windowHeight + statsSectionHeight / 2) {
-                     startCounters();
-                     countersStarted = true;
-                 }
-             });
- 
-             backToTop.addEventListener('click', () => {
-                 window.scrollTo({
-                     top: 0,
-                     behavior: 'smooth'
-                 });
-             });
- 
-             newsletterForm.addEventListener('submit', (e) => {
-                 e.preventDefault();
-                 const email = e.target.querySelector('input[type="email"]');
-                 if (email.value) {
-                     showToast();
-                     email.value = '';
-                 }
-             });
- 
-             function showToast() {
-                 toast.classList.add('show');
-                 setTimeout(() => {
-                     toast.classList.remove('show');
-                 }, 3000);
-             }
- 
-             function startCounters() {
-                 statsCounters.forEach(counter => {
-                     counter.classList.add('visible');
-                     const target = parseInt(counter.querySelector('div').dataset.target);
-                     const duration = 2000;
-                     const increment = target / (duration / 16);
-                     let current = 0;
- 
-                     const updateCounter = () => {
-                         current += increment;
-                         if (current < target) {
-                             counter.querySelector('div').textContent = Math.round(current);
-                             requestAnimationFrame(updateCounter);
-                         } else {
-                             counter.querySelector('div').textContent = target;
-                         }
-                     };
- 
-                     requestAnimationFrame(updateCounter);
-                 });
-             }
-         });
-     </script>-->
-	      <script>
+
+<footer class="bg-gray-900 text-white py-16">
+	     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+		     <div>
+			 <!--<a href="#" class="text-2xl font-['Pacifico'] text-white mb-4 block">logo</a>-->
+			 <img src="https://github.com/Satyamurthi/mbw-Photos/blob/main/Logo/sai%20baba%20Logo.png?raw=true" alt="Logo" class="w-24 h-auto mb-4 block"> 
+			 <p class="text-gray-400 mb-4">Shaping tomorrow's leaders through excellence in education, research, and innovation.</p>
+			 <div class="flex space-x-4">
+			     <a href="https://www.facebook.com/people/Sathya-Sai-Baba-Puc/pfbid02EXmmdXSUpaZJE3uH5zdoHTGTsfFPjy5RK5Z6dUJ55skrdtPwmWgYpTbHbh7RwcfZl" class="text-gray-400 hover:text-white transition-colors">
+				 <i class="ri-facebook-fill text-xl"></i>
+			     </a>
+			     <a href="#" class="text-gray-400 hover:text-white transition-colors">
+				 <i class="ri-twitter-fill text-xl"></i>
+			     </a>
+			     <a href="#" class="text-gray-400 hover:text-white transition-colors">
+				 <i class="ri-instagram-fill text-xl"></i>
+			     </a>
+			     <a href="#" class="text-gray-400 hover:text-white transition-colors">
+				 <i class="ri-linkedin-fill text-xl"></i>
+			     </a>
+			 </div>
+		     </div>
+	 
+		     <div>
+			 <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+			 <ul class="space-y-2">
+			     <li><a href="About.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+			     <li><a href="Academics.html" class="text-gray-400 hover:text-white transition-colors">Academics</a></li>
+			     <li><a href="Gallery.html" class="text-gray-400 hover:text-white transition-colors">Gallery</a></li>
+			     <li><a href="Research.html" class="text-gray-400 hover:text-white transition-colors">Campus Life</a></li>
+			     <li><a href="#" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+			 </ul>
+		     </div>
+	 
+		     <div>
+			 <h3 class="text-lg font-semibold mb-4">Contact</h3>
+			 <ul class="space-y-2">
+			     <li class="flex items-center text-gray-400">
+				 <i class="ri-map-pin-line mr-2"></i>
+				 Sri Sathya Sai Baba PU College, 46, 4th Main Rd, 3rd Block, Jayalakshmipuram, Mysuru, Karnataka 570012
+			     </li>
+			     <li class="flex items-center text-gray-400">
+				 <i class="ri-phone-line mr-2"></i>
+				 0821 2410856
+			     </li>
+			     <li class="flex items-center text-gray-400">
+				 <i class="ri-mail-line mr-2"></i>
+				 sssbpucnn0385@gmail.com
+			     </li>
+			 </ul>
+		     </div>
+		 </div>
+	 
+		 <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+		     <p>&copy; 2025 SSSBPUC. All rights reserved.</p>
+		 </div>
+	     </div>
+	 </footer>
+	
+	 
+	     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        const galleryTabs = document.querySelectorAll(".gallery-tab");
-        const galleryContents = document.querySelectorAll(".gallery-content");
-        const galleryTracks = document.querySelectorAll(".gallery-track");
-        let currentSlide = 0;
-        const slideInterval = 3000;
-        function switchTab(tabId) {
-          galleryTabs.forEach((tab) => {
-            if (tab.dataset.tab === tabId) {
-              tab.classList.add("active", "bg-primary", "text-white");
-              tab.classList.remove("bg-gray-200", "text-gray-700");
-            } else {
-              tab.classList.remove("active", "bg-primary", "text-white");
-              tab.classList.add("bg-gray-200", "text-gray-700");
-            }
-          });
-          galleryContents.forEach((content) => {
-            if (content.id === `${tabId}-gallery`) {
-              content.classList.remove("hidden");
-            } else {
-              content.classList.add("hidden");
-            }
-          });
-        }
-        galleryTabs.forEach((tab) => {
-          tab.addEventListener("click", () => {
-            switchTab(tab.dataset.tab);
-          });
-        });
-        function slideGallery() {
-          galleryTracks.forEach((track) => {
-            const items = track.querySelectorAll(".gallery-item");
-            currentSlide = (currentSlide + 1) % items.length;
-            const offset = -currentSlide * (100 / items.length);
-            track.style.transform = `translateX(${offset}%)`;
-          });
-        }
-        setInterval(slideGallery, slideInterval);
         const backToTop = document.getElementById("back-to-top");
         const toast = document.getElementById("toast");
         const newsletterForm = document.getElementById("newsletter-form");
@@ -585,6 +473,5 @@
         }
       });
     </script>
- 
- </body>
- </html>
+  </body>
+</html>
