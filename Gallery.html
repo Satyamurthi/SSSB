@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Horizon University - Shaping Tomorrow's Leaders</title>
+    <title>SSSB Gallery</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -386,7 +386,7 @@
          <p class="text-sm">Successfully subscribed to newsletter!</p>
      </div>
  
-     <script>
+     <!-- <script>
 	     
          document.addEventListener('DOMContentLoaded', function() {
              const backToTop = document.getElementById('back-to-top');
@@ -459,6 +459,112 @@
                  });
              }
          });
-     </script>
+     </script>-->
+	      <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const galleryTabs = document.querySelectorAll(".gallery-tab");
+        const galleryContents = document.querySelectorAll(".gallery-content");
+        const galleryTracks = document.querySelectorAll(".gallery-track");
+        let currentSlide = 0;
+        const slideInterval = 3000;
+        function switchTab(tabId) {
+          galleryTabs.forEach((tab) => {
+            if (tab.dataset.tab === tabId) {
+              tab.classList.add("active", "bg-primary", "text-white");
+              tab.classList.remove("bg-gray-200", "text-gray-700");
+            } else {
+              tab.classList.remove("active", "bg-primary", "text-white");
+              tab.classList.add("bg-gray-200", "text-gray-700");
+            }
+          });
+          galleryContents.forEach((content) => {
+            if (content.id === `${tabId}-gallery`) {
+              content.classList.remove("hidden");
+            } else {
+              content.classList.add("hidden");
+            }
+          });
+        }
+        galleryTabs.forEach((tab) => {
+          tab.addEventListener("click", () => {
+            switchTab(tab.dataset.tab);
+          });
+        });
+        function slideGallery() {
+          galleryTracks.forEach((track) => {
+            const items = track.querySelectorAll(".gallery-item");
+            currentSlide = (currentSlide + 1) % items.length;
+            const offset = -currentSlide * (100 / items.length);
+            track.style.transform = `translateX(${offset}%)`;
+          });
+        }
+        setInterval(slideGallery, slideInterval);
+        const backToTop = document.getElementById("back-to-top");
+        const toast = document.getElementById("toast");
+        const newsletterForm = document.getElementById("newsletter-form");
+        const statsCounters = document.querySelectorAll(".stats-counter");
+        let countersStarted = false;
+        window.addEventListener("scroll", () => {
+          if (window.pageYOffset > 300) {
+            backToTop.classList.remove("opacity-0", "invisible");
+          } else {
+            backToTop.classList.add("opacity-0", "invisible");
+          }
+          const statsSection =
+            document.querySelector(".stats-counter").parentElement.parentElement;
+          const statsSectionTop = statsSection.offsetTop;
+          const statsSectionHeight = statsSection.offsetHeight;
+          const windowHeight = window.innerHeight;
+          const scrollPosition = window.pageYOffset;
+          if (
+            !countersStarted &&
+            scrollPosition > statsSectionTop - windowHeight + statsSectionHeight / 2
+          ) {
+            startCounters();
+            countersStarted = true;
+          }
+        });
+        backToTop.addEventListener("click", () => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+        newsletterForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const email = e.target.querySelector('input[type="email"]');
+          if (email.value) {
+            showToast();
+            email.value = "";
+          }
+        });
+        function showToast() {
+          toast.classList.add("show");
+          setTimeout(() => {
+            toast.classList.remove("show");
+          }, 3000);
+        }
+        function startCounters() {
+          statsCounters.forEach((counter) => {
+            counter.classList.add("visible");
+            const target = parseInt(counter.querySelector("div").dataset.target);
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
+            const updateCounter = () => {
+              current += increment;
+              if (current < target) {
+                counter.querySelector("div").textContent = Math.round(current);
+                requestAnimationFrame(updateCounter);
+              } else {
+                counter.querySelector("div").textContent = target;
+              }
+            };
+            requestAnimationFrame(updateCounter);
+          });
+        }
+      });
+    </script>
+ 
  </body>
  </html>
