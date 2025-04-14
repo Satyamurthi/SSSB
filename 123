@@ -376,3 +376,34 @@
      </div>
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+
+         <section class="py-20 bg-primary text-white">
+             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                 <div class="text-center mb-16">
+                     <h2 class="text-3xl font-bold mb-4">By the Numbers</h2>
+                     <p class="text-white/80 max-w-2xl mx-auto">Our impact in numbers reflects our commitment to excellence in education and research.</p>
+                 </div>
+ 
+                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                     <div class="text-center stats-counter">
+                         <div class="text-4xl font-bold mb-2" data-target="1000">0</div>
+                         <p class="text-white/80">Students Enrolled</p>
+                     </div>
+                     <div class="text-center stats-counter">
+                         <div class="text-4xl font-bold mb-2" data-target="30">0</div>
+                         <p class="text-white/80">Faculty Members</p>
+                     </div>
+                     <div class="text-center stats-counter">
+                         <div class="text-4xl font-bold mb-2" data-target="4">0</div>
+                         <p class="text-white/80">Academic Programs</p>
+                     </div>
+                     <div class="text-center stats-counter">
+                         <div class="text-4xl font-bold mb-2" data-target="98">0</div>
+                         <p class="text-white/80">Passing Rate</p>
+                     </div>
+                 </div>
+             </div>
+         </section>
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
