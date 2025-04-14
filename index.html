@@ -815,78 +815,72 @@
 	
 	 
 	     <script>
-		     
-	         document.addEventListener('DOMContentLoaded', function() {
-	             const backToTop = document.getElementById('back-to-top');
-	             const toast = document.getElementById('toast');
-	             const newsletterForm = document.getElementById('newsletter-form');
-	             const statsCounters = document.querySelectorAll('.stats-counter');
-	             let countersStarted = false;
-	 
-	             window.addEventListener('scroll', () => {
-	                 if (window.pageYOffset > 300) {
-	                     backToTop.classList.remove('opacity-0', 'invisible');
-	                 } else {
-	                     backToTop.classList.add('opacity-0', 'invisible');
-	                 }
-	 
-	                 const statsSection = document.querySelector('.stats-counter').parentElement.parentElement;
-	                 const statsSectionTop = statsSection.offsetTop;
-	                 const statsSectionHeight = statsSection.offsetHeight;
-	                 const windowHeight = window.innerHeight;
-	                 const scrollPosition = window.pageYOffset;
-	 
-	                 if (!countersStarted && scrollPosition > statsSectionTop - windowHeight + statsSectionHeight / 2) {
-	                     startCounters();
-	                     countersStarted = true;
-	                 }
-	             });
-	 
-	             backToTop.addEventListener('click', () => {
-	                 window.scrollTo({
-	                     top: 0,
-	                     behavior: 'smooth'
-	                 });
-	             });
-	 
-	             newsletterForm.addEventListener('submit', (e) => {
-	                 e.preventDefault();
-	                 const email = e.target.querySelector('input[type="email"]');
-	                 if (email.value) {
-	                     showToast();
-	                     email.value = '';
-	                 }
-	             });
-	 
-	             function showToast() {
-	                 toast.classList.add('show');
-	                 setTimeout(() => {
-	                     toast.classList.remove('show');
-	                 }, 3000);
-	             }
-	 
-	             function startCounters() {
-	                 statsCounters.forEach(counter => {
-	                     counter.classList.add('visible');
-	                     const target = parseInt(counter.querySelector('div').dataset.target);
-	                     const duration = 2000;
-	                     const increment = target / (duration / 16);
-	                     let current = 0;
-	 
-	                     const updateCounter = () => {
-	                         current += increment;
-	                         if (current < target) {
-	                             counter.querySelector('div').textContent = Math.round(current);
-	                             requestAnimationFrame(updateCounter);
-	                         } else {
-	                             counter.querySelector('div').textContent = target;
-	                         }
-	                     };
-	 
-	                     requestAnimationFrame(updateCounter);
-	                 });
-	             }
-	         });
-	     </script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const backToTop = document.getElementById("back-to-top");
+        const toast = document.getElementById("toast");
+        const newsletterForm = document.getElementById("newsletter-form");
+        const statsCounters = document.querySelectorAll(".stats-counter");
+        let countersStarted = false;
+        window.addEventListener("scroll", () => {
+          if (window.pageYOffset > 300) {
+            backToTop.classList.remove("opacity-0", "invisible");
+          } else {
+            backToTop.classList.add("opacity-0", "invisible");
+          }
+          const statsSection =
+            document.querySelector(".stats-counter").parentElement.parentElement;
+          const statsSectionTop = statsSection.offsetTop;
+          const statsSectionHeight = statsSection.offsetHeight;
+          const windowHeight = window.innerHeight;
+          const scrollPosition = window.pageYOffset;
+          if (
+            !countersStarted &&
+            scrollPosition > statsSectionTop - windowHeight + statsSectionHeight / 2
+          ) {
+            startCounters();
+            countersStarted = true;
+          }
+        });
+        backToTop.addEventListener("click", () => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+        newsletterForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const email = e.target.querySelector('input[type="email"]');
+          if (email.value) {
+            showToast();
+            email.value = "";
+          }
+        });
+        function showToast() {
+          toast.classList.add("show");
+          setTimeout(() => {
+            toast.classList.remove("show");
+          }, 3000);
+        }
+        function startCounters() {
+          statsCounters.forEach((counter) => {
+            counter.classList.add("visible");
+            const target = parseInt(counter.querySelector("div").dataset.target);
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
+            const updateCounter = () => {
+              current += increment;
+              if (current < target) {
+                counter.querySelector("div").textContent = Math.round(current);
+                requestAnimationFrame(updateCounter);
+              } else {
+                counter.querySelector("div").textContent = target;
+              }
+            };
+            requestAnimationFrame(updateCounter);
+          });
+        }
+      });
+    </script>
  </body>
  </html>
