@@ -1,317 +1,706 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sri Sathya Sai Baba Pre-University College</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campus Life - Horizon University</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-	
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#1B3764',
-                        secondary: '#DAA520'
-                    },
-                    borderRadius: {
-                        'none': '0px',
-                        'sm': '4px',
-                        DEFAULT: '8px',
-                        'md': '12px',
-                        'lg': '16px',
-                        'xl': '20px',
-                        '2xl': '24px',
-                        '3xl': '32px',
-                        'full': '9999px',
-                        'button': '8px'
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1B3764",
+              secondary: "#DAA520",
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <style>
-        :where([class^="ri-"])::before { content: "\f3c2"; }
-        
-        .nav-link {
-            position: relative;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 0;
-            background-color: #1B3764;
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        
-        .stats-counter {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        
-        .stats-counter.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .program-card {
-            perspective: 1000px;
-            transition: transform 0.6s;
-        }
-        
-        .program-card:hover {
-            transform: scale(1.02);
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .fade-in {
-            animation: fadeIn 0.6s ease forwards;
-        }
-
-        .search-expand {
-            transition: width 0.3s ease;
-        }
-
-        .search-expand:focus {
-            width: 300px;
-        }
-
-        .toast {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            transform: translateY(100px);
-            transition: transform 0.3s ease;
-        }
-
-        .toast.show {
-            transform: translateY(0);
-        }
-
-
-	   .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
-        }
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      .gallery-track {
+      transition: transform 0.5s ease-in-out;
+      }
+      .gallery-item {
+      opacity: 0.8;
+      transition: opacity 0.3s ease;
+      }
+      .gallery-item:hover {
+      opacity: 1;
+      }
+      .gallery-tab.active {
+      position: relative;
+      }
+      .gallery-tab.active::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 2px;
+      background-color: #fff;
+      border-radius: 2px;
+      }
+      .nav-link {
+      position: relative;
+      }
+      .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #1B3764;
+      transition: width 0.3s ease;
+      }
+      .nav-link:hover::after {
+      width: 100%;
+      }
+      .stats-counter {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+      .stats-counter.visible {
+      opacity: 1;
+      transform: translateY(0);
+      }
+      .program-card {
+      perspective: 1000px;
+      transition: transform 0.6s;
+      }
+      .program-card:hover {
+      transform: scale(1.02);
+      }
+      @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+      }
+      .fade-in {
+      animation: fadeIn 0.6s ease forwards;
+      }
+      .search-expand {
+      transition: width 0.3s ease;
+      }
+      .search-expand:focus {
+      width: 300px;
+      }
+      .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      transform: translateY(100px);
+      transition: transform 0.3s ease;
+      }
+      .toast.show {
+      transform: translateY(0);
+      }
     </style>
-</head>
-<body class="bg-white">
+  </head>
+  <body class="bg-white">
     <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+
+      <!-- LEFT SECTION: Hamburger + Left Logo -->
+      <div class="flex items-center space-x-4">
+        <!-- Hamburger for Mobile -->
+        <div class="md:hidden">
+          <button id="mobile-menu-toggle" class="text-gray-700 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+        <!-- Left Logo -->
+        <a href="#"><img src="sai baba photo png.png" style="height: 50px;"></a>
+      </div>
+
+      <!-- CENTER (Only visible on desktop) -->
+      <div class="hidden md:flex space-x-8 items-center">
+        <a href="index.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Home</a>
+        <a href="Academics.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Academics</a>
+        <a href="Gallery.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Gallery</a>
+        <a href="Campus-Life.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Campus Life</a>
+        <!--<a href="Research.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Donations</a>-->
+        <a href="About.html" class="nav-link text-gray-700 hover:text-primary transition-colors">About</a>
+        <a href="#">
+          <button class="bg-primary text-white px-4 py-2 rounded-button hover:bg-primary/90 transition-colors">
+           FOR ADMISSIONS
+          </button>
+        </a>
+      </div>
+
+      <!-- RIGHT SECTION: Right Logo -->
+      <div class="flex items-center">
+        <a href="#">
+          <img src="https://github.com/Satyamurthi/mbw-Photos/blob/main/Copy%20of%20sai%20school%20logo%20png.png?raw=true" style="height: 50px;">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu (Right side, half width + half height) -->
+<!-- Mobile Menu (Left Side) -->
+<div id="mobile-menu" class="fixed top-0 left-0 w-1/2 h-1/2 bg-white z-40 shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden rounded-br-2xl border-r border-b">
+  <div class="flex flex-col p-4 space-y-4 h-full">
+    <!-- Close Button -->
+    <button id="close-mobile-menu" class="self-end text-gray-600 text-2xl font-bold">&times;</button>
+
+    <!-- Links -->
+    <a href="index.html" class="text-gray-700 hover:text-primary">Home</a>
+    <a href="Academics.html" class="text-gray-700 hover:text-primary">Academics</a>
+    <a href="Gallery.html" class="text-gray-700 hover:text-primary">Gallery</a>
+    <a href="Campus-Life.html" class="text-gray-700 hover:text-primary">Campus Life</a>
+    <!--<a href="Research.html" class="text-gray-700 hover:text-primary">Donations</a>-->
+    <a href="About.html" class="text-gray-700 hover:text-primary">About</a>
+    <a href="#">
+      <button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90 transition-colors">
+        FOR ADMISSIONS
+      </button>
+    </a>
+  </div>
+</div>
+
+</nav>
+
+
+
+<script>
+  const toggleBtn = document.getElementById('mobile-menu-toggle');
+  const closeBtn = document.getElementById('close-mobile-menu');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  toggleBtn.addEventListener('click', () => {
+    mobileMenu.classList.remove('-translate-x-full');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    mobileMenu.classList.add('-translate-x-full');
+  });
+</script>
+   <main class="pt-16">
+      <section
+        class="relative h-[500px] flex items-center overflow-hidden"
+        style="background-image: url('https://readdy.ai/api/search-image?query=vibrant%20university%20campus%20life%20scene%20with%20diverse%20students%20walking%20and%20socializing%20in%20a%20modern%20campus%20setting%2C%20beautiful%20architecture%2C%20natural%20lighting%2C%20professional%20photography%2C%20high%20end&width=1920&height=1080&orientation=landscape'); background-size: cover; background-position: center;"
+      >
+        <div class="absolute inset-0 bg-black/40"></div>
+        <div
+          class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white"
+        >
+          <h1 class="text-5xl font-bold mb-6">Campus Life at Horizon</h1>
+          <p class="text-xl mb-8 max-w-2xl mx-auto">
+            Experience a vibrant and diverse community where learning extends
+            beyond the classroom.
+          </p>
+        </div>
+      </section>
+      <section class="py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <a href="#"><img src="sai baba photo png.png" style="height: 50px;"></a>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                Student Life & Community
+              </h2>
+              <p class="text-gray-600 mb-6">
+                At Horizon University, campus life is about more than just
+                academics. It's about building lifelong friendships, discovering
+                new passions, and growing as an individual. Our vibrant
+                community offers countless opportunities for engagement,
+                leadership, and personal growth.
+              </p>
+              <div class="space-y-4">
+                <div class="flex items-start">
+                  <div
+                    class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full shrink-0"
+                  >
+                    <i class="ri-team-line text-primary text-2xl"></i>
+                  </div>
+                  <div class="ml-4">
+                    <h3 class="text-lg font-semibold mb-2">
+                      100+ Student Organizations
+                    </h3>
+                    <p class="text-gray-600">
+                      Join clubs and organizations that match your interests and
+                      passions.
+                    </p>
+                  </div>
                 </div>
-                
-                <div class="hidden md:flex space-x-8">
-                    <a href="index.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Home</a>
-                    <a href="Academics.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Academics</a>
-                    <a href="Admissions.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Admissions</a>
-                    <a href="Campus-Life.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Campus Life</a>
-                    <a href="Research.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Donatioms</a>
-                    <a href="About.html" class="nav-link text-gray-700 hover:text-primary transition-colors">About</a>
-                    <!-- <a href="index.html" class="nav-link">Home</a>
-                    <a href="Academics.html" class="nav-link">Academics</a>
-                    <a href="Admissions.html" class="nav-link">Admissions</a>
-                    <a href="Campus-Life.html" class="nav-link">Campus Life</a>
-                    <a href="About.html" class="nav-link">About</a>-->
+                <div class="flex items-start">
+                  <div
+                    class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full shrink-0"
+                  >
+                    <i class="ri-calendar-event-line text-primary text-2xl"></i>
+                  </div>
+                  <div class="ml-4">
+                    <h3 class="text-lg font-semibold mb-2">
+                      Regular Campus Events
+                    </h3>
+                    <p class="text-gray-600">
+                      Participate in cultural festivals, academic conferences,
+                      and social gatherings.
+                    </p>
+                  </div>
                 </div>
-
-                <div class="flex items-left space-x-4">
-                    <!--<div class="relative">
-                        <input type="text" placeholder="Search..." class="search-expand w-40 px-4 py-2 rounded-full border border-gray-200 focus:outline-none focus:border-primary text-sm">
-                        <i class="ri-search-line absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
-                    </div>-->
-                 <a href="#">   <button class="bg-primary text-white px-6 py-2 rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">
-                        Register
-                    </button></a>
+                <div class="flex items-start">
+                  <div
+                    class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full shrink-0"
+                  >
+                    <i class="ri-medal-line text-primary text-2xl"></i>
+                  </div>
+                  <div class="ml-4">
+                    <h3 class="text-lg font-semibold mb-2">
+                      Leadership Opportunities
+                    </h3>
+                    <p class="text-gray-600">
+                      Develop leadership skills through student government and
+                      organization roles.
+                    </p>
+                  </div>
                 </div>
+              </div>
             </div>
+            <div class="relative h-[600px] rounded-lg overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=diverse%20group%20of%20university%20students%20engaging%20in%20campus%20activities%2C%20modern%20university%20setting%2C%20natural%20lighting%2C%20candid%20moments&width=800&height=1000&orientation=portrait"
+                alt="Student Life"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+            </div>
+          </div>
         </div>
-    </nav>
-    
-    <section id="activities">
-        <h2>Student Activities</h2>
-        <p>Explore a variety of extracurricular activities, from sports to cultural organizations, to enrich your campus experience.</p>
-    </section>
-    
-    <section id="housing">
-        <h2>Housing</h2>
-        <p>Find comfortable and convenient on-campus housing options that cater to different student needs.</p>
-    </section>
-    
-    <section id="dining">
-        <h2>Dining</h2>
-        <p>Enjoy diverse and nutritious meal options available in dining halls and cafes across campus.</p>
-    </section>
-    
-    <section id="events">
-        <h2>Events</h2>
-        <p>Stay updated with the latest campus events, including academic workshops, social gatherings, and concerts.</p>
-    </section>
-    
-    <section id="clubs">
-        <h2>Clubs</h2>
-        <p>Join student-run clubs and organizations that align with your interests and passions.</p>
-    </section>
-    
-   <footer class="bg-gray-900 text-white py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div>
-                <!--<a href="#" class="text-2xl font-['Pacifico'] text-white mb-4 block">logo</a>-->
-                <img src="sai baba photo png.png" alt="Logo" class="w-24 h-auto mb-4 block"> 
-                <p class="text-gray-400 mb-4">Shaping tomorrow's leaders through excellence in education, research, and innovation.</p>
-                <div class="flex space-x-4">
-                    <a href="https://www.facebook.com/people/Sathya-Sai-Baba-Puc/pfbid02EXmmdXSUpaZJE3uH5zdoHTGTsfFPjy5RK5Z6dUJ55skrdtPwmWgYpTbHbh7RwcfZl" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="ri-facebook-fill text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="ri-twitter-fill text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="ri-instagram-fill text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="ri-linkedin-fill text-xl"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div>
-                <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-                <ul class="space-y-2">
-                    <li><a href="About.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
-                    <li><a href="Academics.html" class="text-gray-400 hover:text-white transition-colors">Academics</a></li>
-                    <li><a href="Admissions.html" class="text-gray-400 hover:text-white transition-colors">Admissions</a></li>
-                    <li><a href="Research.html" class="text-gray-400 hover:text-white transition-colors">Research</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Campus Life</a></li>
+      </section>
+      <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+              Campus Facilities
+            </h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+              Explore our state-of-the-art facilities designed to enhance your
+              learning and living experience.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div
+              class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+            >
+              <img
+                src="https://readdy.ai/api/search-image?query=modern%20university%20library%20interior%20with%20students%20studying%2C%20contemporary%20design%2C%20natural%20lighting%2C%20collaborative%20spaces&width=800&height=600&orientation=landscape"
+                alt="Library"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-semibold mb-2">Modern Library</h3>
+                <p class="text-gray-600">
+                  Our library features extensive digital resources, study
+                  spaces, and collaboration areas.
+                </p>
+                <ul class="mt-4 space-y-2">
+                  <li class="flex items-center text-gray-600">
+                    <i class="ri-checkbox-circle-line text-primary mr-2"></i>
+                    24/7 Access
+                  </li>
+                  <li class="flex items-center text-gray-600">
+                    <i class="ri-checkbox-circle-line text-primary mr-2"></i>
+                    Digital Resources
+                  </li>
+                  <li class="flex items-center text-gray-600">
+                    <i class="ri-checkbox-circle-line text-primary mr-2"></i>
+                    Study Rooms
+                  </li>
                 </ul>
+              </div>
             </div>
-            
-            <div>
-                <h3 class="text-lg font-semibold mb-4">Contact</h3>
-                <ul class="space-y-2">
-                    <li class="flex items-center text-gray-400">
-                        <i class="ri-map-pin-line mr-2"></i>
-                        Sri Sathya Sai Baba PU College, 46, 4th Main Rd, 3rd Block, Jayalakshmipuram, Mysuru, Karnataka 570012
-                    </li>
-                    <li class="flex items-center text-gray-400">
-                        <i class="ri-phone-line mr-2"></i>
-                        0821 2410856
-                    </li>
-                    <li class="flex items-center text-gray-400">
-                        <i class="ri-mail-line mr-2"></i>
-                        sssbpucnn0385@gmail.com
-                    </li>
+            <div
+              class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+            >
+              <img
+                src="https://readdy.ai/api/search-image?query=modern%20university%20dormitory%20room%20interior%2C%20comfortable%20living%20space%2C%20well-lit%2C%20contemporary%20furniture&width=800&height=600&orientation=landscape"
+                alt="Housing"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-semibold mb-2">Student Housing</h3>
+                <p class="text-gray-600">
+                  Comfortable and modern residential facilities for both
+                  domestic and international students.
+                </p>
+                <ul class="mt-4 space-y-2">
+                  <li class="flex items-center text-gray-600">
+                    <i class="ri-checkbox-circle-line text-primary mr-2"></i>
+                    Single & Shared Rooms
+                  </li>
+                  <li class="flex items-center text-gray-600">
+                    <i class="ri-checkbox-circle-line text-primary mr-2"></i>
+                    Common Areas
+                  </li>
+                  <li class="flex items-center text-gray-600">
+                    <i class="ri-checkbox-circle-line text-primary mr-2"></i>
+                    24/7 Security
+                  </li>
                 </ul>
+              </div>
             </div>
+            <div
+              class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+            >
+              <img
+                src="https://readdy.ai/api/search-image?query=modern%20university%20recreation%20center%20with%20fitness%20equipment%2C%20sports%20facilities%2C%20bright%20and%20spacious%20interior&width=800&height=600&orientation=landscape"
+                alt="Recreation"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-6">
+                <h3 class="text-xl font-semibold mb-2">Recreation Center</h3>
+                <p class="text-gray-600">
+                  State-of-the-art facilities for sports, fitness, and
+                  recreational activities.
+                </p>
+                <ul class="mt-4 space-y-2">
+                  <li class="flex items-center text-gray-600">
+                    <i class="ri-checkbox-circle-line text-primary mr-2"></i>
+                    Fitness Center
+                  </li>
+                  <li class="flex items-center text-gray-600">
+                    <i class="ri-checkbox-circle-line text-primary mr-2"></i>
+                    Indoor Courts
+                  </li>
+                  <li class="flex items-center text-gray-600">
+                    <i class="ri-checkbox-circle-line text-primary mr-2"></i>
+                    Swimming Pool
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
-        
-        <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-            <p>&copy; 2025 SSSBPUC. All rights reserved.</p>
+      </section>
+      <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+              Student Activities
+            </h2>
+            <p class="text-gray-600 max-w-2xl mx-auto">
+              Get involved in our diverse range of activities and events
+              throughout the year.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="relative group overflow-hidden rounded-lg">
+              <img
+                src="https://readdy.ai/api/search-image?query=university%20cultural%20festival%20celebration%2C%20students%20performing%2C%20colorful%20decorations%2C%20vibrant%20atmosphere&width=600&height=600&orientation=squarish"
+                alt="Cultural Events"
+                class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-center p-4"
+              >
+                <div>
+                  <h3 class="text-white text-lg font-semibold mb-2">
+                    Cultural Events
+                  </h3>
+                  <p class="text-white/80 text-sm">
+                    Celebrate diversity through festivals and performances
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="relative group overflow-hidden rounded-lg">
+              <img
+                src="https://readdy.ai/api/search-image?query=university%20sports%20team%20playing%2C%20competitive%20atmosphere%2C%20athletic%20facilities%2C%20team%20spirit&width=600&height=600&orientation=squarish"
+                alt="Sports"
+                class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-center p-4"
+              >
+                <div>
+                  <h3 class="text-white text-lg font-semibold mb-2">
+                    Sports & Athletics
+                  </h3>
+                  <p class="text-white/80 text-sm">
+                    Compete in varsity and intramural sports
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="relative group overflow-hidden rounded-lg">
+              <img
+                src="https://readdy.ai/api/search-image?query=university%20club%20meeting%2C%20students%20collaborating%2C%20creative%20workspace%2C%20engaged%20discussion&width=600&height=600&orientation=squarish"
+                alt="Clubs"
+                class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-center p-4"
+              >
+                <div>
+                  <h3 class="text-white text-lg font-semibold mb-2">
+                    Clubs & Organizations
+                  </h3>
+                  <p class="text-white/80 text-sm">
+                    Join interest-based and professional clubs
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="relative group overflow-hidden rounded-lg">
+              <img
+                src="https://readdy.ai/api/search-image?query=university%20volunteer%20event%2C%20students%20helping%20community%2C%20social%20service%2C%20teamwork&width=600&height=600&orientation=squarish"
+                alt="Community Service"
+                class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+              />
+              <div
+                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-center p-4"
+              >
+                <div>
+                  <h3 class="text-white text-lg font-semibold mb-2">
+                    Community Service
+                  </h3>
+                  <p class="text-white/80 text-sm">
+                    Make an impact through volunteer work
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-</footer>
-
-
-    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300">
-        <i class="ri-arrow-up-line text-xl"></i>
-    </button>
-
-    <div id="toast" class="toast bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg">
-        <p class="text-sm">Successfully subscribed to newsletter!</p>
-    </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const backToTop = document.getElementById('back-to-top');
-            const toast = document.getElementById('toast');
-            const newsletterForm = document.getElementById('newsletter-form');
-            const statsCounters = document.querySelectorAll('.stats-counter');
-            let countersStarted = false;
-
-            window.addEventListener('scroll', () => {
-                if (window.pageYOffset > 300) {
-                    backToTop.classList.remove('opacity-0', 'invisible');
-                } else {
-                    backToTop.classList.add('opacity-0', 'invisible');
-                }
-
-                const statsSection = document.querySelector('.stats-counter').parentElement.parentElement;
-                const statsSectionTop = statsSection.offsetTop;
-                const statsSectionHeight = statsSection.offsetHeight;
-                const windowHeight = window.innerHeight;
-                const scrollPosition = window.pageYOffset;
-
-                if (!countersStarted && scrollPosition > statsSectionTop - windowHeight + statsSectionHeight / 2) {
-                    startCounters();
-                    countersStarted = true;
-                }
-            });
-
-            backToTop.addEventListener('click', () => {
-                window.scrollTo({
-                    top: 0,
-                    behavior: 'smooth'
-                });
-            });
-
-            newsletterForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                const email = e.target.querySelector('input[type="email"]');
-                if (email.value) {
-                    showToast();
-                    email.value = '';
-                }
-            });
-
-            function showToast() {
-                toast.classList.add('show');
-                setTimeout(() => {
-                    toast.classList.remove('show');
-                }, 3000);
-            }
-
-            function startCounters() {
-                statsCounters.forEach(counter => {
-                    counter.classList.add('visible');
-                    const target = parseInt(counter.querySelector('div').dataset.target);
-                    const duration = 2000;
-                    const increment = target / (duration / 16);
-                    let current = 0;
-
-                    const updateCounter = () => {
-                        current += increment;
-                        if (current < target) {
-                            counter.querySelector('div').textContent = Math.round(current);
-                            requestAnimationFrame(updateCounter);
-                        } else {
-                            counter.querySelector('div').textContent = target;
-                        }
-                    };
-
-                    requestAnimationFrame(updateCounter);
-                });
-            }
-        });
-    </script>
-</body>
-</html>
+      </section>
+      <section class="py-20 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 class="text-3xl font-bold mb-6">Student Support Services</h2>
+              <p class="mb-8">
+                We're committed to supporting your success and well-being
+                throughout your academic journey.
+              </p>
+              <div class="space-y-6">
+                <div class="flex items-start">
+                  <div
+                    class="w-12 h-12 flex items-center justify-center bg-white/10 rounded-full shrink-0"
+                  >
+                    <i class="ri-mental-health-line text-2xl"></i>
+                  </div>
+                  <div class="ml-4">
+                    <h3 class="text-xl font-semibold mb-2">
+                      Health & Wellness
+                    </h3>
+                    <p class="text-white/80">
+                      Access to medical care, counseling, and wellness programs.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-12 h-12 flex items-center justify-center bg-white/10 rounded-full shrink-0"
+                  >
+                    <i class="ri-graduation-cap-line text-2xl"></i>
+                  </div>
+                  <div class="ml-4">
+                    <h3 class="text-xl font-semibold mb-2">Academic Support</h3>
+                    <p class="text-white/80">
+                      Tutoring, writing center, and academic advising services.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-12 h-12 flex items-center justify-center bg-white/10 rounded-full shrink-0"
+                  >
+                    <i class="ri-briefcase-line text-2xl"></i>
+                  </div>
+                  <div class="ml-4">
+                    <h3 class="text-xl font-semibold mb-2">Career Services</h3>
+                    <p class="text-white/80">
+                      Career counseling, job fairs, and internship
+                      opportunities.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="relative h-[500px] rounded-lg overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=university%20student%20services%20center%2C%20modern%20interior%2C%20students%20receiving%20assistance%2C%20professional%20environment&width=800&height=1000&orientation=portrait"
+                alt="Student Services"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+   </main>
+	  
+		  
+           <footer class="bg-gray-900 text-white py-16">
+     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+             <div>
+                 <!--<a href="#" class="text-2xl font-['Pacifico'] text-white mb-4 block">logo</a>-->
+                 <img src="sai baba photo png.png" alt="Logo" class="w-24 h-auto mb-4 block"> 
+                 <p class="text-gray-400 mb-4">Shaping tomorrow's leaders through excellence in education, research, and innovation.</p>
+                 <div class="flex space-x-4">
+                     <a href="https://www.facebook.com/people/Sathya-Sai-Baba-Puc/pfbid02EXmmdXSUpaZJE3uH5zdoHTGTsfFPjy5RK5Z6dUJ55skrdtPwmWgYpTbHbh7RwcfZl" class="text-gray-400 hover:text-white transition-colors">
+                         <i class="ri-facebook-fill text-xl"></i>
+                     </a>
+                     <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                         <i class="ri-twitter-fill text-xl"></i>
+                     </a>
+                     <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                         <i class="ri-instagram-fill text-xl"></i>
+                     </a>
+                     <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                         <i class="ri-linkedin-fill text-xl"></i>
+                     </a>
+                 </div>
+             </div>
+ 
+             <div>
+                 <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                 <ul class="space-y-2">
+                     <li><a href="About.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                     <li><a href="Academics.html" class="text-gray-400 hover:text-white transition-colors">Academics</a></li>
+                     <li><a href="Admissions.html" class="text-gray-400 hover:text-white transition-colors">Admissions</a></li>
+                     <li><a href="Research.html" class="text-gray-400 hover:text-white transition-colors">Research</a></li>
+                     <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Campus Life</a></li>
+                 </ul>
+             </div>
+ 
+             <div>
+                 <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                 <ul class="space-y-2">
+                     <li class="flex items-center text-gray-400">
+                         <i class="ri-map-pin-line mr-2"></i>
+                         Sri Sathya Sai Baba PU College, 46, 4th Main Rd, 3rd Block, Jayalakshmipuram, Mysuru, Karnataka 570012
+                     </li>
+                     <li class="flex items-center text-gray-400">
+                         <i class="ri-phone-line mr-2"></i>
+                         0821 2410856
+                     </li>
+                     <li class="flex items-center text-gray-400">
+                         <i class="ri-mail-line mr-2"></i>
+                         sssbpucnn0385@gmail.com
+                     </li>
+                 </ul>
+             </div>
+         </div>
+ 
+         <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+             <p>&copy; 2025 SSSBPUC. All rights reserved.</p>
+         </div>
+     </div>
+ </footer>
+ 
+ 
+     <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300">
+         <i class="ri-arrow-up-line text-xl"></i>
+     </button>
+ 
+     <div id="toast" class="toast bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg">
+         <p class="text-sm">Successfully subscribed to newsletter!</p>
+     </div>
+ 
+     <script>
+	     
+         document.addEventListener('DOMContentLoaded', function() {
+             const backToTop = document.getElementById('back-to-top');
+             const toast = document.getElementById('toast');
+             const newsletterForm = document.getElementById('newsletter-form');
+             const statsCounters = document.querySelectorAll('.stats-counter');
+             let countersStarted = false;
+ 
+             window.addEventListener('scroll', () => {
+                 if (window.pageYOffset > 300) {
+                     backToTop.classList.remove('opacity-0', 'invisible');
+                 } else {
+                     backToTop.classList.add('opacity-0', 'invisible');
+                 }
+ 
+                 const statsSection = document.querySelector('.stats-counter').parentElement.parentElement;
+                 const statsSectionTop = statsSection.offsetTop;
+                 const statsSectionHeight = statsSection.offsetHeight;
+                 const windowHeight = window.innerHeight;
+                 const scrollPosition = window.pageYOffset;
+ 
+                 if (!countersStarted && scrollPosition > statsSectionTop - windowHeight + statsSectionHeight / 2) {
+                     startCounters();
+                     countersStarted = true;
+                 }
+             });
+ 
+             backToTop.addEventListener('click', () => {
+                 window.scrollTo({
+                     top: 0,
+                     behavior: 'smooth'
+                 });
+             });
+ 
+             newsletterForm.addEventListener('submit', (e) => {
+                 e.preventDefault();
+                 const email = e.target.querySelector('input[type="email"]');
+                 if (email.value) {
+                     showToast();
+                     email.value = '';
+                 }
+             });
+ 
+             function showToast() {
+                 toast.classList.add('show');
+                 setTimeout(() => {
+                     toast.classList.remove('show');
+                 }, 3000);
+             }
+ 
+             function startCounters() {
+                 statsCounters.forEach(counter => {
+                     counter.classList.add('visible');
+                     const target = parseInt(counter.querySelector('div').dataset.target);
+                     const duration = 2000;
+                     const increment = target / (duration / 16);
+                     let current = 0;
+ 
+                     const updateCounter = () => {
+                         current += increment;
+                         if (current < target) {
+                             counter.querySelector('div').textContent = Math.round(current);
+                             requestAnimationFrame(updateCounter);
+                         } else {
+                             counter.querySelector('div').textContent = target;
+                         }
+                     };
+ 
+                     requestAnimationFrame(updateCounter);
+                 });
+             }
+         });
+     </script>
+ </body>
+ </html>
