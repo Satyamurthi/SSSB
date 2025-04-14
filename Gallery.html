@@ -192,133 +192,152 @@
 
 </nav>
     <main class="pt-16">
-      <section class="py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Gallery</h2>
-            <div class="flex justify-center space-x-4 mb-8">
-              <button
-                class="gallery-tab active bg-primary text-white px-6 py-2 rounded-full hover:bg-primary/90 transition-colors"
-                data-tab="primary"
-              >
-                Primary
-              </button>
-              <button
-                class="gallery-tab bg-gray-200 text-gray-700 px-6 py-2 rounded-full hover:bg-gray-300 transition-colors"
-                data-tab="school"
-              >
-                School
-              </button>
-              <button
-                class="gallery-tab bg-gray-200 text-gray-700 px-6 py-2 rounded-full hover:bg-gray-300 transition-colors"
-                data-tab="college"
-              >
-                PU College
-              </button>
+  <section class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Gallery</h2>
+        <div class="flex flex-wrap justify-center gap-4 mb-8">
+          <button
+            class="gallery-tab active bg-primary text-white px-6 py-2 rounded-full hover:bg-primary/90 transition-colors"
+            data-tab="primary"
+          >
+            Primary
+          </button>
+          <button
+            class="gallery-tab bg-gray-200 text-gray-700 px-6 py-2 rounded-full hover:bg-gray-300 transition-colors"
+            data-tab="school"
+          >
+            School
+          </button>
+          <button
+            class="gallery-tab bg-gray-200 text-gray-700 px-6 py-2 rounded-full hover:bg-gray-300 transition-colors"
+            data-tab="college"
+          >
+            PU College
+          </button>
+        </div>
+      </div>
+
+      <!-- Primary Gallery -->
+      <div class="gallery-content" id="primary-gallery">
+        <div class="gallery-slider overflow-hidden">
+          <div class="gallery-track flex flex-wrap justify-center">
+            <!-- Primary Images -->
+            <div class="gallery-item w-full sm:w-1/2 lg:w-1/3 p-4">
+              <img
+                src="https://readdy.ai/api/search-image?query=primary%20school%20classroom%20with%20young%20students&width=800&height=600&orientation=landscape"
+                class="w-full h-64 object-cover rounded-lg shadow-md"
+                alt="Primary Education"
+              />
             </div>
-          </div>
-          <div class="gallery-content" id="primary-gallery">
-            <div class="gallery-slider overflow-hidden">
-              <div class="gallery-track flex transition-transform duration-500">
-                <div
-                  class="gallery-item w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-4"
-                >
-                  <img
-                    src="https://readdy.ai/api/search-image?query=primary%20school%20classroom%20with%20young%20students%20engaged%20in%20interactive%20learning%2C%20colorful%20educational%20materials%2C%20modern%20teaching%20aids%2C%20natural%20lighting&width=800&height=600&orientation=landscape"
-                    class="w-full h-64 object-cover rounded-lg shadow-md"
-                    alt="Primary Education"
-                  />
-                </div>
-                <div
-                  class="gallery-item w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-4"
-                >
-                  <img
-                    src="https://readdy.ai/api/search-image?query=primary%20school%20students%20in%20science%20lab%20conducting%20simple%20experiments%2C%20hands-on%20learning%20environment%2C%20safety%20equipment&width=800&height=600&orientation=landscape"
-                    class="w-full h-64 object-cover rounded-lg shadow-md"
-                    alt="Primary Science Lab"
-                  />
-                </div>
-                <div
-                  class="gallery-item w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-4"
-                >
-                  <img
-                    src="https://readdy.ai/api/search-image?query=primary%20school%20playground%20with%20modern%20equipment%2C%20children%20playing%20safely%2C%20outdoor%20learning%20spaces&width=800&height=600&orientation=landscape"
-                    class="w-full h-64 object-cover rounded-lg shadow-md"
-                    alt="Primary Playground"
-                  />
-                </div>
-              </div>
+            <div class="gallery-item w-full sm:w-1/2 lg:w-1/3 p-4">
+              <img
+                src="https://readdy.ai/api/search-image?query=primary%20school%20students%20in%20science%20lab&width=800&height=600&orientation=landscape"
+                class="w-full h-64 object-cover rounded-lg shadow-md"
+                alt="Primary Science Lab"
+              />
             </div>
-          </div>
-          <div class="gallery-content hidden" id="school-gallery">
-            <div class="gallery-slider overflow-hidden">
-              <div class="gallery-track flex transition-transform duration-500">
-                <div
-                  class="gallery-item w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-4"
-                >
-                  <img
-                    src="https://readdy.ai/api/search-image?query=high%20school%20students%20in%20advanced%20computer%20lab%2C%20modern%20technology%2C%20collaborative%20learning%20environment&width=800&height=600&orientation=landscape"
-                    class="w-full h-64 object-cover rounded-lg shadow-md"
-                    alt="School Computer Lab"
-                  />
-                </div>
-                <div
-                  class="gallery-item w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-4"
-                >
-                  <img
-                    src="https://readdy.ai/api/search-image?query=high%20school%20sports%20field%20with%20students%20playing%20various%20sports%2C%20professional%20equipment%2C%20coaching%20sessions&width=800&height=600&orientation=landscape"
-                    class="w-full h-64 object-cover rounded-lg shadow-md"
-                    alt="School Sports"
-                  />
-                </div>
-                <div
-                  class="gallery-item w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-4"
-                >
-                  <img
-                    src="https://readdy.ai/api/search-image?query=high%20school%20library%20with%20students%20studying%2C%20modern%20learning%20resources%2C%20digital%20facilities&width=800&height=600&orientation=landscape"
-                    class="w-full h-64 object-cover rounded-lg shadow-md"
-                    alt="School Library"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="gallery-content hidden" id="college-gallery">
-            <div class="gallery-slider overflow-hidden">
-              <div class="gallery-track flex transition-transform duration-500">
-                <div
-                  class="gallery-item w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-4"
-                >
-                  <img
-                    src="https://readdy.ai/api/search-image?query=pre-university%20college%20students%20in%20chemistry%20lab%2C%20advanced%20equipment%2C%20scientific%20experiments&width=800&height=600&orientation=landscape"
-                    class="w-full h-64 object-cover rounded-lg shadow-md"
-                    alt="PU College Lab"
-                  />
-                </div>
-                <div
-                  class="gallery-item w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-4"
-                >
-                  <img
-                    src="https://readdy.ai/api/search-image?query=pre-university%20college%20seminar%20hall%20with%20students%20attending%20lecture%2C%20modern%20audiovisual%20equipment&width=800&height=600&orientation=landscape"
-                    class="w-full h-64 object-cover rounded-lg shadow-md"
-                    alt="PU College Seminar"
-                  />
-                </div>
-                <div
-                  class="gallery-item w-full md:w-1/2 lg:w-1/3 flex-shrink-0 p-4"
-                >
-                  <img
-                    src="https://readdy.ai/api/search-image?query=pre-university%20college%20campus%20with%20modern%20architecture%2C%20student%20facilities%2C%20green%20spaces&width=800&height=600&orientation=landscape"
-                    class="w-full h-64 object-cover rounded-lg shadow-md"
-                    alt="PU College Campus"
-                  />
-                </div>
-              </div>
+            <div class="gallery-item w-full sm:w-1/2 lg:w-1/3 p-4">
+              <img
+                src="https://readdy.ai/api/search-image?query=primary%20school%20playground%20modern%20equipment&width=800&height=600&orientation=landscape"
+                class="w-full h-64 object-cover rounded-lg shadow-md"
+                alt="Primary Playground"
+              />
             </div>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+
+      <!-- School Gallery -->
+      <div class="gallery-content hidden" id="school-gallery">
+        <div class="gallery-slider overflow-hidden">
+          <div class="gallery-track flex flex-wrap justify-center">
+            <!-- School Images -->
+            <div class="gallery-item w-full sm:w-1/2 lg:w-1/3 p-4">
+              <img
+                src="https://readdy.ai/api/search-image?query=high%20school%20students%20in%20computer%20lab&width=800&height=600&orientation=landscape"
+                class="w-full h-64 object-cover rounded-lg shadow-md"
+                alt="School Computer Lab"
+              />
+            </div>
+            <div class="gallery-item w-full sm:w-1/2 lg:w-1/3 p-4">
+              <img
+                src="https://readdy.ai/api/search-image?query=high%20school%20sports%20field%20with%20students&width=800&height=600&orientation=landscape"
+                class="w-full h-64 object-cover rounded-lg shadow-md"
+                alt="School Sports"
+              />
+            </div>
+            <div class="gallery-item w-full sm:w-1/2 lg:w-1/3 p-4">
+              <img
+                src="https://readdy.ai/api/search-image?query=high%20school%20library%20with%20students&width=800&height=600&orientation=landscape"
+                class="w-full h-64 object-cover rounded-lg shadow-md"
+                alt="School Library"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- College Gallery -->
+      <div class="gallery-content hidden" id="college-gallery">
+        <div class="gallery-slider overflow-hidden">
+          <div class="gallery-track flex flex-wrap justify-center">
+            <!-- College Images -->
+            <div class="gallery-item w-full sm:w-1/2 lg:w-1/3 p-4">
+              <img
+                src="https://readdy.ai/api/search-image?query=pre-university%20college%20students%20in%20chemistry%20lab&width=800&height=600&orientation=landscape"
+                class="w-full h-64 object-cover rounded-lg shadow-md"
+                alt="PU College Lab"
+              />
+            </div>
+            <div class="gallery-item w-full sm:w-1/2 lg:w-1/3 p-4">
+              <img
+                src="https://readdy.ai/api/search-image?query=pre-university%20college%20seminar%20hall&width=800&height=600&orientation=landscape"
+                class="w-full h-64 object-cover rounded-lg shadow-md"
+                alt="PU College Seminar"
+              />
+            </div>
+            <div class="gallery-item w-full sm:w-1/2 lg:w-1/3 p-4">
+              <img
+                src="https://readdy.ai/api/search-image?query=pre-university%20college%20campus%20with%20green%20spaces&width=800&height=600&orientation=landscape"
+                class="w-full h-64 object-cover rounded-lg shadow-md"
+                alt="PU College Campus"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const tabs = document.querySelectorAll(".gallery-tab");
+    const contents = document.querySelectorAll(".gallery-content");
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const target = tab.getAttribute("data-tab");
+
+        tabs.forEach((t) => {
+          t.classList.remove("active", "bg-primary", "text-white");
+          t.classList.add("bg-gray-200", "text-gray-700");
+        });
+
+        tab.classList.add("active", "bg-primary", "text-white");
+        tab.classList.remove("bg-gray-200", "text-gray-700");
+
+        contents.forEach((content) => {
+          content.classList.add("hidden");
+        });
+
+        document.getElementById(`${target}-gallery`).classList.remove("hidden");
+      });
+    });
+  });
+</script>
+
   <footer class="bg-gray-900 text-white py-16">
      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
