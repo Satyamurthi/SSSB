@@ -1,1 +1,378 @@
+<!--<nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <!-- Left Section - ->
+      <div class="flex items-center space-x-4">
+        <!-- Left Logo - ->
+        <a href="#">
+          <img src="sai baba photo png.png" style="height: 50px;">
+        </a>
+      </div>
+
+      <!-- Center Navigation (hidden on mobile) - ->
+      <div class="hidden md:flex space-x-8 items-center">
+        <a href="index.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Home</a>
+        <a href="Academics.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Academics</a>
+        <a href="Admissions.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Admissions</a>
+        <a href="Campus-Life.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Campus Life</a>
+        <a href="Research.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Donations</a>
+        <a href="About.html" class="nav-link text-gray-700 hover:text-primary transition-colors">About</a>
+        <a href="#">
+          <button class="bg-primary text-white px-4 py-2 rounded-button hover:bg-primary/90 transition-colors">
+            APPLY FOR ADMISSIONS
+          </button>
+        </a>
+      </div>
+
+      <!-- Right Section - ->
+      <div class="flex items-center space-x-4">
+        <!-- Right Logo (Always Visible) - ->
+        <a href="#">
+          <img src="https://github.com/Satyamurthi/mbw-Photos/blob/main/Copy%20of%20sai%20school%20logo%20png.png?raw=true" style="height: 50px;">
+        </a>
+
+        <!-- Hamburger (Mobile Only) - ->
+        <div class="md:hidden">
+          <button id="mobile-menu-toggle" class="text-gray-700 focus:outline-none">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu - ->
+  <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 bg-white border-t border-gray-200">
+    <a href="index.html" class="block py-2 text-gray-700 hover:text-primary">Home</a>
+    <a href="Academics.html" class="block py-2 text-gray-700 hover:text-primary">Academics</a>
+    <a href="Admissions.html" class="block py-2 text-gray-700 hover:text-primary">Admissions</a>
+    <a href="Campus-Life.html" class="block py-2 text-gray-700 hover:text-primary">Campus Life</a>
+    <a href="Research.html" class="block py-2 text-gray-700 hover:text-primary">Donations</a>
+    <a href="About.html" class="block py-2 text-gray-700 hover:text-primary">About</a>
+    <a href="#" class="block py-2">
+      <button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90 transition-colors">
+        APPLY FOR ADMISSIONS
+      </button>
+    </a>
+  </div>
+</nav>
+
+
+<script>
+  const toggleBtn = document.getElementById('mobile-menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  toggleBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+
+-->
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<section class="py-20 bg-gray-50" >
+ <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+ 	<a href="#" class="block">
+                     <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                         <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                             <i class="ri-book-open-line text-primary text-2xl"></i>
+                         </div>
+                         <h3 class="text-xl font-semibold mb-2">NEET</h3>
+                         <p class="text-gray-600">Achieve Your Medical Dream! ✨<br>
+ 						✅ 4 Hours of Intensive Daily Coaching<br>
+ 						✅ Expert Faculty & Proven Strategies<br>
+ 						✅ 10 Out of 12 Students Qualified!<br>
+ 						✅ Limited Seats - Enroll Now!</p>
+                     </div>
+ 
+ 
+ 
+ 
+ </a>
+ <a href="#" class="block">
+                     <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                         <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                             <i class="ri-user-follow-line text-primary text-2xl"></i>
+                         </div>
+                         <h3 class="text-xl font-semibold mb-2">Admissions</h3>
+                         <p class="text-gray-600">Your journey starts here. Learn about our admission process and requirements.</p>
+                     </div>
+ </a>
+ <a href="#" class="block">
+                     <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                         <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                             <i class="ri-community-line text-primary text-2xl"></i>
+                         </div>
+                         <h3 class="text-xl font-semibold mb-2">Campus Life</h3>
+                         <p class="text-gray-600">Experience a vibrant community with over 100 student organizations.</p>
+                     </div>
+ </a>
+ <a href="#" class="block">
+                     <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                         <div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-full mb-4">
+                             <i class="ri-flask-line text-primary text-2xl"></i>
+                         </div>
+                         <h3 class="text-xl font-semibold mb-2">Donations</h3>
+                         <p class="text-gray-600">The Trust accepts voluntary donations from service minded individuals with gratitude. No amount is too small.</p>
+                     </div>
+ </a>
+                 </div>
+             </div>
+         </section>-->
+ 
+ 
+ <!--<section class="p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+         <div class="card bg-white rounded-2xl p-6 shadow-lg">
+             <img src="/mnt/data/image.png" alt="Headteacher" class="w-full h-40 rounded-xl object-cover mb-4">
+             <h2 class="text-xl font-bold mb-2">Welcome from the Headteacher</h2>
+             <p class="text-gray-600">At Kentwood Academy, our guiding principle is "Aim High, Be Kind, and Dare to be Different."</p>
+             <button class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg">Read More</button>
+         </div>
+ 
+         <div class="card bg-blue-900 text-white rounded-2xl p-6 shadow-lg">
+             <h2 class="text-xl font-bold mb-2">Arrange a Personal Visit</h2>
+             <p>Experience Kentwood Academy firsthand. Tailored to your child's interests and admission stage.</p>
+             <button class="mt-4 px-4 py-2 bg-white text-blue-900 rounded-lg">Arrange a Visit</button>
+         </div>
+ 
+         <div class="card bg-white rounded-2xl p-6 shadow-lg flex justify-center items-center">
+             <img src="/mnt/data/image.png" alt="Logo" class="w-24 h-24">
+         </div>
+ 
+         <div class="card bg-indigo-100 rounded-2xl p-6 shadow-lg">
+             <h2 class="text-xl font-bold mb-2">Admissions</h2>
+             <p>Selecting the ideal educational environment for your child is a significant and profound choice.</p>
+             <button class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg">Read More</button>
+         </div>
+ 
+         <div class="card bg-indigo-100 rounded-2xl p-6 shadow-lg md:col-span-2">
+             <h2 class="text-xl font-bold mb-2">The Ethos and the Environment</h2>
+             <p>At Kentwood Academy, our ethos goes beyond academia. We believe in nurturing the whole child.</p>
+             <button class="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg">Read More</button>
+         </div>
+     </section>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<!-- Labrarories-->
+         <section class="py-20">
+             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                 <div class="text-center mb-16">
+                     <h2 class="text-3xl font-bold text-gray-900 mb-4">----------</h2>
+                     <p class="text-gray-600 max-w-2xl mx-auto">Discover our most popular and innovative academic programs designed to prepare you for success.</p>
+                 </div>
+ 
+                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                     <div class="program-card bg-white rounded-lg overflow-hidden shadow-sm">
+                         <img src="https://github.com/Satyamurthi/mwb.github.io/blob/main/Photos/DSC_4033.jpg?raw=true" alt="Program 1" class="w-full h-48 object-cover">
+                         <div class="p-6">
+                             <div class="flex items-center mb-4">
+                                 <span class="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">Physics Lab</span>
+                                 <span class="ml-2 text-sm text-gray-500"></span>
+                             </div>
+                             <h3 class="text-xl font-semibold mb-2">🌈⃤&nbsp;&nbsp;Physics Lab ⚛️</h3>
+                             <p class="text-gray-600 mb-4">Equipped with advanced apparatus for hands-on experiments. Students explore concepts through practical demonstrations.</p>
+                             <button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">
+                                 Learn More
+                             </button>
+                         </div>
+                     </div> 
+
+                     <div class="program-card bg-white rounded-lg overflow-hidden shadow-sm">
+                         <img src="https://github.com/Satyamurthi/mwb.github.io/blob/main/Photos/DSC_4038.jpg?raw=true" alt="Program 2" class="w-full h-48 object-cover">
+                         <div class="p-6">
+                             <div class="flex items-center mb-4">
+                                 <span class="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">Chemistry Lab</span>
+                                 <span class="ml-2 text-sm text-gray-500"></span>
+                             </div>
+                             <h3 class="text-xl font-semibold mb-2">🧪 Chemistry Lab 👨🏻‍🔬</h3>
+                             <p class="text-gray-600 mb-4">Designed for safe and effective chemical experiments. Students learn concepts with practical applications.</p>
+                             <button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">
+                                 Learn More
+                             </button>
+                         </div>
+                     </div>
+ 
+                     <div class="program-card bg-white rounded-lg overflow-hidden shadow-sm">
+                         <img src="https://github.com/Satyamurthi/mwb.github.io/blob/main/Photos/DSC_4015.jpg?raw=true" alt="Program 2" class="w-full h-48 object-cover">
+                         <div class="p-6">
+                             <div class="flex items-center mb-4">
+                                 <span class="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">Biology Lab</span>
+                                 <span class="ml-2 text-sm text-gray-500"></span>
+                             </div>
+                             <h3 class="text-xl font-semibold mb-2">🌱 Biology Lab 🫁</h3>
+                             <p class="text-gray-600 mb-4">Offers modern tools for studying life sciences. Students perform dissections and observe microscopic life.</p>
+                             <button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">
+                                 Learn More
+                             </button>
+                         </div>
+                     </div>
+ 
+ 
+ 		    <div class="program-card bg-white rounded-lg overflow-hidden shadow-sm">
+                         <img src="https://github.com/Satyamurthi/mwb.github.io/blob/main/Photos/DSC_4006.jpg?raw=true" alt="Program 2" class="w-full h-48 object-cover">
+                         <div class="p-6">
+                             <div class="flex items-center mb-4">
+                                 <span class="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">Computer Science Lab</span>
+                                 <span class="ml-2 text-sm text-gray-500"></span>
+                             </div>
+                             <h3 class="text-xl font-semibold mb-2">💻 Computer Science Lab 🌐</h3>
+                             <p class="text-gray-600 mb-4">Equipped with high-performance computers and software. Students learn programming, coding, and IT skills.</p>
+                             <button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">
+                                 Learn More
+                             </button>
+                         </div>
+                     </div>
+ 
+                     <div class="program-card bg-white rounded-lg overflow-hidden shadow-sm">
+                         <img src="https://github.com/Satyamurthi/mwb.github.io/blob/main/Photos/DSC_4054.jpg?raw=true" alt="Program 2" class="w-full h-48 object-cover">
+                         <div class="p-6">
+                             <div class="flex items-center mb-4">
+                                 <span class="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">Library</span>
+                                 <span class="ml-2 text-sm text-gray-500"></span>
+                             </div>
+                             <h3 class="text-xl font-semibold mb-2">📚 Library 📖</h3>
+                             <p class="text-gray-600 mb-4">A vast collection of books and journals of all Neet JEE and KCET resources. Quiet, conducive space for focused study and research.</p>
+                             <button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">
+                                 Learn More
+                             </button>
+                         </div>
+                     </div>
+ 
+                     <div class="program-card bg-white rounded-lg overflow-hidden shadow-sm">
+                         <img src="https://github.com/Satyamurthi/mwb.github.io/blob/main/Photos/DSC_4015.jpg" alt="Program 3" class="w-full h-48 object-cover">
+                         <div class="p-6">
+                             <div class="flex items-center mb-4">
+                                 <span class="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">Class Room's</span>
+                                 <span class="ml-2 text-sm text-gray-500">6 Years</span>
+                             </div>
+                             <h3 class="text-xl font-semibold mb-2">👨🏻‍🏫 Class Room's 👩‍🏫</h3>
+                             <p class="text-gray-600 mb-4">Smart classrooms with interactive panels for immersive learning. Visual aids enhance understanding and retention of concepts.</p>
+                             <button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">
+                                 Learn More
+                             </button>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </section>
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<section class="py-20 bg-gray-50">
+              <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                  <div class="text-center mb-16">
+                      <h2 class="text-3xl font-bold text-gray-900 mb-4">Sister Institutes</h2>
+                      <p class="text-gray-600 max-w-2xl mx-auto">Discover endless opportunities and shared excellence at our esteemed sister institutions.</p>
+                  </div>
+ 
+                  <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 gap-4">
+              <div class="relative group overflow-hidden rounded-lg flex items-center justify-center h-64 bg-gray-100 col-span-1 mx-auto">
+                  <img src="https://github.com/Satyamurthi/mbw-Photos/blob/main/image.png?raw=true" alt="Campus 1" class="max-w-full max-h-full transition-transform duration-300 group-hover:scale-110">
+                  <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                      <p class="text-white text-center px-4">ALIKE</p>
+                  </div>
+              </div>
+                      <div class="relative group overflow-hidden rounded-lg flex items-center justify-center h-64 bg-gray-100 col-span-1 mx-auto">
+                  <img src="https://github.com/Satyamurthi/mbw-Photos/blob/main/1656521788221.jpeg?raw=true" alt="Campus 2" class="max-w-full max-h-full transition-transform duration-300 group-hover:scale-110">
+                  <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                      <p class="text-white text-center px-4">DHARWAD</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+ 
+ 
+ 
+ 
+ 
+ 
+     
+ 
+    <!-- <footer class="bg-gray-900 text-white py-16">
+         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                 <div>
+                     <!--<a href="#" class="text-2xl font-['Pacifico'] text-white mb-4 block">logo</a>--
+ 		    <img src="sai baba photo png.png" text-2xl text-white mb-4 block></img>
+                     <p class="text-gray-400 mb-4">Shaping tomorrow's leaders through excellence in education, research, and innovation.</p>
+                     <div class="flex space-x-4">
+                         <a href="https://www.facebook.com/people/Sathya-Sai-Baba-Puc/pfbid02EXmmdXSUpaZJE3uH5zdoHTGTsfFPjy5RK5Z6dUJ55skrdtPwmWgYpTbHbh7RwcfZl" class="text-gray-400 hover:text-white transition-colors">
+                             <i class="ri-facebook-fill text-xl"></i>
+                         </a>
+                         <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                             <i class="ri-twitter-fill text-xl"></i>
+                         </a>
+                         <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                             <i class="ri-instagram-fill text-xl"></i>
+                         </a>
+                         <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                             <i class="ri-linkedin-fill text-xl"></i>
+                         </a>
+                     </div>
+                 </div>
+                 
+                 <div>
+                     <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                     <ul class="space-y-2">
+                         <li><a href="#" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                         <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Academics</a></li>
+                         <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Admissions</a></li>
+                         <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Research</a></li>
+                         <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Campus Life</a></li>
+                     </ul>
+                 </div>
+                 
+                 <div>
+                     <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                     <ul class="space-y-2">
+                         <li class="flex items-center text-gray-400">
+                             <i class="ri-map-pin-line mr-2"></i>
+                             Sri Sathya Sai Baba PU College, 46, 4th Main Rd, 3rd Block, Jayalakshmipuram, Mysuru, Karnataka 570012
+                         </li>
+                         <li class="flex items-center text-gray-400">
+                             <i class="ri-phone-line mr-2"></i>
+                             0821 2410856
+                         </li>
+                         <li class="flex items-center text-gray-400">
+                             <i class="ri-mail-line mr-2"></i>
+                             sssbpucnn0385@gmail.com
+                         </li>
+                     </ul>
+                 </div>-->
+ 
+         <!--        <div>
+                     <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+                     <p class="text-gray-400 mb-4">Subscribe to our newsletter for updates and news.</p>
+                     <form class="space-y-4" id="newsletter-form">
+                         <input type="email" placeholder="Your email address" class="w-full px-4 py-2 rounded-button bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:border-primary">
+                         <button type="submit" class="w-full bg-primary text-white px-6 py-2 rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">
+                             Subscribe
+                         </button>
+                     </form>
+                 </div>
+             </div>
+             
+             <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                 <p>&copy; 2025 SSSBPUC. All rights reserved.</p>
+             </div>
+         </div>
+     </footer>-->
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+     <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300">
+         <i class="ri-arrow-up-line text-xl"></i>
+     </button>
+ 
+     <div id="toast" class="toast bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg">
+         <p class="text-sm">Successfully subscribed to newsletter!</p>
+     </div>
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
