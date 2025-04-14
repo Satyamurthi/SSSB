@@ -1,181 +1,233 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academics | University Name</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
-    <!--<style>
-        :where([class^="ri-"])::before { content: "\f3c2"; }
-        .program-card:hover { transform: translateY(-4px); }
-        .quick-link:hover { transform: translateY(-2px); }
-    </style>-->
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8"> 
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="shortcut icon" type="x-icon" href="https://github.com/Satyamurthi/mbw-Photos/blob/main/Logo/sai%20school%20logo%20png.png?raw=true"> 
+     <title>Sri Sathya Sai Baba School & Pre-University College</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+     <script>
+          tailwind.config = {
+             theme: {
+                 extend: {
+                     colors: {
+                         primary: '#1B3764',
+                         secondary: '#DAA520'
+                     },
+                     borderRadius: {
+                         'none': '0px',
+                         'sm': '4px',
+                         DEFAULT: '8px',
+                         'md': '12px',
+                         'lg': '16px',
+                         'xl': '20px',
+                         '2xl': '24px',
+                         '3xl': '32px',
+                         'full': '9999px',
+                         'button': '8px'
+                     }
+                 }
+             }
+         }
+     </script>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
      <style>
-        :where([class^="ri-"])::before { content: "\f3c2"; }
-        
-        .nav-link {
-            position: relative;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 0;
-            background-color: #1B3764;
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        
-        .stats-counter {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-        
-        .stats-counter.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .program-card {
-            perspective: 1000px;
-            transition: transform 0.6s;
-        }
-        
-        .program-card:hover {
-            transform: scale(1.02);
-        }
+         :where([class^="ri-"])::before { content: "\f3c2"; }
+ 
+         .nav-link {
+             position: relative;
+         }
+ 
+         .nav-link::after {
+             content: '';
+             position: absolute;
+             width: 0;
+             height: 2px;
+             bottom: -4px;
+             left: 0;
+             background-color: #1B3764;
+             transition: width 0.3s ease;
+         }
+ 
+         .nav-link:hover::after {
+             width: 100%;
+         }
+ 
+         .stats-counter {
+             opacity: 0;
+             transform: translateY(20px);
+             transition: opacity 0.6s ease, transform 0.6s ease;
+         }
+ 
+         .stats-counter.visible {
+             opacity: 1;
+             transform: translateY(0);
+         }
+	 .stats-counter {
+	      opacity: 0;
+	      transform: translateY(20px);
+	      transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+      .stats-counter.visible {
+	      opacity: 1;
+	      transform: translateY(0);
+      }
+         .program-card {
+             perspective: 1000px;
+             transition: transform 0.6s;
+         }
+ 
+         .program-card:hover {
+             transform: scale(1.02);
+         }
+ 
+         @keyframes fadeIn {
+             from { opacity: 0; transform: translateY(20px); }
+             to { opacity: 1; transform: translateY(0); }
+         }
+ 
+         .fade-in {
+             animation: fadeIn 0.6s ease forwards;
+         }
+ 
+         .search-expand {
+             transition: width 0.3s ease;
+         }
+ 
+         .search-expand:focus {
+             width: 300px;
+         }
+ 
+         .toast {
+             position: fixed;
+             bottom: 24px;
+             right: 24px;
+             transform: translateY(100px);
+             transition: transform 0.3s ease;
+         }
+ 
+         .toast.show {
+             transform: translateY(0);
+         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
 
-        .fade-in {
-            animation: fadeIn 0.6s ease forwards;
-        }
 
-        .search-expand {
-            transition: width 0.3s ease;
-        }
+ 	   .card:hover {
+             transform: translateY(-5px);
+             box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+         }
+/*
+	 #video-container {
+	  position: fixed;
+	  top: 5VH;
+	  left: 0;
+	  width: 100VW;
+	  height: 55VH;
+	  z-index: -1;
+	  pointer-events: none;
+	  display: flex;
+	  justify-content: center;
+	}
+	
+    	/* Dark overlay to improve contrast * /
+	.overlay {
+	  position: fixed;
+	  z-index: 0;
+ 	  pointer-events: none;
+	}
 
-        .search-expand:focus {
-            width: 300px;
-        }
-
-        .toast {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            transform: translateY(100px);
-            transition: transform 0.3s ease;
-        }
-
-        .toast.show {
-            transform: translateY(0);
-        }
-    </style>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#2563eb',
-                        secondary: '#475569'
-                    },
-                    borderRadius: {
-                        'none': '0px',
-                        'sm': '4px',
-                        DEFAULT: '8px',
-                        'md': '12px',
-                        'lg': '16px',
-                        'xl': '20px',
-                        '2xl': '24px',
-                        '3xl': '32px',
-                        'full': '9999px',
-                        'button': '8px'
-                    }
-                },
-                fontFamily: {
-                    'sans': ['Inter', 'sans-serif']
-                }
-            }
-        }
-    </script>
-</head>
-<body class="font-sans bg-white">
-    <!--<header class="fixed w-full top-0 bg-white shadow-sm z-50">
-        <nav class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-16">
-                    <a href="/" class="text-2xl font-['Pacifico'] text-primary">logo</a>
-                    <div class="hidden md:flex items-center space-x-8">
-                        <!--<a href="#" class="text-gray-800 hover:text-primary">Home</a>
-                        <a href="#" class="text-primary font-medium">Academics</a>
-                        <a href="#" class="text-gray-800 hover:text-primary">Research</a>
-                        <a href="#" class="text-gray-800 hover:text-primary">Admissions</a>
-                        <a href="#" class="text-gray-800 hover:text-primary">Campus Life</a>
-
-                        <a href="index.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Home</a>
-                    <a href="Academics.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Academics</a>
-                    <a href="Admissions.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Admissions</a>
-                    <a href="Campus-Life.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Campus Life</a>
-                    <a href="Research.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Research</a>
-                    <a href="About.html" class="nav-link text-gray-700 hover:text-primary transition-colors">About</a>
-                    </div>
-                </div>
-                <div class="relative">
-                    <input type="text" placeholder="Search..." class="pl-10 pr-4 py-2 w-64 rounded-button border border-gray-200 focus:outline-none focus:border-primary text-sm">
-                    <div class="absolute left-3 top-0 h-full w-4 flex items-center justify-center">
-                        <i class="ri-search-line text-gray-400"></i>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>-->
+	    /* Content blocks * /
+	.section {
+	  position: relative;
+	  z-index: 1;
+	}*/
+     </style>
+ </head>
+ <body class="bg-white">
+	 
+ <!-- Navigation Bar -->
  <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <a href="#" class="text-2xl font-['Pacifico'] text-primary">logo</a>
-                </div>
-                
-                <div class="hidden md:flex space-x-8">
-                    <a href="index.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Home</a>
-                    <a href="Academics.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Academics</a>
-                    <a href="Admissions.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Admissions</a>
-                    <a href="Campus-Life.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Campus Life</a>
-                    <a href="Research.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Research</a>
-                    <a href="About.html" class="nav-link text-gray-700 hover:text-primary transition-colors">About</a>
-                    <!-- <a href="index.html" class="nav-link">Home</a>
-                    <a href="Academics.html" class="nav-link">Academics</a>
-                    <a href="Admissions.html" class="nav-link">Admissions</a>
-                    <a href="Campus-Life.html" class="nav-link">Campus Life</a>
-                    <a href="About.html" class="nav-link">About</a>-->
-                </div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
 
-                <div class="flex items-center space-x-4">
-                    <div class="relative">
-                        <input type="text" placeholder="Search..." class="search-expand w-40 px-4 py-2 rounded-full border border-gray-200 focus:outline-none focus:border-primary text-sm">
-                        <i class="ri-search-line absolute right-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
-                    </div>
-                    <button class="bg-primary text-white px-6 py-2 rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">
-                        Apply Now
-                    </button>
-                </div>
-            </div>
-        </div>
-    </nav>
+      <!-- LEFT SECTION: Hamburger + Left Logo -->
+      <div class="flex items-center space-x-4">
+	<!-- Hamburger for Mobile -->
+	<div class="md:hidden">
+	  <button id="mobile-menu-toggle" class="text-gray-700 focus:outline-none">
+	    <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2"
+	      viewBox="0 0 24 24">
+	      <path stroke-linecap="round" stroke-linejoin="round"
+		d="M4 6h16M4 12h16M4 18h16" />
+	    </svg>
+	  </button>
+	</div>
+	<!-- Left Logo -->
+	<a href="index.html"><img src="https://github.com/Satyamurthi/mbw-Photos/blob/main/Logo/sai%20baba%20Logo.png?raw=true" style="height: 50px;"></a>
+      </div>
+
+      <!-- CENTER (Only visible on desktop) -->
+      <div class="hidden md:flex space-x-8 items-center">
+	<a href="index.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Home</a>
+	<a href="Academics.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Academics</a>
+	<a href="Gallery.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Gallery</a>
+	<a href="Campus-Life.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Campus Life</a>
+	<a href="About.html" class="nav-link text-gray-700 hover:text-primary transition-colors">About</a>
+	<a href="#">
+	  <button class="bg-primary text-white px-4 py-2 rounded-button hover:bg-primary/90 transition-colors">
+	   	FOR ADMISSIONS
+	  </button>
+	</a>
+      </div>
+
+      <!-- RIGHT SECTION: Right Logo -->
+      <div class="flex items-center">
+	<a href="About.html">
+	  <img src="https://github.com/Satyamurthi/mbw-Photos/blob/main/Logo/sai%20school%20logo%20png.png?raw=true" style="height: 50px;">
+	</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu (Right side, half width + half height) -->
+      <!-- Mobile Menu (Left Side) -->
+	<div id="mobile-menu" class="fixed top-0 left-0 w-1/2 h-1/2 bg-white z-40 shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden rounded-br-2xl border-r border-b">
+	  <div class="flex flex-col p-4 space-y-4 h-full">
+	    <!-- Close Button -->
+	    <button id="close-mobile-menu" class="self-end text-gray-600 text-2xl font-bold">&times;</button>
+	
+	    <!-- Links -->
+	    <a href="index.html" class="text-gray-700 hover:text-primary">Home</a>
+	    <a href="Academics.html" class="text-gray-700 hover:text-primary">Academics</a>
+	    <a href="Gallery.html" class="text-gray-700 hover:text-primary">Gallery</a>
+	    <a href="Campus-Life.html" class="text-gray-700 hover:text-primary">Campus Life</a>
+	    <!--<a href="Research.html" class="text-gray-700 hover:text-primary">Donations</a>-->
+	    <a href="About.html" class="text-gray-700 hover:text-primary">About</a>
+	    <a href="#">
+	      <button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90 transition-colors">
+		FOR ADMISSIONS
+	      </button>
+	    </a>
+	  </div>
+	</div>
+</nav>
+<!-- Mobile Menu Script -->
+	<script>
+	  const toggleBtn = document.getElementById('mobile-menu-toggle');
+	  const closeBtn = document.getElementById('close-mobile-menu');
+	  const mobileMenu = document.getElementById('mobile-menu');
+	
+	  toggleBtn.addEventListener('click', () => {
+	    mobileMenu.classList.remove('-translate-x-full');
+	  });
+	
+	  closeBtn.addEventListener('click', () => {
+	    mobileMenu.classList.add('-translate-x-full');
+	  });
+	</script>
     <main class="mt-20">
         <section class="relative h-[500px] overflow-hidden">
             <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://public.readdy.ai/ai/img_res/1bdd8f60c4c3d980ea187b699c687c28.jpg')"></div>
@@ -369,77 +421,133 @@
         </section>
     </main>
 
-    <footer class="bg-gray-900 text-white py-16">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-12">
-                <div>
-                    <h3 class="text-lg font-semibold mb-6">Academic Departments</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Arts & Sciences</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Engineering</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Business</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Medicine</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-6">Resources</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Library</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Research Centers</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Career Services</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Technology Support</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-6">Quick Links</h3>
-                    <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Academic Calendar</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Course Catalog</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Faculty Directory</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Campus Map</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-6">Connect With Us</h3>
-                    <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
-                            <i class="ri-facebook-fill"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
-                            <i class="ri-twitter-fill"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
-                            <i class="ri-linkedin-fill"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-700 transition-colors">
-                            <i class="ri-instagram-fill"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 University Name. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const formData = new FormData(e.target);
-            const data = Object.fromEntries(formData);
-            console.log('Form submitted:', data);
-            e.target.reset();
-            
-            const notification = document.createElement('div');
-            notification.className = 'fixed bottom-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg';
-            notification.textContent = 'Message sent successfully!';
-            document.body.appendChild(notification);
-            
-            setTimeout(() => {
-                notification.remove();
-            }, 3000);
+<footer class="bg-gray-900 text-white py-16">
+	     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+		     <div>
+			 <!--<a href="#" class="text-2xl font-['Pacifico'] text-white mb-4 block">logo</a>-->
+			 <img src="https://github.com/Satyamurthi/mbw-Photos/blob/main/Logo/sai%20baba%20Logo.png?raw=true" alt="Logo" class="w-24 h-auto mb-4 block"> 
+			 <p class="text-gray-400 mb-4">Shaping tomorrow's leaders through excellence in education, research, and innovation.</p>
+			 <div class="flex space-x-4">
+			     <a href="https://www.facebook.com/people/Sathya-Sai-Baba-Puc/pfbid02EXmmdXSUpaZJE3uH5zdoHTGTsfFPjy5RK5Z6dUJ55skrdtPwmWgYpTbHbh7RwcfZl" class="text-gray-400 hover:text-white transition-colors">
+				 <i class="ri-facebook-fill text-xl"></i>
+			     </a>
+			     <a href="#" class="text-gray-400 hover:text-white transition-colors">
+				 <i class="ri-twitter-fill text-xl"></i>
+			     </a>
+			     <a href="#" class="text-gray-400 hover:text-white transition-colors">
+				 <i class="ri-instagram-fill text-xl"></i>
+			     </a>
+			     <a href="#" class="text-gray-400 hover:text-white transition-colors">
+				 <i class="ri-linkedin-fill text-xl"></i>
+			     </a>
+			 </div>
+		     </div>
+	 
+		     <div>
+			 <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+			 <ul class="space-y-2">
+			     <li><a href="About.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+			     <li><a href="Academics.html" class="text-gray-400 hover:text-white transition-colors">Academics</a></li>
+			     <li><a href="Gallery.html" class="text-gray-400 hover:text-white transition-colors">Gallery</a></li>
+			     <li><a href="Research.html" class="text-gray-400 hover:text-white transition-colors">Campus Life</a></li>
+			     <li><a href="#" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+			 </ul>
+		     </div>
+	 
+		     <div>
+			 <h3 class="text-lg font-semibold mb-4">Contact</h3>
+			 <ul class="space-y-2">
+			     <li class="flex items-center text-gray-400">
+				 <i class="ri-map-pin-line mr-2"></i>
+				 Sri Sathya Sai Baba PU College, 46, 4th Main Rd, 3rd Block, Jayalakshmipuram, Mysuru, Karnataka 570012
+			     </li>
+			     <li class="flex items-center text-gray-400">
+				 <i class="ri-phone-line mr-2"></i>
+				 0821 2410856
+			     </li>
+			     <li class="flex items-center text-gray-400">
+				 <i class="ri-mail-line mr-2"></i>
+				 sssbpucnn0385@gmail.com
+			     </li>
+			 </ul>
+		     </div>
+		 </div>
+	 
+		 <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+		     <p>&copy; 2025 SSSBPUC. All rights reserved.</p>
+		 </div>
+	     </div>
+	 </footer>
+	
+	 
+	     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const backToTop = document.getElementById("back-to-top");
+        const toast = document.getElementById("toast");
+        const newsletterForm = document.getElementById("newsletter-form");
+        const statsCounters = document.querySelectorAll(".stats-counter");
+        let countersStarted = false;
+        window.addEventListener("scroll", () => {
+          if (window.pageYOffset > 300) {
+            backToTop.classList.remove("opacity-0", "invisible");
+          } else {
+            backToTop.classList.add("opacity-0", "invisible");
+          }
+          const statsSection =
+            document.querySelector(".stats-counter").parentElement.parentElement;
+          const statsSectionTop = statsSection.offsetTop;
+          const statsSectionHeight = statsSection.offsetHeight;
+          const windowHeight = window.innerHeight;
+          const scrollPosition = window.pageYOffset;
+          if (
+            !countersStarted &&
+            scrollPosition > statsSectionTop - windowHeight + statsSectionHeight / 2
+          ) {
+            startCounters();
+            countersStarted = true;
+          }
         });
+        backToTop.addEventListener("click", () => {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+        newsletterForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const email = e.target.querySelector('input[type="email"]');
+          if (email.value) {
+            showToast();
+            email.value = "";
+          }
+        });
+        function showToast() {
+          toast.classList.add("show");
+          setTimeout(() => {
+            toast.classList.remove("show");
+          }, 3000);
+        }
+        function startCounters() {
+          statsCounters.forEach((counter) => {
+            counter.classList.add("visible");
+            const target = parseInt(counter.querySelector("div").dataset.target);
+            const duration = 2000;
+            const increment = target / (duration / 16);
+            let current = 0;
+            const updateCounter = () => {
+              current += increment;
+              if (current < target) {
+                counter.querySelector("div").textContent = Math.round(current);
+                requestAnimationFrame(updateCounter);
+              } else {
+                counter.querySelector("div").textContent = target;
+              }
+            };
+            requestAnimationFrame(updateCounter);
+          });
+        }
+      });
     </script>
 </body>
 </html>
