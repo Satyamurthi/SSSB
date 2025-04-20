@@ -132,30 +132,16 @@
 }
 
 
-	.hero {
-	    text-align: center;
-	    font-size: 18px;
-	    color: #fff;
-	    background-repeat: no-repeat;
-	    background-size: cover;
-	    background-attachment: fixed;
-	    background-position: center;
-	}
-.hero__desc {
-    font-size: 14px;
-    line-height: 23px;
+.hero {
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
 }
-	.container {
-    max-width: 1054px;
-    margin: 0 auto;
-}
-	     .container::after {
-    content: '';
-    clear: both;
-    display: table;
-}
-
-	     .hero__bg {
+.hero__bg {
     padding: 72px 0 167px 0;
     background: rgba(0, 0, 0, 0.75);
     position: relative;
@@ -164,15 +150,28 @@
     left: 0;
     right: 0;
 }
-
-
-	     .row {
+.container {
+    max-width: 1054px;
+    margin: 0 auto;
+}
+.container::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+.row {
     max-width: none;
 }
 .row {
     max-width: 62.5rem;
     margin-right: auto;
     margin-left: auto;
+}
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
 }
 .row::before, .row::after {
     display: table;
@@ -193,32 +192,24 @@
     -ms-flex-order: 1;
     order: 1;
 }
-
-	     
-	     
-	     
-	     .hero__single {
+.hero__single {
     display: flex
 ;
     align-items: center;
     padding: 20px;
 }
-	     
-	.hero__img {
+.hero__img {
     box-shadow: 0 4px 15px 3px rgba(0, 0, 0, 0.15);
     border-radius: 50%;
     min-width: 150px;
     overflow: hidden;
     margin-right: 30px;
     transition: all 1s;
-}     
-	     
-	     
-	     
-	    .hero__content {
+}
+.hero__content {
     text-align: left;
 }
-	     .hero__tag {
+.hero__tag {
     font-size: 12px;
     line-height: 20px;
     letter-spacing: 2px;
@@ -227,19 +218,16 @@
     color: #BDBDBD;
     margin-bottom: 5px;
 }
-	     .hero__title {
+.hero__title {
     font-weight: bold;
     font-size: 18px;
     margin-bottom: 15px;
 }
-	     .hero__desc {
+.hero__desc {
     font-size: 14px;
     line-height: 23px;
 }
-	     .read-more {
-    color: #F2951D;
-}
-	     
+
 	     
 	     
 	     
@@ -620,48 +608,50 @@
 
 	 
 <section class="hero" style="background-image:url(https://alikeonline.org/wp-content/uploads/2018/02/BlessingsBackground-1.jpg)">
-<div class="hero__bg">
-<div class="container">
-<div class="row">
-<div class="columns large-6">
-<div class="hero__single">
-<div class="hero__img">
-<img src="https://alikeonline.org/wp-content/uploads/2018/02/01.jpg" alt="annaimg">
-</div>
-<div class="hero__content">
-<span class="hero__tag">founder president</span>
-<h4 class="hero__title">
-<a href="https://alikeonline.org/about-anna/">
-Late Sri Madiyala Narayana Bhat								</a>
-</h4>
-<p class="hero__desc">
-Deeply influenced by this Gurukula system of Education, Sri Narayana Bhat, with the help of some dedicated workers, set up two educational institutions at Alike…...
-<a href="https://alikeonline.org/about-anna/" class="read-more">Read more</a>
-</p>
-</div>
-</div>
-</div>
-<div class="columns large-6">
-<div class="hero__single">
-<div class="hero__img">
-<img src="https://alikeonline.org/wp-content/uploads/2018/02/02.png" alt="babaimg">
-</div>
-<div class="hero__content">
-<span class="hero__tag">blessings</span>
-<h4 class="hero__title">
-<a href="https://alikeonline.org/bhagawan-sri-sathya-sai-baba/">
-Bhagawan Sri Sathya Sai Baba								</a>
-</h4>
-<p class="hero__desc">
-Bhagawan Sri Sathya Sai Baba was incarnated in a remote village called Puttaparthi in Anantpur district in Andhra Pradesh in the year 23-11-1926. His parents…...
-<a href="https://alikeonline.org/bhagawan-sri-sathya-sai-baba/" class="read-more">Read more</a>
-</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+	<div class="hero__bg">
+		<div class="container">
+			<div class="row">
+				<div class="columns large-6">
+					<div class="hero__single">
+						<div class="hero__img">
+							<img src="https://alikeonline.org/wp-content/uploads/2018/02/01.jpg" alt="annaimg">
+						</div>
+						<div class="hero__content">
+							<span class="hero__tag">founder president</span>
+							<h4 class="hero__title">
+								<a href="https://alikeonline.org/about-anna/">
+									Late Sri Madiyala Narayana Bhat								
+								</a>
+							</h4>
+							<p class="hero__desc">
+								Deeply influenced by this Gurukula system of Education, Sri Narayana Bhat, with the help of some dedicated workers, set up two educational institutions at Alike…...
+								<a href="https://alikeonline.org/about-anna/" class="read-more">Read more</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="columns large-6">
+					<div class="hero__single">
+						<div class="hero__img">
+							<img src="https://alikeonline.org/wp-content/uploads/2018/02/02.png" alt="babaimg">
+						</div>
+						<div class="hero__content">
+							<span class="hero__tag">blessings</span>
+							<h4 class="hero__title">
+								<a href="https://alikeonline.org/bhagawan-sri-sathya-sai-baba/">
+										Bhagawan Sri Sathya Sai Baba								
+								</a>
+							</h4>
+							<p class="hero__desc">
+								Bhagawan Sri Sathya Sai Baba was incarnated in a remote village called Puttaparthi in Anantpur district in Andhra Pradesh in the year 23-11-1926. His parents…...
+								<a href="https://alikeonline.org/bhagawan-sri-sathya-sai-baba/" class="read-more">Read more</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
 
 
