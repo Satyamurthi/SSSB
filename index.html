@@ -447,33 +447,33 @@
 		      </section>
 	
 	 
-			 <!-- YouTube API Script -->
+			<!-- YouTube API Script -->
 			<script>
 			    function onYouTubeIframeAPIReady() {
-				new YT.Player('video-container', {
-				    videoId: 'zKz4QQKx_jo', // Replace with your YouTube Video ID
-				    playerVars: {
-					autoplay: 1,
-					mute: 1,
-					loop: 1,
-					playlist: 'zKz4QQKx_jo',
-					controls: 0,
-					showinfo: 0,          // Legacy; may not work but harmless
-					modestbranding: 1,    // Minimal branding
-					fs: 0,
-					rel: 0,
-					disablekb: 1,
-					cc_load_policy: 0,    // Prevent captions
-					iv_load_policy: 3,    // Hide annotations
-					playsinline: 1
-				    },
-				    events: {
-					onReady: function(event) {
-					    event.target.setPlaybackRate(1); // Use 1x instead of 5x to avoid YouTube playback error
-					    event.target.playVideo();
-					}
-				    }
-				});
+			        new YT.Player('video-container', {
+			            videoId: 'zKz4QQKx_jo', // Replace with your YouTube Video ID
+			            playerVars: {
+			                autoplay: 1,
+			                mute: 1,
+			                loop: 1,
+			                playlist: 'zKz4QQKx_jo',
+			                controls: 0,
+			                showinfo: 0,          // Legacy; may not work but harmless
+			                modestbranding: 1,    // Minimal branding
+			                fs: 0,
+			                rel: 0,
+			                disablekb: 1,
+			                cc_load_policy: 0,    // Prevent captions
+			                iv_load_policy: 3,    // Hide annotations
+			                playsinline: 1
+			            },
+			            events: {
+			                onReady: function(event) {
+			                    event.target.setPlaybackRate(2); // Max YouTube-supported speed
+			                    event.target.playVideo();
+			                }
+			            }
+			        });
 			    }
 			
 			    // Load YouTube Iframe API
@@ -482,6 +482,7 @@
 			    document.head.appendChild(tag);
 			</script>
 			<!-- Video End -->
+
 	
 			<!-- Welcome Note -->
 			<section class="about-section">
