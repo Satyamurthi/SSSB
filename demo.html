@@ -304,22 +304,22 @@
 	      </section> -->
 
 
-<!-- VIDEO SECTION (Full-screen YouTube Background, Scrolls Away) -->
-  <section class="relative h-screen flex items-center justify-center overflow-hidden">
+<!-- VIDEO BACKGROUND (Fixed + Full Screen) -->
+  <section class="relative h-screen overflow-hidden">
     
-    <!-- YouTube Video -->
-    <div id="video-container" class="absolute inset-0 w-full h-full -z-10 pointer-events-none"></div>
-
-    <!-- Optional Overlay -->
-    <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"></div>
-
-    <!-- Hero Text on Top of Video -->
-    <div class="relative text-white text-center px-4">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Welcome to SSSBPUC</h1>
-      <p class="text-lg md:text-xl max-w-2xl mx-auto">
-        Your Future Starts Here.
-      </p>
+    <!-- Fixed YouTube Background Video -->
+    <div class="fixed inset-0 z-0">
+      <iframe
+        class="w-full h-full"
+        src="https://www.youtube.com/embed/zKz4QQKx_jo?autoplay=1&mute=1&loop=1&playlist=zKz4QQKx_jo&controls=0&modestbranding=1&iv_load_policy=3&playsinline=1"
+        frameborder="0"
+        allow="autoplay; fullscreen"
+        allowfullscreen
+      ></iframe>
     </div>
+
+    <!-- Spacer div: pushes content down to create scroll -->
+    <div class="h-screen"></div>
   </section>
 
   <!-- Updates Section -->
