@@ -304,20 +304,26 @@
 	      </section> -->
 
 
-  <!-- VIDEO SECTION (Fixed Background YouTube Video) -->
-  <div id="video-container" class="fixed inset-0 -z-10 pointer-events-none h-screen w-full"></div>
+<!-- VIDEO SECTION (Full-screen YouTube Background, Scrolls Away) -->
+  <section class="relative h-screen flex items-center justify-center overflow-hidden">
+    
+    <!-- YouTube Video -->
+    <div id="video-container" class="absolute inset-0 w-full h-full -z-10 pointer-events-none"></div>
 
-  <!-- Overlay (optional gradient for readability) -->
-  <div class="fixed inset-0 bg-gradient-to-r from-black/60 to-transparent -z-10"></div>
+    <!-- Optional Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"></div>
 
-  <!-- Section to Push Content Down -->
-  <section class="relative h-[600px] flex items-center justify-center text-white">
-    <div class="text-center px-4">
+    <!-- Hero Text on Top of Video -->
+    <div class="relative text-white text-center px-4">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Welcome to SSSBPUC</h1>
+      <p class="text-lg md:text-xl max-w-2xl mx-auto">
+        Your Future Starts Here.
+      </p>
     </div>
   </section>
 
-  <!-- Updates Section Scrolls OVER the Fixed Background -->
-  <section class="relative bg-white py-20">
+  <!-- Updates Section -->
+  <section class="bg-white py-20 relative z-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
 	             <h2 class="text-3xl font-bold text-gray-900 mb-4">Updates</h2>
@@ -452,11 +458,11 @@
     });
   }
 
-  // Load YouTube API
   const tag = document.createElement('script');
   tag.src = "https://www.youtube.com/iframe_api";
   document.head.appendChild(tag);
 </script>
+
 
 
 
