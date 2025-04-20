@@ -119,17 +119,72 @@
              transform: translateY(-5px);
              box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
          }
-.video-wrapper {
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  opacity: 1;
-  transform: scale(1);
-  will-change: transform, opacity;
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+  color: #333;
 }
 
-.video-section.fade-out .video-wrapper {
-  opacity: 0;
-  transform: scale(1.05);
+.about-section {
+  padding: 40px;
 }
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo img {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px 40px;
+}
+
+.section-title {
+  font-size: 16px;
+  color: #f97316;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: bold;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #f97316;
+  margin-top: 5px;
+}
+
+.about-text h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 20px;
+}
+
+.highlight-orange {
+  color: #f97316;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
 
 
 .hero {
@@ -280,36 +335,7 @@ body {
 	     
 	     
 	     
-	     
-	     
-	     
-	     
-	     
-	     
-	     
-	     
-	     
-	     
-	     
-	     
-	     
-	     
-	     
-	     .video-background {
-	  position: absolute;
-	  top: 0;
-	  left: 0;
-	  width: 100%;
-	  height: 100%;
-	  pointer-events: none;
-	  z-index: -1;
-	}
-	
-	.video-background iframe {
-	  width: 100%;
-	  height: 100%;
-	  object-fit: cover;
-	}
+
 	
 	.content {
 	  position: relative;
@@ -404,12 +430,12 @@ body {
 
 <!-- Main Content -->
  <main class="pt-16">
-	 <!-- Video Start - ->	 
+	 <!-- Video Start -->	 
 	<section class="relative h-[600px] flex items-center overflow-hidden">
 	         <!-- Background Video Container - ->
 	         <div id="video-container" class="absolute inset-0 w-full h-full -z-10"></div>
 	 
-	         <!-- Overlay - ->
+	         <!-- Overlay -->
 	         <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-transparent"></div>
 	
 		<!-- Above Video Content -->
@@ -428,8 +454,8 @@ body {
 	                     </button>- ->
 	                 </div>
 	             </div>
-	         </div>- ->
-	      </section> -->
+	         </div>-->
+	      </section>
 
 
    <!-- VIDEO SECTION -->
@@ -598,7 +624,7 @@ body {
 
 
  
-		 <!-- YouTube API Script - ->
+		 <!-- YouTube API Script -->
 		<script>
 		    function onYouTubeIframeAPIReady() {
 		        new YT.Player('video-container', {
@@ -653,6 +679,37 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+<section class="about-section">
+    <div class="about-container">
+      <div class="logo">
+        <img src="2ed402f5-b835-4b9a-bf7b-1c29502f913c.png" alt="School Logo" />
+      </div>
+      <div class="about-text">
+        <h4 class="section-title">ABOUT US</h4>
+        <h1>Welcome to <span class="highlight-orange">Sri Sathya Sai Jnanapeeta–C.B.S.E.</span></h1>
+        <p>
+          Our school, recognized in 2008-2009 by the Institute of Sri Sathya Sai Education (India), Bombay, is dedicated to fostering Education in Human Values. Today's education system often prioritizes intellectual and skill development while neglecting the cultivation of good character. 
+          <br><br>
+          We believe that true education extends beyond academics to encompass moral and spiritual growth. Our mission is to nurture students who not only excel academically but also possess compassion, humility, and a sense of service towards society.
+          <br><br>
+          We strive to instill in our students a deep reverence for righteousness, a steadfast faith in God, and a profound love for their mothers, motherland, mother tongue, and religion. Our goal is to produce individuals who lead meaningful lives guided by principles of truth, righteousness, and service to humanity.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+	 
 
 
 	 
