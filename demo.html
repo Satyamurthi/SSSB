@@ -494,7 +494,20 @@
 		<!-- Video End -->
 
 
+<script>
+  window.addEventListener('scroll', () => {
+    const section = document.querySelector('.video-section');
+    const video = section.querySelector('.video-wrapper');
+    const scrollY = window.scrollY;
+    const sectionHeight = section.offsetHeight;
 
+    if (scrollY > sectionHeight * 0.5) {
+      section.classList.add('scrolled');
+    } else {
+      section.classList.remove('scrolled');
+    }
+  });
+</script>
 
      
 	  <!-- Updates Start -->
