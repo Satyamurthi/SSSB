@@ -119,20 +119,18 @@
              transform: translateY(-5px);
              box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
          }
-.video-section {
+.video-wrapper {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 1;
+  transform: scale(1);
   will-change: transform, opacity;
 }
 
-.video-wrapper {
-  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-  transform: scale(1);
-  opacity: 1;
+.video-section.fade-out .video-wrapper {
+  opacity: 0;
+  transform: scale(1.05);
 }
 
-.video-section.scrolled .video-wrapper {
-  transform: scale(1.05);
-  opacity: 0;
-}
 
 	.hero {
 	    text-align: center;
@@ -295,10 +293,10 @@
 
 
    <!-- VIDEO SECTION -->
-  <section class="relative h-screen overflow-hidden video-section">
+  <section class="video-section relative h-screen overflow-hidden">
     
-    <!-- YouTube Video -->
-    <div class="absolute inset-0 z-0 video-wrapper">
+    <!-- YOUTUBE IFRAME -->
+    <div class="video-wrapper absolute inset-0 z-0">
       <iframe
         class="w-full h-full pointer-events-none"
         src="https://www.youtube.com/embed/zKz4QQKx_jo?autoplay=1&mute=1&loop=1&playlist=zKz4QQKx_jo&controls=0&modestbranding=1&iv_load_policy=3&playsinline=1"
@@ -307,6 +305,9 @@
         allowfullscreen
       ></iframe>
     </div>
+
+    <!-- DARK OVERLAY -->
+    <div class="absolute inset-0 bg-black/40 z-10"></div>
 
     <!-- Overlay -->
     <div class="absolute inset-0 bg-black/50 z-10"></div>
@@ -495,19 +496,20 @@
 
 
 <script>
-  window.addEventListener('scroll', () => {
-    const section = document.querySelector('.video-section');
-    const video = section.querySelector('.video-wrapper');
-    const scrollY = window.scrollY;
-    const sectionHeight = section.offsetHeight;
+  const videoSection = document.querySelector('.video-section');
 
-    if (scrollY > sectionHeight * 0.5) {
-      section.classList.add('scrolled');
+  window.addEventListener('scroll', () => {
+    const sectionTop = videoSection.getBoundingClientRect().top;
+    const triggerPoint = window.innerHeight * 0.4;
+
+    if (sectionTop < -triggerPoint) {
+      videoSection.classList.add('fade-out');
     } else {
-      section.classList.remove('scrolled');
+      videoSection.classList.remove('fade-out');
     }
   });
 </script>
+
 
      
 	  <!-- Updates Start -->
