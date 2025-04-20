@@ -304,28 +304,166 @@
 	      </section> -->
 
 
+  <!-- VIDEO SECTION (Fixed Background YouTube Video) -->
+  <div id="video-container" class="fixed inset-0 -z-10 pointer-events-none h-screen w-full"></div>
+
+  <!-- Overlay (optional gradient for readability) -->
+  <div class="fixed inset-0 bg-gradient-to-r from-black/60 to-transparent -z-10"></div>
+
+  <!-- Section to Push Content Down -->
+  <section class="relative h-[600px] flex items-center justify-center text-white">
+    <div class="text-center px-4">
+    </div>
+  </section>
+
+  <!-- Updates Section Scrolls OVER the Fixed Background -->
+  <section class="relative bg-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+	             <h2 class="text-3xl font-bold text-gray-900 mb-4">Updates</h2>
+	             <p class="text-gray-600 max-w-2xl mx-auto">
+	                Stay updated with the latest happenings, breakthroughs, and events at SSSBPUC.
+	             </p>
+	         </div>
+	 
+	         <!-- Grid Layout for News & Events -->
+	         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+	 
+	             <!-- Research Video Card -->
+	             <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+	                 <video class="w-full h-48 object-cover" controls autoplay muted loop>
+	                     <source src="https://github.com/Satyamurthi/mbw-Photos/blob/main/Baba%20Photo.png">
+	                     Your browser does not support the video tag.
+	                 </video>
+	                 <div class="p-6">
+	                     <div class="flex items-center mb-4">
+	                         <span class="text-sm text-primary font-medium">Research</span>
+	                         <span class="mx-2">•</span>
+	                         <span class="text-sm text-gray-500">Feb 20, 2025</span>
+	                     </div>
+	                     <h3 class="text-xl font-semibold mb-2">Breakthrough in Quantum Computing</h3>
+	                     <p class="text-gray-600 mb-4">
+	                         Our research team has achieved a significant milestone in quantum computing, paving the way for future innovations.
+	                     </p>
+	                     <a href="#" class="text-primary font-medium hover:text-primary/80 transition-colors">Read More →</a>
+	                 </div>
+	             </div>
+	 
+	             <!-- Event Video Card -->
+	             <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+	                 <video class="w-full h-48 object-cover" controls autoplay muted loop>
+	                     <source src="https://your-video-url.com/event-video.mp4" type="video/mp4">
+	                     Your browser does not support the video tag.
+	                 </video>
+	                 <div class="p-6">
+	                     <div class="flex items-center mb-4">
+	                         <span class="text-sm text-primary font-medium">Events</span>
+	                         <span class="mx-2">•</span>
+	                         <span class="text-sm text-gray-500">Feb 15, 2025</span>
+	                     </div>
+	                     <h3 class="text-xl font-semibold mb-2">Spring Graduation Ceremony 2025</h3>
+	                     <p class="text-gray-600 mb-4">
+	                         Join us in celebrating the achievements of our graduating class of 2025 at our annual ceremony.
+	                     </p>
+	                     <a href="#" class="text-primary font-medium hover:text-primary/80 transition-colors">Read More →</a>
+	                 </div>
+	             </div>
+	 
+	             <!-- Event Video Card -->
+	             <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+	                 <video class="w-full h-48 object-cover" controls autoplay muted loop>
+	                     <source src="https://your-video-url.com/event-video.mp4" type="video/mp4">
+	                     Your browser does not support the video tag.
+	                 </video>
+	                 <div class="p-6">
+	                     <div class="flex items-center mb-4">
+	                         <span class="text-sm text-primary font-medium">Events</span>
+	                         <span class="mx-2">•</span>
+	                         <span class="text-sm text-gray-500">Feb 15, 2025</span>
+	                     </div>
+	                     <h3 class="text-xl font-semibold mb-2">Spring Graduation Ceremony 2025</h3>
+	                     <p class="text-gray-600 mb-4">
+	                         Join us in celebrating the achievements of our graduating class of 2025 at our annual ceremony.
+	                     </p>
+	                     <a href="#" class="text-primary font-medium hover:text-primary/80 transition-colors">Read More →</a>
+	                 </div>
+	             </div>
+	 
+	             <!-- Campus Life Video Card -->
+	             <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+	                 <video class="w-full h-48 object-cover" controls autoplay muted loop>
+	                     <source src="https://your-video-url.com/sports-complex.mp4" type="video/mp4">
+	                     Your browser does not support the video tag.
+	                 </video>
+	                 <div class="p-6">
+	                     <div class="flex items-center mb-4">
+	                         <span class="text-sm text-primary font-medium">Campus Life</span>
+	                         <span class="mx-2">•</span>
+	                         <span class="text-sm text-gray-500">Feb 10, 2025</span>
+	                     </div>
+	                     <h3 class="text-xl font-semibold mb-2">New Sports Complex Opening</h3>
+	                     <p class="text-gray-600 mb-4">
+	                         Experience our state-of-the-art sports facility designed to enhance student wellness and athletic performance.
+	                     </p>
+	                     <a href="#" class="text-primary font-medium hover:text-primary/80 transition-colors">Read More →</a>
+	                 </div>
+	             </div>
+	 
+	         </div>
+	 
+	         <!-- Centered "View All News" Button -->
+	         <div class="text-center mt-12">
+	             <button class="bg-primary text-white px-8 py-3 rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">
+	                 View All News
+	             </button>
+	         </div>
+	     
+    </div>
+  </section>
+
+</main>
+
+<!-- YouTube API Script -->
+<script>
+  function onYouTubeIframeAPIReady() {
+    new YT.Player('video-container', {
+      videoId: 'zKz4QQKx_jo',
+      playerVars: {
+        autoplay: 1,
+        mute: 1,
+        loop: 1,
+        playlist: 'zKz4QQKx_jo',
+        controls: 0,
+        showinfo: 0,
+        modestbranding: 1,
+        fs: 0,
+        rel: 0,
+        disablekb: 1,
+        iv_load_policy: 3,
+        cc_load_policy: 0,
+        playsinline: 1
+      },
+      events: {
+        onReady: function (event) {
+          event.target.setPlaybackRate(1);
+          event.target.playVideo();
+        }
+      }
+    });
+  }
+
+  // Load YouTube API
+  const tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  document.head.appendChild(tag);
+</script>
 
 
-<section class="hero1">
-  <div class="video-background">
-    <iframe
-      src="https://www.youtube.com/embed/zKz4QQKx_jo?autoplay=1&mute=1&loop=1&playlist=zKz4QQKx_jo&controls=0&showinfo=0&modestbranding=1"
-      frameborder="0"
-      allow="autoplay; fullscreen"
-      allowfullscreen
-    ></iframe>
-  </div>
-
-  <div class="content">
-    <h1>Welcome to My Website</h1>
-    <p>This is a hero section with a YouTube background.</p>
-  </div>
-</section>
 
 
 
  
-		 <!-- YouTube API Script -->
+		 <!-- YouTube API Script - ->
 		<script>
 		    function onYouTubeIframeAPIReady() {
 		        new YT.Player('video-container', {
@@ -360,38 +498,6 @@
 		    document.head.appendChild(tag);
 		</script>
 		<!-- Video End -->
-
-
-
-
-
-
-	 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
