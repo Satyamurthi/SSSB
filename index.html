@@ -123,7 +123,95 @@
 	  background-color: #fff;
 	  color: #333;
 	}
-	
+
+
+
+
+
+
+
+
+
+
+.card {
+  width: 300px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin: 1rem auto;
+}
+
+.slideshow-container {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.slide.active {
+  display: block;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding: 6px 10px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.nav-btn:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.card p {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+
+
+
+
+
+
+
+	     
 	.about-section {
 	  padding: 40px;
 	}
@@ -233,7 +321,7 @@
 	    display: flex;
 	    align-items: center;
 	    padding: 20px;
-	    background: rgba(255, 255, 255, 0.05);  /*Optional soft card background */
+	    /*background: rgba(255, 255, 255, 0.05);  Optional soft card background */
 	    border-radius: 20px;
 	    transition: all 0.3s ease-in-out;
 	}
@@ -515,7 +603,7 @@
 			
 			
 				 
-			<section class="hero" style="background-image:url(https://github.com/Satyamurthi/mbw-Photos/blob/main/Baba%20Photos/Bhajan%20hall.png?raw=true)">
+			<<section class="hero" style="background-image:url(https://github.com/Satyamurthi/mbw-Photos/blob/main/Baba%20Photos/Bhajan%20hall.png?raw=true)">
 				<div class="hero__bg">
 					<div class="container">
 						<div class="row">
@@ -561,97 +649,6 @@
 					</div>
 				</div>
 			</section>
-
-
-	
-
-
-
-
-
-		 
-	
-<!-- ngg_resource_manager_marker --><script>if (document.location.protocol != "https:") {document.location = document.URL.replace(/^http:/i, "https:");}</script><script type="text/javascript" src="https://alikeonline.org/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1.4"></script><script type="text/javascript">
-/* <![CDATA[ */
-var wpcf7 = {"apiSettings":{"root":"https:\/\/alikeonline.org\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
-/* ]]> */
-</script>
-
-
-<script type="text/javascript" src="https://alikeonline.org/wp-content/themes/alike-2017/lib/js/vendor/what-input.js?ver=20120206"></script>
-<script type="text/javascript" src="https://alikeonline.org/wp-content/themes/alike-2017/lib/js/vendor/foundation.js?ver=20120206"></script>
-<script type="text/javascript" src="https://alikeonline.org/wp-content/themes/alike-2017/lib/js/owl.carousel.min.js?ver=20120206"></script>
-<script type="text/javascript" src="https://alikeonline.org/wp-content/themes/alike-2017/lib/js/vendor/jquery.js?ver=20120206"></script><script type="text/javascript" src="https://alikeonline.org/wp-content/themes/alike-2017/lib/js/vendor/sticky.js?ver=20120206"></script>
-<script type="text/javascript" src="https://alikeonline.org/wp-content/themes/alike-2017/lib/js/all.js?ver=20120206"></script>
-<script type="text/javascript" src="https://alikeonline.org/wp-content/plugins/page-links-to/js/new-tab.min.js?ver=3.0.0-beta.1"></script>
-<script type="text/javascript" src="https://alikeonline.org/wp-includes/js/hoverIntent.min.js?ver=1.8.1"></script>
-<script type="text/javascript">
-/* <![CDATA[ */
-var megamenu = {"timeout":"300","interval":"100"};
-/* ]]> */
-</script>
-<script type="text/javascript" src="https://alikeonline.org/wp-content/plugins/megamenu/js/maxmegamenu.js?ver=2.5.2"></script>
-<script type="text/javascript" src="https://alikeonline.org/wp-includes/js/wp-embed.min.js?ver=4.9.8"></script>
-<meta http-equiv="imagetoolbar" content="no"><!-- disable image toolbar (if any) -->
-<script type="text/javascript">
-/*<![CDATA[*/
-document.oncontextmenu = function() {
-return false;
-};
-document.onselectstart = function() {
-if (event.srcElement.type != "text" && event.srcElement.type != "textarea" && event.srcElement.type != "password") {
-return false;
-}
-else {
-return true;
-}
-};
-if (window.sidebar) {
-document.onmousedown = function(e) {
-var obj = e.target;
-if (obj.tagName.toUpperCase() == 'SELECT'
-|| obj.tagName.toUpperCase() == "INPUT"
-|| obj.tagName.toUpperCase() == "TEXTAREA"
-|| obj.tagName.toUpperCase() == "PASSWORD") {
-return true;
-}
-else {
-return false;
-}
-};
-}
-document.ondragstart = function() {
-return false;
-};
-/*]]>*/
-</script>
-<script type="text/javascript">
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-26488427-1']);
-_gaq.push(['_setDomainName', 'none']);
-_gaq.push(['_setAllowLinker', true]);
-_gaq.push(['_trackPageview']);
-(function() {
-var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-</script>
-<!-- WP Fastest Cache file was created in 0.58028411865234 seconds, on 02-05-25 18:41:55 --><!-- via php -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1334,6 +1331,32 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 	  });
 	}
       });
+document.querySelectorAll('.slideshow-container').forEach(container => {
+  const slides = container.querySelectorAll('.slide');
+  const prevBtn = container.querySelector('.prev');
+  const nextBtn = container.querySelector('.next');
+  let index = 0;
+
+  function showSlide(i) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[i].classList.add('active');
+  }
+
+  prevBtn.addEventListener('click', () => {
+    index = (index - 1 + slides.length) % slides.length;
+    showSlide(index);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+  });
+
+  setInterval(() => {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+  }, 3000);
+});
     </script>
  </body>
  </html>
