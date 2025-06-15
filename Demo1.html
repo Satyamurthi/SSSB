@@ -491,33 +491,32 @@
     </div>
   </div>
 
- <!-- Mobile Menu -->
+<!-- Mobile Sidebar Menu -->
 <div id="mobile-menu"
-     class="fixed top-0 left-0 w-full h-full bg-white z-50 shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden overflow-y-auto">
+     class="fixed top-0 left-0 w-72 h-full bg-gray-900 text-white z-50 shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden rounded-r-2xl">
 
-  <!-- Header Row: Logo + Title + Close -->
-  <div class="flex items-center justify-between p-4 border-b border-gray-200">
+  <!-- Header: Logo + Title + Close -->
+  <div class="flex items-center justify-between p-4 border-b border-gray-700">
     <div class="flex items-center space-x-3">
       <!-- Logo -->
       <img src="https://github.com/Satyamurthi/mbw-Photos/blob/main/Logo/sai%20baba%20Logo.png?raw=true"
            alt="Logo" class="h-10 w-auto">
-      <!-- Title -->
-      <div class="text-lg font-semibold text-gray-800">Sri Sathya Sai Baba School & PU College</div>
+      <!-- College Title -->
+      <div class="text-sm font-semibold leading-tight">Sri Sathya Sai Baba<br>PU College</div>
     </div>
     <!-- Close Button -->
-    <button id="close-mobile-menu" class="text-gray-600 text-3xl font-bold">&times;</button>
+    <button id="close-mobile-menu" class="text-white text-3xl font-bold">&times;</button>
   </div>
 
-  <!-- Navigation Links -->
-  <div class="flex flex-col space-y-4 p-6">
-    <a href="index.html" class="text-gray-800 text-lg hover:text-primary transition">Home</a>
-    <a href="Academics.html" class="text-gray-800 text-lg hover:text-primary transition">Academics</a>
-    <a href="Gallery.html" class="text-gray-800 text-lg hover:text-primary transition">Gallery</a>
-    <a href="Campus-Life.html" class="text-gray-800 text-lg hover:text-primary transition">Campus Life</a>
-    <a href="About.html" class="text-gray-800 text-lg hover:text-primary transition">About</a>
-  </div>
+  <!-- Nav Links -->
+  <nav class="flex flex-col px-4 pt-6 space-y-4 text-base">
+    <a href="index.html" class="hover:bg-gray-800 px-3 py-2 rounded transition">🏠 Home</a>
+    <a href="Academics.html" class="hover:bg-gray-800 px-3 py-2 rounded transition">📘 Academics</a>
+    <a href="Gallery.html" class="hover:bg-gray-800 px-3 py-2 rounded transition">🖼️ Gallery</a>
+    <a href="Campus-Life.html" class="hover:bg-gray-800 px-3 py-2 rounded transition">🏫 Campus Life</a>
+    <a href="About.html" class="hover:bg-gray-800 px-3 py-2 rounded transition">ℹ️ About</a>
+  </nav>
 </div>
-</nav>
 
 
 <!-- Mobile Menu Script -->
@@ -534,6 +533,7 @@
     mobileMenu.classList.add('-translate-x-full');
   });
 </script>
+
 
 
 
