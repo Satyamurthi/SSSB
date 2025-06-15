@@ -1,0 +1,1374 @@
+
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8"> 
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="shortcut icon" type="x-icon" href="https://github.com/Satyamurthi/mbw-Photos/blob/main/Logo/sai%20school%20logo%20png.png?raw=true"> 
+     <title>Sri Sathya Sai Baba School & Pre-University College</title>
+     <script src="https://cdn.tailwindcss.com"></script>
+     <script>
+          tailwind.config = {
+             theme: {
+                 extend: {
+                     colors: {
+                         primary: '#1B3764',
+                         secondary: '#DAA520'
+                     },
+                     borderRadius: {
+                         'none': '0px',
+                         'sm': '4px',
+                         DEFAULT: '8px',
+                         'md': '12px',
+                         'lg': '16px',
+                         'xl': '20px',
+                         '2xl': '24px',
+                         '3xl': '32px',
+                         'full': '9999px',
+                         'button': '8px'
+                     }
+                 }
+             }
+         }
+     </script>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+     <style>
+         :where([class^="ri-"])::before { content: "\f3c2"; }
+ 
+         .nav-link {
+             position: relative;
+         }
+ 
+         .nav-link::after {
+             content: '';
+             position: absolute;
+             width: 0;
+             height: 2px;
+             bottom: -4px;
+             left: 0;
+             background-color: #1B3764;
+             transition: width 0.3s ease;
+         }
+ 
+         .nav-link:hover::after {
+             width: 100%;
+         }
+ 
+         .stats-counter {
+             opacity: 0;
+             transform: translateY(20px);
+             transition: opacity 0.6s ease, transform 0.6s ease;
+         }
+ 
+         .stats-counter.visible {
+             opacity: 1;
+             transform: translateY(0);
+         }
+	 .stats-counter {
+	      opacity: 0;
+	      transform: translateY(20px);
+	      transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+      .stats-counter.visible {
+	      opacity: 1;
+	      transform: translateY(0);
+      }
+         .program-card {
+             perspective: 1000px;
+             transition: transform 0.6s;
+         }
+ 
+         .program-card:hover {
+             transform: scale(1.02);
+         }
+ 
+         @keyframes fadeIn {
+             from { opacity: 0; transform: translateY(20px); }
+             to { opacity: 1; transform: translateY(0); }
+         }
+ 
+         .fade-in {
+             animation: fadeIn 0.6s ease forwards;
+         }
+ 
+         .search-expand {
+             transition: width 0.3s ease;
+         }
+ 
+         .search-expand:focus {
+             width: 300px;
+         }
+ 
+         .toast {
+             position: fixed;
+             bottom: 24px;
+             right: 24px;
+             transform: translateY(100px);
+             transition: transform 0.3s ease;
+         }
+ 
+         .toast.show {
+             transform: translateY(0);
+         }
+	.card:hover {
+	     transform: translateY(-5px);
+	     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+         }
+	/* Image Scorlling */
+	body {
+	  margin: 0;
+	  font-family: 'Roboto', sans-serif;
+	  background-color: #fff;
+	  color: #333;
+	}
+
+
+
+
+
+
+
+
+
+
+.card {
+  width: 300px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin: 1rem auto;
+}
+
+.slideshow-container {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.slide.active {
+  display: block;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  font-size: 20px;
+  padding: 6px 10px;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.nav-btn:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.card p {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+
+
+
+
+
+
+
+	     
+	.about-section {
+	  padding: 40px;
+	}
+	
+	.about-container {
+	  display: flex;
+	  flex-wrap: wrap;
+	  align-items: center;
+	  justify-content: center;
+	  max-width: 1200px;
+	  margin: auto;
+	}
+	
+	.logo img {
+	  max-width: 350px;
+	  width: 100%;
+	  height: auto;
+	}
+	
+	.about-text {
+	  flex: 1;
+	  min-width: 300px;
+	  padding: 20px 40px;
+	}
+	
+	.section-title {
+	  font-size: 16px;
+	  color: #f97316;
+	  text-transform: uppercase;
+	  margin-bottom: 10px;
+	  font-weight: bold;
+	  position: relative;
+	}
+	
+	.section-title::after {
+	  content: "";
+	  display: block;
+	  width: 40px;
+	  height: 3px;
+	  background: #f97316;
+	  margin-top: 5px;
+	}
+	
+	.about-text h1 {
+	  font-size: 32px;
+	  font-weight: 700;
+	  color: #1a202c;
+	  margin-bottom: 20px;
+	}
+	
+	.highlight-orange {
+	  color: #f97316;
+	}
+	
+	.about-text p {
+	  font-size: 16px;
+	  line-height: 1.8;
+	}
+	.hero {
+	    text-align: center;
+	    font-size: 18px;
+	    color: #fff;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    background-attachment: fixed;
+	    background-position: center;
+	}
+	
+	.hero__bg {
+	    padding: 72px 0 167px 0;
+	    background: rgba(0, 0, 0, 0.75);
+	    position: relative;
+	    top: 0;
+	    bottom: 0;
+	    left: 0;
+	    right: 0;
+	}
+	
+	.container {
+	    max-width: 1054px;
+	    margin: 0 auto;
+	    box-sizing: border-box;
+	}
+	
+	.container::after {
+	    content: '';
+	    clear: both;
+	    display: table;
+	}
+	
+	.row {
+	    display: flex;
+	    flex-wrap: wrap;
+	    justify-content: space-between;
+	    gap: 20px;
+	    max-width: 62.5rem;
+	    margin: 0 auto;
+	}
+	
+	.columns {
+	    flex: 1 1 48%;
+	    box-sizing: border-box;
+	}
+	
+	/* Each card section */
+	.hero__single {
+	    display: flex;
+	    align-items: center;
+	    padding: 20px;
+	    /*background: rgba(255, 255, 255, 0.05);  Optional soft card background */
+	    border-radius: 20px;
+	    transition: all 0.3s ease-in-out;
+	}
+	
+
+	/*.hero__img {
+	    box-shadow: 0 4px 15px 3px rgba(0, 0, 0, 0.15);
+	    border-radius: 50%;
+	    min-width: 150px;
+	    max-width: 150px;
+	    overflow: hidden;
+	    margin-right: 30px;
+	    transition: all 1s;
+	}*/
+	.hero__img {
+	    box-shadow: 0 4px 15px 3px rgba(0, 0, 0, 0.15);
+	    border-radius: 50%;
+	    min-width: 150px;
+	    overflow: hidden;
+	    margin-right: 30px;
+	    transition: all 1s;
+	}
+	.hero__img img {
+	    width: 100%;
+	    height: auto;
+	    display: block;
+	}
+	
+	.hero__content {
+	    text-align: left;
+	}
+	
+	.hero__tag {
+	    font-size: 12px;
+	    line-height: 20px;
+	    letter-spacing: 2px;
+	    display: block;
+	    text-transform: uppercase;
+	    color: #BDBDBD;
+	    margin-bottom: 5px;
+	}
+	
+	.hero__title {
+	    font-weight: bold;
+	    font-size: 18px;
+	    margin-bottom: 15px;
+	    color: #fff;
+	}
+	
+	.hero__desc {
+	    font-size: 14px;
+	    line-height: 23px;
+	    color: #eee;
+	}
+	.rounded-button {
+      border-radius: 9999px;
+  }
+
+	/* ========== Mobile Responsive ========== */
+	@media screen and (max-width: 768px) {
+	    .columns {
+	        flex: 1 1 100%;
+	    }
+	
+	    .hero__single {
+	        flex-direction: row; /* Keep row direction on mobile too */
+	        align-items: flex-start;
+	        text-align: left;
+	    }
+	
+	    .hero__img {
+	        margin: 0 20px 0 0; /* margin right instead of bottom */
+	    }
+	
+	    .hero__content {
+	        display: flex;
+	        flex-direction: column;
+	        text-align: left;
+	        align-items: flex-start;
+	    }
+	}
+	
+	/* ========== Reset styles (optional cleanup) ========== */
+	div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+	    margin: 0;
+	    padding: 0;
+	}
+	
+	*, *::before, *::after {
+	    box-sizing: border-box;
+	}
+	
+	body {
+	    margin: 0;
+	    padding: 0;
+	    background: #fefefe;
+	    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+	    font-weight: normal;
+	    line-height: 1.5;
+	    color: #0a0a0a;
+	    -webkit-font-smoothing: antialiased;
+	    -moz-osx-font-smoothing: grayscale;
+	}
+	.content {
+	  position: relative;
+	  z-index: 1;
+	  padding-top: 200px;
+	}
+
+     </style>
+ </head>
+ <body class="bg-white">
+	 
+<!-- Navigation Bar -->
+<nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-col items-center justify-center py-2">
+
+      <!-- TOP ROW: Logos + Title -->
+      <div class="flex justify-between items-center w-full">
+        <!-- LEFT: Hamburger + Logo -->
+        <div class="flex items-center space-x-4">
+          <!-- Hamburger for Mobile -->
+          <div class="md:hidden">
+            <button id="mobile-menu-toggle" class="text-gray-700 focus:outline-none">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+          <!-- Left Logo -->
+          <a href="index.html">
+            <img src="https://github.com/Satyamurthi/mbw-Photos/blob/main/Logo/sai%20baba%20Logo.png?raw=true" style="height: 50px;">
+          </a>
+        </div>
+
+        <!-- CENTER: College Title -->
+        <div class="text-center text-base sm:text-lg md:text-xl font-semibold text-gray-800">
+          Sri Sathya Sai Baba School And PU College
+        </div>
+
+        <!-- RIGHT: Right Logo -->
+        <div class="flex items-center">
+          <a href="About.html">
+            <img src="https://github.com/Satyamurthi/mbw-Photos/blob/main/Logo/sai%20school%20logo%20png.png?raw=true" style="height: 50px;">
+          </a>
+        </div>
+      </div>
+
+      <!-- SECOND ROW: Nav Buttons (Desktop only) -->
+      <div class="hidden md:flex justify-center space-x-6 w-full mt-2">
+        <a href="index.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Home</a>
+        <a href="Academics.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Academics</a>
+        <a href="Gallery.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Gallery</a>
+        <a href="Campus-Life.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Campus Life</a>
+        <a href="About.html" class="nav-link text-gray-700 hover:text-primary transition-colors">About</a>
+        <a href="#">
+          <button class="bg-primary text-white px-4 py-2 rounded-button hover:bg-primary/90 transition-colors">
+            FOR ADMISSIONS
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="fixed top-0 left-0 w-full h-1/2 bg-white z-40 shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden rounded-br-2xl border-r border-b">
+    <div class="flex flex-col p-4 space-y-4 h-full">
+      <!-- Close Button -->
+      <button id="close-mobile-menu" class="self-end text-gray-600 text-2xl font-bold">&times;</button>
+
+      <!-- Links -->
+      <a href="index.html" class="text-gray-700 hover:text-primary">Home</a>
+      <a href="Academics.html" class="text-gray-700 hover:text-primary">Academics</a>
+      <a href="Gallery.html" class="text-gray-700 hover:text-primary">Gallery</a>
+      <a href="Campus-Life.html" class="text-gray-700 hover:text-primary">Campus Life</a>
+      <a href="About.html" class="text-gray-700 hover:text-primary">About</a>
+      <a href="#">
+        <button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90 transition-colors">
+          FOR ADMISSIONS
+        </button>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu Script -->
+<script>
+  const toggleBtn = document.getElementById('mobile-menu-toggle');
+  const closeBtn = document.getElementById('close-mobile-menu');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  toggleBtn.addEventListener('click', () => {
+    mobileMenu.classList.remove('-translate-x-full');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    mobileMenu.classList.add('-translate-x-full');
+  });
+</script>
+
+
+	<!-- Main Content -->
+	 <main class="pt-16">
+		 <!-- Video Start -->	 
+		<section class="relative h-[600px] flex items-center overflow-hidden">
+			 <!-- Background Video Container -->
+			 <div id="video-container" class="absolute inset-0 w-full h-full -z-10"></div>
+		 
+			 <!-- Overlay -->
+			 <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-transparent"></div>
+		
+			<!-- Above Video Content -->
+		     <!--    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			     <div class="max-w-2xl text-white">
+				 <h1 class="text-5xl font-bold mb-6 fade-in">Shape Your Future at SSSBPUC</h1>
+				 <p class="text-xl mb-8 fade-in" style="animation-delay: 0.2s">
+				     Discover a world-class education that prepares you for leadership in a rapidly evolving global society.
+				 </p>
+				 <div class="flex space-x-4 fade-in" style="animation-delay: 0.4s">
+				     <button onclick="window.location.href='Academics.html'" class="bg-white text-primary px-8 py-3 rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap">
+					 Explore Programs
+				     </button>
+				     <button onclick="window.location.href='https://www.youtube.com/watch?v=zKz4QQKx_jo'" class="border-2 border-white text-white px-8 py-3 rounded-button hover:bg-white/10 transition-colors whitespace-nowrap">
+					 Virtual Tour
+				     </button>- ->
+				 </div>
+			     </div>
+			 </div>-->
+		      </section>
+	
+	 
+			<!-- YouTube API Script -->
+			<script>
+			    function onYouTubeIframeAPIReady() {
+			        new YT.Player('video-container', {
+			            videoId: 'zKz4QQKx_jo', // Replace with your YouTube Video ID
+			            playerVars: {
+			                autoplay: 1,
+			                mute: 1,
+			                loop: 1,
+			                playlist: 'zKz4QQKx_jo',
+			                controls: 0,
+			                showinfo: 0,          // Legacy; may not work but harmless
+			                modestbranding: 1,    // Minimal branding
+			                fs: 0,
+			                rel: 0,
+			                disablekb: 1,
+			                cc_load_policy: 0,    // Prevent captions
+			                iv_load_policy: 3,    // Hide annotations
+			                playsinline: 1
+			            },
+			            events: {
+			                onReady: function(event) {
+			                    event.target.setPlaybackRate(2); // Max YouTube-supported speed
+			                    event.target.playVideo();
+			                }
+			            }
+			        });
+			    }
+			
+			    // Load YouTube Iframe API
+			    let tag = document.createElement('script');
+			    tag.src = "https://www.youtube.com/iframe_api";
+			    document.head.appendChild(tag);
+			</script>
+			<!-- Video End -->
+
+	
+			<!-- Welcome Note -->
+			<section class="about-section">
+			    <div class="about-container">
+			      <div class="logo">
+				<img src="https://github.com/Satyamurthi/mbw-Photos/blob/main/Logo/sai%20school%20logo%20png.png?raw=true" alt="School Logo" />
+			      </div>
+			      <div class="about-text">
+				<h4 class="section-title">ABOUT US</h4>
+				<h1>Welcome to <span class="highlight-orange">Sri Sathya Sai School & PU College Mysuru</span></h1>
+				<p>
+				  Our school is dedicated to fostering Education in Human Values. Today's education system often prioritizes intellectual and skill development while neglecting the cultivation of good character. We believe that true education extends beyond academics to encompass moral and spiritual growth. Our mission is to nurture students who not only excel academically but also possess compassion, humility, and a sense of service towards society. We strive to instill in our students a deep reverence for righteousness, a steadfast faith in God, and a profound love for their mothers, motherland, mother tongue, and religion. Our goal is to produce individuals who lead meaningful lives guided by principles of truth , righteousness, and service to humanity
+				</p>
+			      </div>
+			    </div>
+			  </section>
+			
+			
+			
+			
+				 
+			
+			
+				 
+			<<section class="hero" style="background-image:url(https://github.com/Satyamurthi/mbw-Photos/blob/main/Baba%20Photos/Bhajan%20hall.png?raw=true)">
+				<div class="hero__bg">
+					<div class="container">
+						<div class="row">
+							<div class="columns large-6">
+								<div class="hero__single">
+									<div class="hero__img">
+										<img src="https://github.com/Satyamurthi/mbw-Photos/blob/main/Baba%20Photos/Sunandamma.png?raw=true" alt="annaimg">
+									</div>
+									<div class="hero__content">
+										<span class="hero__tag">founder president</span>
+										<h4 class="hero__title">
+											<a href="#">
+												Late Smt Sunandamma								
+											</a>
+										</h4>
+										<p class="hero__desc">
+											Deeply influenced by the Bhagvn Sri Satya Sai Baba, Smt Sunandamma, with the help of some dedicated workers, set up yhis educational institution at Mysuru on 1957…...
+											<a href="#" class="read-more">Read more</a>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="columns large-6">
+								<div class="hero__single">
+									<div class="hero__img">
+										<img src="https://github.com/Satyamurthi/mbw-Photos/blob/main/Baba%20Photos/Baba%20Cahir.jpg?raw=true" alt="babaimg">
+									</div>
+									<div class="hero__content">
+										<span class="hero__tag">blessings</span>
+										<h4 class="hero__title">
+											<a href="#">
+													Bhagawan Sri Sathya Sai Baba								
+											</a>
+										</h4>
+										<p class="hero__desc">
+											Bhagawan Sri Sathya Sai Baba was incarnated in a remote village called Puttaparthi in Anantpur district in Andhra Pradesh in the year 23-11-1926. His parents…...
+											<a href="#" class="read-more">Read more</a>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+
+
+
+
+
+
+
+
+		 
+		 
+			  <!-- Updates Start -->
+			 <section class="bg-white py-20">
+			     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				 <div class="text-center mb-16">
+				     <h2 class="text-3xl font-bold text-gray-900 mb-4">Updates</h2>
+				     <p class="text-gray-600 max-w-2xl mx-auto">
+					Stay updated with the latest happenings, breakthroughs, and events at SSSBPUC.
+				     </p>
+				 </div>
+			 
+				 <!-- Grid Layout for News & Events -->
+				 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+			 
+				     <!-- Research Video Card -->
+				     <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+					 <video class="w-full h-48 object-cover" controls autoplay muted loop>
+					     <source src="https://github.com/Satyamurthi/mbw-Photos/blob/main/Baba%20Photo.png">
+					     Your browser does not support the video tag.
+					 </video>
+					 <div class="p-6">
+					     <div class="flex items-center mb-4">
+						 <span class="text-sm text-primary font-medium">Research</span>
+						 <span class="mx-2">•</span>
+						 <span class="text-sm text-gray-500">Feb 20, 2025</span>
+					     </div>
+					     <h3 class="text-xl font-semibold mb-2">Breakthrough in Quantum Computing</h3>
+					     <p class="text-gray-600 mb-4">
+						 Our research team has achieved a significant milestone in quantum computing, paving the way for future innovations.
+					     </p>
+					     <a href="#" class="text-primary font-medium hover:text-primary/80 transition-colors">Read More →</a>
+					 </div>
+				     </div>
+			 
+				     <!-- Event Video Card -->
+				     <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+					 <video class="w-full h-48 object-cover" controls autoplay muted loop>
+					     <source src="https://your-video-url.com/event-video.mp4" type="video/mp4">
+					     Your browser does not support the video tag.
+					 </video>
+					 <div class="p-6">
+					     <div class="flex items-center mb-4">
+						 <span class="text-sm text-primary font-medium">Events</span>
+						 <span class="mx-2">•</span>
+						 <span class="text-sm text-gray-500">Feb 15, 2025</span>
+					     </div>
+					     <h3 class="text-xl font-semibold mb-2">Spring Graduation Ceremony 2025</h3>
+					     <p class="text-gray-600 mb-4">
+						 Join us in celebrating the achievements of our graduating class of 2025 at our annual ceremony.
+					     </p>
+					     <a href="#" class="text-primary font-medium hover:text-primary/80 transition-colors">Read More →</a>
+					 </div>
+				     </div>
+			 
+				     <!-- Event Video Card -->
+				     <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+					 <video class="w-full h-48 object-cover" controls autoplay muted loop>
+					     <source src="https://your-video-url.com/event-video.mp4" type="video/mp4">
+					     Your browser does not support the video tag.
+					 </video>
+					 <div class="p-6">
+					     <div class="flex items-center mb-4">
+						 <span class="text-sm text-primary font-medium">Events</span>
+						 <span class="mx-2">•</span>
+						 <span class="text-sm text-gray-500">Feb 15, 2025</span>
+					     </div>
+					     <h3 class="text-xl font-semibold mb-2">Spring Graduation Ceremony 2025</h3>
+					     <p class="text-gray-600 mb-4">
+						 Join us in celebrating the achievements of our graduating class of 2025 at our annual ceremony.
+					     </p>
+					     <a href="#" class="text-primary font-medium hover:text-primary/80 transition-colors">Read More →</a>
+					 </div>
+				     </div>
+			 
+				     <!-- Campus Life Video Card -->
+				     <div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+					 <video class="w-full h-48 object-cover" controls autoplay muted loop>
+					     <source src="https://your-video-url.com/sports-complex.mp4" type="video/mp4">
+					     Your browser does not support the video tag.
+					 </video>
+					 <div class="p-6">
+					     <div class="flex items-center mb-4">
+						 <span class="text-sm text-primary font-medium">Campus Life</span>
+						 <span class="mx-2">•</span>
+						 <span class="text-sm text-gray-500">Feb 10, 2025</span>
+					     </div>
+					     <h3 class="text-xl font-semibold mb-2">New Sports Complex Opening</h3>
+					     <p class="text-gray-600 mb-4">
+						 Experience our state-of-the-art sports facility designed to enhance student wellness and athletic performance.
+					     </p>
+					     <a href="#" class="text-primary font-medium hover:text-primary/80 transition-colors">Read More →</a>
+					 </div>
+				     </div>
+			 
+				 </div>
+			 
+				 <!-- Centered "View All News" Button -->
+				 <div class="text-center mt-12">
+				     <button class="bg-primary text-white px-8 py-3 rounded-button hover:bg-primary/90 transition-colors whitespace-nowrap">
+					 View All News
+				     </button>
+				 </div>
+			     </div>
+			 </section>
+		
+		
+		
+		
+		
+		
+		
+		
+			 <!-- Numbers -->
+			<section class="py-20 bg-primary text-white">
+				<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				  <div class="text-center mb-16">
+				    <h2 class="text-3xl font-bold mb-4">By the Numbers</h2>
+				    <p class="text-white/80 max-w-2xl mx-auto">
+				      Our impact in numbers reflects our commitment to excellence in education and research.
+				    </p>
+				  </div>
+				  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+				    <div class="text-center stats-counter">
+				      <div class="text-4xl font-bold mb-2" data-target="25000">0</div>
+				      <p class="text-white/80">Students Enrolled</p>
+				    </div>
+				    <div class="text-center stats-counter">
+				      <div class="text-4xl font-bold mb-2" data-target="70">0</div>
+				      <p class="text-white/80">Faculty Members</p>
+				    </div>
+				    <div class="text-center stats-counter">
+				      <div class="text-4xl font-bold mb-2" data-target="4">0</div>
+				      <p class="text-white/80">Academic Programs</p>
+				    </div>
+				    <div class="text-center stats-counter">
+				      <div class="text-4xl font-bold mb-2" data-target="100">0</div>
+				      <p class="text-white/80">Passing Rate</p>
+				    </div>
+				  </div>
+				</div>
+			      </section>
+		
+				<script>
+				  document.addEventListener("DOMContentLoaded", () => {
+				    const counters = document.querySelectorAll('.stats-counter');
+				    const speed = 200;
+				
+				    const animateCounter = (el) => {
+				      const counter = el.querySelector('div[data-target]');
+				      const updateCount = () => {
+					const target = +counter.getAttribute('data-target');
+					const count = +counter.innerText;
+					const increment = target / speed;
+				
+					if (count < target) {
+					  counter.innerText = Math.ceil(count + increment);
+					  setTimeout(updateCount, 15);
+					} else {
+					  counter.innerText = target.toLocaleString(); // format with commas
+					}
+				      };
+				      updateCount();
+				    };
+				
+				    const observer = new IntersectionObserver((entries, observer) => {
+				      entries.forEach(entry => {
+					if (entry.isIntersecting) {
+					  entry.target.classList.add('visible'); // 💡 this makes it fade in!
+					  animateCounter(entry.target); // 💡 this starts the count!
+					  observer.unobserve(entry.target); // only animate once
+					}
+				      });
+				    }, { threshold: 0.5 });
+				
+				    counters.forEach(counter => {
+				      observer.observe(counter);
+				    });
+				  });
+				</script>
+		
+		
+		
+		
+		
+		
+			 
+			<!-- Facilities Start -->
+			<section class="bg-white py-20">
+			  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			    <div class="text-center mb-16">
+			      <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Facilities</h2>
+			      <p class="text-gray-600 max-w-2xl mx-auto">Discover our most popular and innovative academic programs designed to prepare you for success.</p>
+			    </div>
+			
+			    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+			
+			      <!-- Card 1 -->
+			      <div class="program-card bg-white rounded-lg overflow-hidden shadow-sm">
+				<img id="slide-1" src="https://github.com/Satyamurthi/mwb.github.io/blob/main/Photos/DSC_4033.jpg?raw=true" class="w-full h-48 object-cover" alt="Physics Lab">
+				<div class="p-6">
+				  <div class="flex items-center mb-4">
+				    <span class="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">Physics Lab</span>
+				  </div>
+				  <h3 class="text-xl font-semibold mb-2">🌈⃤  Physics Lab ⚛️</h3>
+				  <p class="text-gray-600 mb-4">Equipped with advanced apparatus for hands-on experiments. Students explore concepts through practical demonstrations.</p>
+				  <button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90 transition-colors">Learn More</button>
+				</div>
+			      </div>
+			
+			      <!-- Card 2 -->
+			      <div class="program-card bg-white rounded-lg overflow-hidden shadow-sm">
+				<img id="slide-2" src="https://github.com/Satyamurthi/mwb.github.io/blob/main/Photos/DSC_4038.jpg?raw=true" class="w-full h-48 object-cover" alt="Chemistry Lab">
+				<div class="p-6">
+				  <div class="flex items-center mb-4">
+				    <span class="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">Chemistry Lab</span>
+				  </div>
+				  <h3 class="text-xl font-semibold mb-2">🧪 Chemistry Lab 👨🏻‍🔬</h3>
+				  <p class="text-gray-600 mb-4">Designed for safe and effective chemical experiments. Students learn concepts with practical applications.</p>
+				  <button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90 transition-colors">Learn More</button>
+				</div>
+			      </div>
+			
+			      <!-- Card 3 -->
+			      <div class="program-card bg-white rounded-lg overflow-hidden shadow-sm">
+				<img id="slide-3" src="https://github.com/Satyamurthi/mwb.github.io/blob/main/Photos/DSC_4015.jpg?raw=true" class="w-full h-48 object-cover" alt="Biology Lab">
+				<div class="p-6">
+				  <div class="flex items-center mb-4">
+				    <span class="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">Biology Lab</span>
+				  </div>
+				  <h3 class="text-xl font-semibold mb-2">🌱 Biology Lab 🫁</h3>
+				  <p class="text-gray-600 mb-4">Offers modern tools for studying life sciences. Students perform dissections and observe microscopic life.</p>
+				  <button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90 transition-colors">Learn More</button>
+				</div>
+			      </div>
+			
+			
+			      <!-- Card 4 -->
+			      <div class="program-card bg-white rounded-lg overflow-hidden shadow-sm">
+				<img id="slide-4" src="https://github.com/Satyamurthi/mwb.github.io/blob/main/Photos/DSC_4006.jpg?raw=true" class="w-full h-48 object-cover" alt="Biology Lab">
+				<div class="p-6">
+				  <div class="flex items-center mb-4">
+				    <span class="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">Biology Lab</span>
+				  </div>
+				  <h3 class="text-xl font-semibold mb-2">💻 Computer Science Lab 🌐</h3>
+				  <p class="text-gray-600 mb-4">Offers modern tools for studying life sciences. Students perform dissections and observe microscopic life.</p>
+				  <button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90 transition-colors">Learn More</button>
+				</div>
+			      </div>
+			
+			
+			      <!-- Card 5 -->
+			      <div class="program-card bg-white rounded-lg overflow-hidden shadow-sm">
+				<img id="slide-5" src="https://github.com/Satyamurthi/mwb.github.io/blob/main/Photos/DSC_4054.jpg?raw=true" class="w-full h-48 object-cover" alt="Biology Lab">
+				<div class="p-6">
+				  <div class="flex items-center mb-4">
+				    <span class="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">Biology Lab</span>
+				  </div>
+				  <h3 class="text-xl font-semibold mb-2">📚 Library 📖</h3>
+				  <p class="text-gray-600 mb-4">Offers modern tools for studying life sciences. Students perform dissections and observe microscopic life.</p>
+				  <button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90 transition-colors">Learn More</button>
+				</div>
+			      </div>
+			
+			
+			      <!-- Card 6 -->
+			      <div class="program-card bg-white rounded-lg overflow-hidden shadow-sm">
+				<img id="slide-6" src="https://github.com/Satyamurthi/mwb.github.io/blob/main/Photos/DSC_4054.jpg?raw=true" class="w-full h-48 object-cover" alt="Biology Lab">
+				<div class="p-6">
+				  <div class="flex items-center mb-4">
+				    <span class="bg-primary/10 text-primary text-sm px-3 py-1 rounded-full">Biology Lab</span>
+				  </div>
+				  <h3 class="text-xl font-semibold mb-2">👨🏻‍🏫 Class Room's 👩‍🏫</h3>
+				  <p class="text-gray-600 mb-4">Offers modern tools for studying life sciences. Students perform dissections and observe microscopic life.</p>
+				  <button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90 transition-colors">Learn More</button>
+				</div>
+			      </div>
+				    
+			    </div>
+			  </div>
+			</section>
+			
+			<script>
+			  // Array of image groups for each slideshow
+			  const slides = {
+			    "slide-1": [
+			      "https://github.com/Satyamurthi/mwb.github.io/blob/main/Photos/DSC_4033.jpg?raw=true",
+			      "https://github.com/Satyamurthi/mwb.github.io/blob/main/Photos/DSC_4038.jpg?raw=true"
+			    ],
+			    "slide-2": [
+			      "https://github.com/Satyamurthi/mwb.github.io/blob/main/Photos/DSC_4038.jpg?raw=true",
+			      "https://github.com/Satyamurthi/mwb.github.io/blob/main/Photos/DSC_4033.jpg?raw=true"
+			    ],
+			    "slide-3": [
+			      "https://github.com/Satyamurthi/mwb.github.io/blob/main/Photos/DSC_4015.jpg?raw=true",
+			      "https://github.com/Satyamurthi/mwb.github.io/blob/main/Photos/DSC_4006.jpg?raw=true"
+			    ]
+			    "slide-4": [
+			      "https://github.com/Satyamurthi/mwb.github.io/blob/main/Photos/DSC_4006.jpg?raw=true",
+			      "https://github.com/Satyamurthi/mwb.github.io/blob/main/Photos/DSC_4015.jpg?raw=true",
+			    ],
+			    "slide-5": [
+			      "https://github.com/Satyamurthi/mwb.github.io/blob/main/Photos/DSC_4038.jpg?raw=true",
+			      "https://github.com/Satyamurthi/mwb.github.io/blob/main/Photos/DSC_4015.jpg?raw=true",
+			    ],
+			    "slide-6": [
+			      "https://github.com/Satyamurthi/mwb.github.io/blob/main/Photos/DSC_4015.jpg?raw=true",
+			      "https://github.com/Satyamurthi/mwb.github.io/blob/main/Photos/DSC_4006.jpg?raw=true"
+			    ]
+			  };
+			
+			  // Function to rotate images
+			  function startSlideshow(id, imageArray) {
+			    let index = 0;
+			    setInterval(() => {
+			      const img = document.getElementById(id);
+			      if (img) {
+				index = (index + 1) % imageArray.length;
+				img.src = imageArray[index];
+			      }
+			    }, 3000); // 3 seconds per slide
+			  }
+			
+			  // Start all slideshows
+			  Object.entries(slides).forEach(([id, images]) => {
+			    startSlideshow(id, images);
+			  });
+			</script>
+		<!-- Facilities End -->
+		
+			 <!-- Campus Life Start -->
+			 <section class="py-20 bg-gray-50">
+			     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				 <div class="text-center mb-16">
+				     <h2 class="text-3xl font-bold text-gray-900 mb-4">Campus Life</h2>
+				     <p class="text-gray-600 max-w-2xl mx-auto">Experience the vibrant and diverse community at SSSBPUC.</p>
+				 </div>
+		 
+				 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+				     <div class="relative group overflow-hidden rounded-lg">
+					 <img src="https://github.com/Satyamurthi/mbw-Photos/blob/main/image.png?raw=true" alt="College 1" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+					 <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+					     <p class="text-white text-center px-4">College</p>
+					 </div>
+				     </div>
+				     <div class="relative group overflow-hidden rounded-lg">
+					 <img src="#" alt="College 2" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+					 <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+					     <p class="text-white text-center px-4">Student Housing</p>
+					 </div>
+				     </div>
+				     <div class="relative group overflow-hidden rounded-lg">
+					 <img src="#" alt="College 3" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+					 <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+					     <p class="text-white text-center px-4">Sports Facilities</p>
+					 </div>
+				     </div>
+				     <div class="relative group overflow-hidden rounded-lg">
+					 <img src="#" alt="College 4" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+					 <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+					     <p class="text-white text-center px-4">Student Center</p>
+					 </div>
+				     </div>
+				 </div>
+			     </div>
+			 </section>
+			<!-- Campus Life End -->
+		
+			<!-- Sister Institutes Section -->
+			<section class="py-20">
+			  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			    <div class="text-center mb-16">
+			      <h2 class="text-3xl font-bold text-gray-900 mb-4">
+				Sister Institutes
+			      </h2>
+			      <p class="text-gray-600 max-w-2xl mx-auto">
+				Discover endless opportunities and shared excellence at our esteemed sister institutions.
+			      </p>
+			    </div>
+			    <div class="relative">
+			      <div class="overflow-hidden">
+				<div class="activities-slider flex transition-transform duration-500">
+				  <!-- Slide 1 -->
+				  <div class="slide w-full md:w-1/2 lg:w-1/4 flex-shrink-0 px-3">
+				    <div class="relative group overflow-hidden rounded-lg">
+				      <img
+					src="https://github.com/Satyamurthi/mbw-Photos/blob/main/Sister%20Institutes/Alike.jpg?raw=true"
+					alt="Alike"
+					class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+				      />
+				      <div
+					class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-center p-4"
+				      >
+					<h3 class="text-white text-lg font-semibold mb-2">Alike</h3>
+				      </div>
+				    </div>
+				  </div>
+			
+				  <!-- Slide 2 -->
+				  <div class="slide w-full md:w-1/2 lg:w-1/4 flex-shrink-0 px-3">
+				    <div class="relative group overflow-hidden rounded-lg">
+				      <img
+					src="https://github.com/Satyamurthi/mbw-Photos/blob/main/Sister%20Institutes/Dharwad%202.jpg?raw=true"
+					alt="Dharwad"
+					class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+				      />
+				      <div
+					class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-center p-4"
+				      >
+					<h3 class="text-white text-lg font-semibold mb-2">Dharwad</h3>
+				      </div>
+				    </div>
+				  </div>
+			
+				  <!-- Slide 3 -->
+				  <div class="slide w-full md:w-1/2 lg:w-1/4 flex-shrink-0 px-3">
+				    <div class="relative group overflow-hidden rounded-lg">
+				      <img
+					src="https://github.com/Satyamurthi/mbw-Photos/blob/main/College%20Photos/College.jpg?raw=true"
+					alt="Mysuru"
+					class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+				      />
+				      <div
+					class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-center p-4"
+				      >
+					<h3 class="text-white text-lg font-semibold mb-2">Mysuru</h3>
+				      </div>
+				    </div>
+				  </div>
+			
+				  <!-- Duplicate slides for demo -->
+				  <div class="slide w-full md:w-1/2 lg:w-1/4 flex-shrink-0 px-3">
+				    <div class="relative group overflow-hidden rounded-lg">
+				      <img
+					src="https://github.com/Satyamurthi/mbw-Photos/blob/main/Sister%20Institutes/Alike.jpg?raw=true"
+					alt="Alike"
+					class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+				      />
+				      <div
+					class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-center p-4"
+				      >
+					<h3 class="text-white text-lg font-semibold mb-2">Alike</h3>
+				      </div>
+				    </div>
+				  </div>
+			
+				  <div class="slide w-full md:w-1/2 lg:w-1/4 flex-shrink-0 px-3">
+				    <div class="relative group overflow-hidden rounded-lg">
+				      <img
+					src="https://github.com/Satyamurthi/mbw-Photos/blob/main/Sister%20Institutes/Dharwad%202.jpg?raw=true"
+					alt="Dharwad"
+					class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+				      />
+				      <div
+					class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-center p-4"
+				      >
+					<h3 class="text-white text-lg font-semibold mb-2">Dharwad</h3>
+				      </div>
+				    </div>
+				  </div>
+			
+				  <div class="slide w-full md:w-1/2 lg:w-1/4 flex-shrink-0 px-3">
+				    <div class="relative group overflow-hidden rounded-lg">
+				      <img
+					src="https://github.com/Satyamurthi/mbw-Photos/blob/main/College%20Photos/College.jpg?raw=true"
+					alt="Mysuru"
+					class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+				      />
+				      <div
+					class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-center p-4"
+				      >
+					<h3 class="text-white text-lg font-semibold mb-2">Mysuru</h3>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+			      </div>
+			
+			      <!-- Slider Buttons -->
+			      <button
+				class="absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 hover:bg-white rounded-full shadow-lg flex items-center justify-center text-primary z-10"
+				id="prev-activities"
+			      >
+				<i class="ri-arrow-left-s-line text-2xl"></i>
+			      </button>
+			      <button
+				class="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 hover:bg-white rounded-full shadow-lg flex items-center justify-center text-primary z-10"
+				id="next-activities"
+			      >
+				<i class="ri-arrow-right-s-line text-2xl"></i>
+			      </button>
+			    </div>
+			  </div>
+			</section>
+			
+			<script>
+			  document.addEventListener("DOMContentLoaded", function () {
+			    const slider = document.querySelector(".activities-slider");
+			    const slides = document.querySelectorAll(".slide");
+			    const prevBtn = document.getElementById("prev-activities");
+			    const nextBtn = document.getElementById("next-activities");
+			
+			    let currentSlide = 0;
+			
+			    function getVisibleSlides() {
+			      const width = window.innerWidth;
+			      if (width >= 1024) return 4; // Desktop
+			      if (width >= 640) return 2;  // Tablet
+			      return 1;                    // Mobile
+			    }
+			
+			    function updateSlider() {
+			      const visibleSlides = getVisibleSlides();
+			      const slideWidth = slides[0].offsetWidth + 24; // 24px for px-3
+			      const offset = currentSlide * slideWidth;
+			      slider.style.transform = `translateX(-${offset}px)`;
+			    }
+			
+			    prevBtn.addEventListener("click", () => {
+			      const visibleSlides = getVisibleSlides();
+			      currentSlide = Math.max(currentSlide - visibleSlides, 0);
+			      updateSlider();
+			    });
+			
+			    nextBtn.addEventListener("click", () => {
+			      const visibleSlides = getVisibleSlides();
+			      const maxSlide = Math.max(slides.length - visibleSlides, 0);
+			      currentSlide = Math.min(currentSlide + visibleSlides, maxSlide);
+			      updateSlider();
+			    });
+			
+			    window.addEventListener("resize", updateSlider);
+			    updateSlider();
+			
+			    setInterval(() => {
+			      const visibleSlides = getVisibleSlides();
+			      const maxSlide = Math.max(slides.length - visibleSlides, 0);
+			      currentSlide = (currentSlide + visibleSlides) % (maxSlide + 1);
+			      updateSlider();
+			    }, 5000);
+			  });
+			</script>
+		
+	 </main>
+		 
+	 <footer class="bg-gray-900 text-white py-16">
+	     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+		     <div>
+			 <!--<a href="#" class="text-2xl font-['Pacifico'] text-white mb-4 block">logo</a>-->
+			 <img src="https://github.com/Satyamurthi/mbw-Photos/blob/main/Logo/sai%20baba%20Logo.png?raw=true" alt="Logo" class="w-24 h-auto mb-4 block"> 
+			 <p class="text-gray-400 mb-4">Shaping tomorrow's leaders through excellence in education, research, and innovation.</p>
+			 <div class="flex space-x-4">
+			     <a href="https://www.facebook.com/people/Sathya-Sai-Baba-Puc/pfbid02EXmmdXSUpaZJE3uH5zdoHTGTsfFPjy5RK5Z6dUJ55skrdtPwmWgYpTbHbh7RwcfZl" class="text-gray-400 hover:text-white transition-colors">
+				 <i class="ri-facebook-fill text-xl"></i>
+			     </a>
+			     <a href="#" class="text-gray-400 hover:text-white transition-colors">
+				 <i class="ri-twitter-fill text-xl"></i>
+			     </a>
+			     <a href="#" class="text-gray-400 hover:text-white transition-colors">
+				 <i class="ri-instagram-fill text-xl"></i>
+			     </a>
+			     <a href="#" class="text-gray-400 hover:text-white transition-colors">
+				 <i class="ri-linkedin-fill text-xl"></i>
+			     </a>
+			 </div>
+		     </div>
+	 
+		     <div>
+			 <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+			 <ul class="space-y-2">
+			     <li><a href="About.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+			     <li><a href="Academics.html" class="text-gray-400 hover:text-white transition-colors">Academics</a></li>
+			     <li><a href="Gallery.html" class="text-gray-400 hover:text-white transition-colors">Gallery</a></li>
+			     <li><a href="Research.html" class="text-gray-400 hover:text-white transition-colors">Campus Life</a></li>
+			     <li><a href="#" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+			 </ul>
+		     </div>
+	 
+		     <div>
+			 <h3 class="text-lg font-semibold mb-4">Contact</h3>
+			 <ul class="space-y-2">
+			     <li class="flex items-center text-gray-400">
+				 <i class="ri-map-pin-line mr-2"></i>
+				 Sri Sathya Sai Baba PU College, 46, 4th Main Rd, 3rd Block, Jayalakshmipuram, Mysuru, Karnataka 570012
+			     </li>
+			     <li class="flex items-center text-gray-400">
+				 <i class="ri-phone-line mr-2"></i>
+				 0821 2410856
+			     </li>
+			     <li class="flex items-center text-gray-400">
+				 <i class="ri-mail-line mr-2"></i>
+				 sssbpucnn0385@gmail.com
+			     </li>
+			 </ul>
+		     </div>
+		 </div>
+	 
+		 <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+		     <p>&copy; 2025 SSSBPUC. All rights reserved.</p>
+		 </div>
+	     </div>
+	 </footer>
+	
+	 
+	     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+	const backToTop = document.getElementById("back-to-top");
+	const toast = document.getElementById("toast");
+	const newsletterForm = document.getElementById("newsletter-form");
+	const statsCounters = document.querySelectorAll(".stats-counter");
+	let countersStarted = false;
+	window.addEventListener("scroll", () => {
+	  if (window.pageYOffset > 300) {
+	    backToTop.classList.remove("opacity-0", "invisible");
+	  } else {
+	    backToTop.classList.add("opacity-0", "invisible");
+	  }
+	  const statsSection =
+	    document.querySelector(".stats-counter").parentElement.parentElement;
+	  const statsSectionTop = statsSection.offsetTop;
+	  const statsSectionHeight = statsSection.offsetHeight;
+	  const windowHeight = window.innerHeight;
+	  const scrollPosition = window.pageYOffset;
+	  if (
+	    !countersStarted &&
+	    scrollPosition > statsSectionTop - windowHeight + statsSectionHeight / 2
+	  ) {
+	    startCounters();
+	    countersStarted = true;
+	  }
+	});
+	backToTop.addEventListener("click", () => {
+	  window.scrollTo({
+	    top: 0,
+	    behavior: "smooth",
+	  });
+	});
+	newsletterForm.addEventListener("submit", (e) => {
+	  e.preventDefault();
+	  const email = e.target.querySelector('input[type="email"]');
+	  if (email.value) {
+	    showToast();
+	    email.value = "";
+	  }
+	});
+	function showToast() {
+	  toast.classList.add("show");
+	  setTimeout(() => {
+	    toast.classList.remove("show");
+	  }, 3000);
+	}
+	function startCounters() {
+	  statsCounters.forEach((counter) => {
+	    counter.classList.add("visible");
+	    const target = parseInt(counter.querySelector("div").dataset.target);
+	    const duration = 2000;
+	    const increment = target / (duration / 16);
+	    let current = 0;
+	    const updateCounter = () => {
+	      current += increment;
+	      if (current < target) {
+		counter.querySelector("div").textContent = Math.round(current);
+		requestAnimationFrame(updateCounter);
+	      } else {
+		counter.querySelector("div").textContent = target;
+	      }
+	    };
+	    requestAnimationFrame(updateCounter);
+	  });
+	}
+      });
+document.querySelectorAll('.slideshow-container').forEach(container => {
+  const slides = container.querySelectorAll('.slide');
+  const prevBtn = container.querySelector('.prev');
+  const nextBtn = container.querySelector('.next');
+  let index = 0;
+
+  function showSlide(i) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[i].classList.add('active');
+  }
+
+  prevBtn.addEventListener('click', () => {
+    index = (index - 1 + slides.length) % slides.length;
+    showSlide(index);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+  });
+
+  setInterval(() => {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+  }, 3000);
+});
+    </script>
+ </body>
+ </html>
