@@ -434,7 +434,7 @@
 
      </style>
  </head>
- <body class="bg-white">
+ <body class="bg-white text-black dark:bg-gray-900 dark:text-white">
 	 
 <!-- Navigation Bar -->
 <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
@@ -473,7 +473,31 @@
           </a>
         </div>
 
-       
+       <!-- Toggle Button -->
+<button id="theme-toggle" class="fixed top-4 right-4 p-2 bg-gray-200 dark:bg-gray-700 rounded">
+  🌙 / ☀️
+</button>
+
+<script>
+  const toggle = document.getElementById('theme-toggle');
+  toggle.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark');
+    // Save preference in localStorage
+    if (document.documentElement.classList.contains('dark')) {
+      localStorage.setItem('theme', 'dark');
+    } else {
+      localStorage.setItem('theme', 'light');
+    }
+  });
+
+  // On page load, apply saved theme
+  window.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('theme') === 'dark') {
+      document.documentElement.classList.add('dark');
+    }
+  });
+</script>
+
       </div>
 
       <!-- SECOND ROW: Desktop Nav Links -->
