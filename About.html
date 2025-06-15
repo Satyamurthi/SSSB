@@ -148,78 +148,108 @@
  </head>
  <body class="bg-white">
 	 
- <!-- Navigation Bar -->
- <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
+<!-- Navigation Bar -->
+<nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-16">
+    <div class="flex flex-col items-center justify-center py-2">
 
-      <!-- LEFT SECTION: Hamburger + Left Logo -->
-      <div class="flex items-center space-x-4">
-	<!-- Hamburger for Mobile -->
-	<div class="md:hidden">
-	  <button id="mobile-menu-toggle" class="text-gray-700 focus:outline-none">
-	    <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2"
-	      viewBox="0 0 24 24">
-	      <path stroke-linecap="round" stroke-linejoin="round"
-		d="M4 6h16M4 12h16M4 18h16" />
-	    </svg>
-	  </button>
-	</div>
-	<!-- Left Logo -->
-	<a href="index.html"><img src="https://github.com/Satyamurthi/mbw-Photos/blob/main/Logo/sai%20baba%20Logo.png?raw=true" style="height: 50px;"></a>
+      <!-- TOP ROW: Logos + Title -->
+      <div class="flex justify-between items-center w-full">
+        <!-- LEFT: Hamburger + Left Logo -->
+        <div class="flex items-center space-x-4">
+          <!-- Hamburger (Mobile) -->
+          <div class="md:hidden">
+            <button id="mobile-menu-toggle" class="text-gray-700 focus:outline-none">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+          <!-- Left Logo -->
+          <a href="index.html">
+            <img src="https://github.com/Satyamurthi/mbw-Photos/blob/main/Logo/sai%20baba%20Logo.png?raw=true"
+                 class="h-[50px] md:h-[70px]">
+          </a>
+        </div>
+
+        <!-- CENTER TITLE -->
+        <div class="text-center text-sm sm:text-base md:text-xl font-semibold text-gray-800">
+          <span class="highlight-orange">Sri Sathya Sai Baba School & PU College Mysuru</span>
+        </div>
+
+        <!-- RIGHT: Logo -->
+        <div class="flex items-center">
+          <a href="About.html">
+            <img src="https://github.com/Satyamurthi/mbw-Photos/blob/main/Logo/sai%20school%20logo%20png.png?raw=true"
+                 class="h-[50px] md:h-[70px]">
+          </a>
+        </div>
       </div>
 
-      <!-- CENTER (Only visible on desktop) -->
-      <div class="hidden md:flex space-x-8 items-center">
-	<a href="index.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Home</a>
-	<a href="Academics.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Academics</a>
-	<a href="Gallery.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Gallery</a>
-	<a href="Campus-Life.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Campus Life</a>
-	<a href="About.html" class="nav-link text-gray-700 hover:text-primary transition-colors">About</a>
-	<a href="#">
-	  <button class="bg-primary text-white px-4 py-2 rounded-button hover:bg-primary/90 transition-colors">
-	   	FOR ADMISSIONS
-	  </button>
-	</a>
-      </div>
-
-      <!-- RIGHT SECTION: Right Logo -->
-      <div class="flex items-center">
-	<a href="About.html">
-	  <img src="https://github.com/Satyamurthi/mbw-Photos/blob/main/Logo/sai%20school%20logo%20png.png?raw=true" style="height: 50px;">
-	</a>
+      <!-- SECOND ROW: Desktop Nav Links -->
+      <div class="hidden md:flex justify-center space-x-6 w-full mt-2">
+        <a href="index.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Home</a>
+        <a href="Academics.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Academics</a>
+        <a href="Gallery.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Gallery</a>
+        <a href="Campus-Life.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Campus Life</a>
+        <a href="About.html" class="nav-link text-gray-700 hover:text-primary transition-colors">About</a>
+        <a href="#">
+          <button class="bg-primary text-white px-4 py-2 rounded-button hover:bg-primary/90 transition-colors">
+            FOR ADMISSIONS
+          </button>
+        </a>
       </div>
     </div>
   </div>
 
-  <!-- Mobile Menu (Right side, half width + half height) -->
-      <!-- Mobile Menu (Left Side) -->
-	<div id="mobile-menu" class="fixed top-0 left-0 w-1/2 h-1/2 bg-white z-40 shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden rounded-br-2xl border-r border-b">
-	  <div class="flex flex-col p-4 space-y-4 h-full">
-	    <!-- Close Button -->
-	    <button id="close-mobile-menu" class="self-end text-gray-600 text-2xl font-bold">&times;</button>
-	
-	    <!-- Links -->
-	    <a href="index.html" class="text-gray-700 hover:text-primary">Home</a>
-	    <a href="Academics.html" class="text-gray-700 hover:text-primary">Academics</a>
-	    <a href="Gallery.html" class="text-gray-700 hover:text-primary">Gallery</a>
-	    <a href="Campus-Life.html" class="text-gray-700 hover:text-primary">Campus Life</a>
-	    <!--<a href="Research.html" class="text-gray-700 hover:text-primary">Donations</a>-->
-	    <a href="About.html" class="text-gray-700 hover:text-primary">About</a>
-	 <a href="#">
-	      <button class="w-full bg-primary text-white py-2 rounded-button hover:bg-primary/90 transition-colors">
-		FOR ADMISSIONS
-	      </button>
-	    </a>
-	  </div>
-	</div>
+ <!-- Mobile Sidebar Menu -->
+<div id="mobile-menu" class="fixed top-0 left-0 w-72 h-full bg-gray-900 text-white z-50 shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden rounded-r-2xl">
+
+  <!-- Header: Logo + Title + Close -->
+  <div class="flex items-center justify-between p-4 border-b border-gray-700">
+    <div class="flex items-center space-x-3">
+      <!-- Logo -->
+      <img src="https://github.com/Satyamurthi/mbw-Photos/blob/main/Logo/sai%20baba%20Logo.png?raw=true"
+           alt="Logo" class="h-10 w-auto">
+      <!-- College Title -->
+      <div class="text-sm font-semibold leading-tight"><span class="highlight-orange">Sri Sathya Sai Baba School & PU College Mysuru</span></div>
+    </div>
+    <!-- Close Button -->
+    <button id="close-mobile-menu" class="text-white text-3xl font-bold">&times;</button>
+  </div>
+
+  <!-- Nav Links -->
+  <nav class="flex flex-col px-4 pt-6 space-y-4 text-base">
+    <a href="index.html" class="hover:bg-gray-800 px-3 py-2 rounded transition">🏠 Home</a>
+    <a href="Academics.html" class="hover:bg-gray-800 px-3 py-2 rounded transition">📘 Academics</a>
+    <a href="Gallery.html" class="hover:bg-gray-800 px-3 py-2 rounded transition">🖼️ Gallery</a>
+    <a href="Campus-Life.html" class="hover:bg-gray-800 px-3 py-2 rounded transition">🏫 Campus Life</a>
+    <a href="About.html" class="hover:bg-gray-800 px-3 py-2 rounded transition">ℹ️ About</a>
+  </nav>
+</div>
+
 </nav>
+
+<!-- Script for Mobile Menu Toggle -->
+<script>
+  const toggleBtn = document.getElementById('mobile-menu-toggle');
+  const closeBtn = document.getElementById('close-mobile-menu');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  toggleBtn.addEventListener('click', () => {
+    mobileMenu.classList.remove('-translate-x-full');
+  });
+
+  closeBtn.addEventListener('click', () => {
+    mobileMenu.classList.add('-translate-x-full');
+  });
+</script>
     <div class="pt-16 relative">
         <div class="h-[500px] relative overflow-hidden">
-            <img src="https://public.readdy.ai/ai/img_res/4b72ffb41abef0d88490783bf2013f77.jpg" class="w-full h-full object-cover" alt="Campus Life">
+            <img src="https://github.com/Satyamurthi/mbw-Photos/blob/main/College%20Photos/College.jpg?raw=true" class="w-full h-full object-cover" alt="Campus Life">
             <div class="absolute inset-0 bg-black/40"></div>
             <div class="absolute inset-0 flex items-center justify-center">
-                <h1 class="text-5xl font-bold text-white text-center">About Horizon University</h1>
+                <!-- <h1 class="text-5xl font-bold text-white text-center">About Horizon University</h1>-->
             </div>
         </div>
     </div>
@@ -229,11 +259,11 @@
             <div class="grid md:grid-cols-2 gap-12">
                 <div class="space-y-6">
                     <h2 class="text-3xl font-bold text-gray-900">Our Mission</h2>
-                    <p class="text-lg text-gray-600 leading-relaxed">At Horizon University, we are dedicated to fostering intellectual growth, innovation, and personal development. Our mission is to empower students with knowledge, skills, and values necessary to make meaningful contributions to society while pursuing their passions and achieving academic excellence.</p>
+                    <p class="text-lg text-gray-600 leading-relaxed">To mould all-rounded holistic individuals-professionally sound, socially responsible and spiritually aware- who embody noble values and a right attitude, through Educare that caters to the emotional and psychological, intellectual, physical, and spiritual dimensions of the human personality.</p>
                 </div>
                 <div class="space-y-6">
                     <h2 class="text-3xl font-bold text-gray-900">Our Vision</h2>
-                    <p class="text-lg text-gray-600 leading-relaxed">We envision Horizon University as a global leader in education, research, and innovation. By 2030, we aim to be recognized worldwide for our transformative education model, groundbreaking research, and commitment to solving global challenges through collaboration and innovation.</p>
+                    <p class="text-lg text-gray-600 leading-relaxed">To assist generations of students acquire self knowledge and self confidence, so as to cultivate self sacrifice and earn self realization; thereby molding them into leaders who will benefit society.</p>
                 </div>
             </div>
         </div>
