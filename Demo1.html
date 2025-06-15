@@ -491,50 +491,50 @@
     </div>
   </div>
 
-  <!-- Mobile Menu -->
-  <div id="mobile-menu"
-       class="fixed top-0 left-0 w-full h-full bg-white z-50 shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden">
-    <div class="flex flex-col p-6 space-y-4 h-full">
-      <!-- Close Button -->
-      <button id="close-mobile-menu" class="self-end text-gray-600 text-3xl font-bold">&times;</button>
-
-<!-- Mobile Menu -->
+ <!-- Mobile Menu -->
 <div id="mobile-menu"
      class="fixed top-0 left-0 w-full h-full bg-white z-50 shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden overflow-y-auto">
-  <div class="flex flex-col p-6 space-y-4">
-    <!-- Close Button -->
-    <button id="close-mobile-menu" class="self-end text-gray-600 text-3xl font-bold">&times;</button>
 
-    <!-- Mobile Nav Links -->
-    <a href="index.html" class="text-gray-900 text-lg hover:text-primary">Home</a>
-    <a href="Academics.html" class="text-gray-900 text-lg hover:text-primary">Academics</a>
-    <a href="Gallery.html" class="text-gray-900 text-lg hover:text-primary">Gallery</a>
-    <a href="Campus-Life.html" class="text-gray-900 text-lg hover:text-primary">Campus Life</a>
-    <a href="About.html" class="text-gray-900 text-lg hover:text-primary">About</a>
-    <a href="#">
-      <button class="w-full bg-primary text-white py-2 rounded-lg hover:bg-primary/90 transition">
-        FOR ADMISSIONS
-      </button>
-    </a>
+  <!-- Header Row: Logo + Title + Close -->
+  <div class="flex items-center justify-between p-4 border-b border-gray-200">
+    <div class="flex items-center space-x-3">
+      <!-- Logo -->
+      <img src="https://github.com/Satyamurthi/mbw-Photos/blob/main/Logo/sai%20baba%20Logo.png?raw=true"
+           alt="Logo" class="h-10 w-auto">
+      <!-- Title -->
+      <div class="text-lg font-semibold text-gray-800">Sri Sathya Sai Baba School & PU College</div>
+    </div>
+    <!-- Close Button -->
+    <button id="close-mobile-menu" class="text-gray-600 text-3xl font-bold">&times;</button>
+  </div>
+
+  <!-- Navigation Links -->
+  <div class="flex flex-col space-y-4 p-6">
+    <a href="index.html" class="text-gray-800 text-lg hover:text-primary transition">Home</a>
+    <a href="Academics.html" class="text-gray-800 text-lg hover:text-primary transition">Academics</a>
+    <a href="Gallery.html" class="text-gray-800 text-lg hover:text-primary transition">Gallery</a>
+    <a href="Campus-Life.html" class="text-gray-800 text-lg hover:text-primary transition">Campus Life</a>
+    <a href="About.html" class="text-gray-800 text-lg hover:text-primary transition">About</a>
   </div>
 </div>
 </nav>
 
+
 <!-- Mobile Menu Script -->
 <script>
-const toggleBtn = document.getElementById('mobile-menu-toggle');
-const closeBtn = document.getElementById('close-mobile-menu');
-const mobileMenu = document.getElementById('mobile-menu');
+  const toggleBtn = document.getElementById('mobile-menu-toggle');
+  const closeBtn = document.getElementById('close-mobile-menu');
+  const mobileMenu = document.getElementById('mobile-menu');
 
-toggleBtn.addEventListener('click', () => {
-  mobileMenu.classList.remove('-translate-x-full');
-});
+  toggleBtn.addEventListener('click', () => {
+    mobileMenu.classList.remove('-translate-x-full');
+  });
 
-closeBtn.addEventListener('click', () => {
-  mobileMenu.classList.add('-translate-x-full');
-});
-
+  closeBtn.addEventListener('click', () => {
+    mobileMenu.classList.add('-translate-x-full');
+  });
 </script>
+
 
 
 
