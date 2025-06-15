@@ -439,7 +439,8 @@
 <!-- Navigation Bar -->
 <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 border-b border-gray-100">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex flex-col md:flex-col items-center justify-center py-2">
+    <div class="flex flex-col items-center justify-center py-2">
+
 
       <!-- TOP ROW: Logos + Center Title -->
       <div class="flex justify-between items-center w-full">
@@ -498,18 +499,18 @@
       <button id="close-mobile-menu" class="self-end text-gray-600 text-3xl font-bold">&times;</button>
 
 <!-- Mobile Menu -->
-<div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-white z-50 shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden">
-  <div class="flex flex-col p-6 space-y-4 h-full">
+<div id="mobile-menu"
+     class="fixed top-0 left-0 w-full h-full bg-white z-50 shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden overflow-y-auto">
+  <div class="flex flex-col p-6 space-y-4">
     <!-- Close Button -->
     <button id="close-mobile-menu" class="self-end text-gray-600 text-3xl font-bold">&times;</button>
 
-    <!-- Links -->
-    <a href="index.html" class="text-gray-800 text-lg hover:text-primary">Home</a>
-    <a href="Academics.html" class="text-gray-800 text-lg hover:text-primary">Academics</a>
-    <a href="Gallery.html" class="text-gray-800 text-lg hover:text-primary">Gallery</a>
-    <a href="Campus-Life.html" class="text-gray-800 text-lg hover:text-primary">Campus Life</a>
-    <a href="About.html" class="text-gray-800 text-lg hover:text-primary">About</a>
-    
+    <!-- Mobile Nav Links -->
+    <a href="index.html" class="text-gray-900 text-lg hover:text-primary">Home</a>
+    <a href="Academics.html" class="text-gray-900 text-lg hover:text-primary">Academics</a>
+    <a href="Gallery.html" class="text-gray-900 text-lg hover:text-primary">Gallery</a>
+    <a href="Campus-Life.html" class="text-gray-900 text-lg hover:text-primary">Campus Life</a>
+    <a href="About.html" class="text-gray-900 text-lg hover:text-primary">About</a>
     <a href="#">
       <button class="w-full bg-primary text-white py-2 rounded-lg hover:bg-primary/90 transition">
         FOR ADMISSIONS
@@ -517,7 +518,6 @@
     </a>
   </div>
 </div>
-
 </nav>
 
 <!-- Mobile Menu Script -->
