@@ -441,12 +441,11 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex flex-col items-center justify-center py-2">
 
-
-      <!-- TOP ROW: Logos + Center Title -->
+      <!-- TOP ROW: Logos + Title -->
       <div class="flex justify-between items-center w-full">
-        <!-- LEFT: Hamburger + Logo -->
+        <!-- LEFT: Hamburger + Left Logo -->
         <div class="flex items-center space-x-4">
-          <!-- Hamburger for Mobile -->
+          <!-- Hamburger (Mobile) -->
           <div class="md:hidden">
             <button id="mobile-menu-toggle" class="text-gray-700 focus:outline-none">
               <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -457,7 +456,7 @@
           <!-- Left Logo -->
           <a href="index.html">
             <img src="https://github.com/Satyamurthi/mbw-Photos/blob/main/Logo/sai%20baba%20Logo.png?raw=true"
-                 class="h-[50px] md:h-[120px]">
+                 class="h-[50px] md:h-[70px]">
           </a>
         </div>
 
@@ -470,12 +469,12 @@
         <div class="flex items-center">
           <a href="About.html">
             <img src="https://github.com/Satyamurthi/mbw-Photos/blob/main/Logo/sai%20school%20logo%20png.png?raw=true"
-                 class="h-[50px] md:h-[120px]">
+                 class="h-[50px] md:h-[70px]">
           </a>
         </div>
       </div>
 
-      <!-- SECOND ROW: Nav Links (Desktop Only) -->
+      <!-- SECOND ROW: Desktop Nav Links -->
       <div class="hidden md:flex justify-center space-x-6 w-full mt-2">
         <a href="index.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Home</a>
         <a href="Academics.html" class="nav-link text-gray-700 hover:text-primary transition-colors">Academics</a>
@@ -491,35 +490,41 @@
     </div>
   </div>
 
-<!-- Mobile Sidebar Menu -->
-<div id="mobile-menu"
-     class="fixed top-0 left-0 w-72 h-full bg-gray-900 text-white z-50 shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden rounded-r-2xl">
+  <!-- MOBILE MENU: Sidebar -->
+  <div id="mobile-menu"
+       class="fixed top-0 left-0 w-72 h-full bg-gray-900 text-white z-50 shadow-lg transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden rounded-r-2xl">
 
-  <!-- Header: Logo + Title + Close -->
-  <div class="flex items-center justify-between p-4 border-b border-gray-700">
-    <div class="flex items-center space-x-3">
-      <!-- Logo -->
-      <img src="https://github.com/Satyamurthi/mbw-Photos/blob/main/Logo/sai%20baba%20Logo.png?raw=true"
-           alt="Logo" class="h-10 w-auto">
-      <!-- College Title -->
-      <div class="text-sm font-semibold leading-tight">Sri Sathya Sai Baba<br>PU College</div>
+    <!-- Mobile Header: Logos + Title + Close -->
+    <div class="flex flex-col p-4 space-y-4 border-b border-gray-700">
+      <div class="flex items-center justify-between">
+        <!-- Left Logo -->
+        <img src="https://github.com/Satyamurthi/mbw-Photos/blob/main/Logo/sai%20baba%20Logo.png?raw=true"
+             alt="Logo" class="h-10 w-auto">
+
+        <!-- Close Button -->
+        <button id="close-mobile-menu" class="text-white text-3xl font-bold">&times;</button>
+      </div>
+      <!-- Center Title -->
+      <div class="text-base font-semibold leading-tight text-center">
+        Sri Sathya Sai Baba<br>School And PU College
+      </div>
+      <!-- Right Logo -->
+      <img src="https://github.com/Satyamurthi/mbw-Photos/blob/main/Logo/sai%20school%20logo%20png.png?raw=true"
+           alt="Logo" class="h-10 w-auto mx-auto">
     </div>
-    <!-- Close Button -->
-    <button id="close-mobile-menu" class="text-white text-3xl font-bold">&times;</button>
+
+    <!-- Nav Links -->
+    <nav class="flex flex-col px-4 pt-6 space-y-4 text-base">
+      <a href="index.html" class="hover:bg-gray-800 px-3 py-2 rounded transition">🏠 Home</a>
+      <a href="Academics.html" class="hover:bg-gray-800 px-3 py-2 rounded transition">📘 Academics</a>
+      <a href="Gallery.html" class="hover:bg-gray-800 px-3 py-2 rounded transition">🖼️ Gallery</a>
+      <a href="Campus-Life.html" class="hover:bg-gray-800 px-3 py-2 rounded transition">🏫 Campus Life</a>
+      <a href="About.html" class="hover:bg-gray-800 px-3 py-2 rounded transition">ℹ️ About</a>
+    </nav>
   </div>
+</nav>
 
-  <!-- Nav Links -->
-  <nav class="flex flex-col px-4 pt-6 space-y-4 text-base">
-    <a href="index.html" class="hover:bg-gray-800 px-3 py-2 rounded transition">🏠 Home</a>
-    <a href="Academics.html" class="hover:bg-gray-800 px-3 py-2 rounded transition">📘 Academics</a>
-    <a href="Gallery.html" class="hover:bg-gray-800 px-3 py-2 rounded transition">🖼️ Gallery</a>
-    <a href="Campus-Life.html" class="hover:bg-gray-800 px-3 py-2 rounded transition">🏫 Campus Life</a>
-    <a href="About.html" class="hover:bg-gray-800 px-3 py-2 rounded transition">ℹ️ About</a>
-  </nav>
-</div>
-
-
-<!-- Mobile Menu Script -->
+<!-- Script for Mobile Menu Toggle -->
 <script>
   const toggleBtn = document.getElementById('mobile-menu-toggle');
   const closeBtn = document.getElementById('close-mobile-menu');
@@ -533,6 +538,7 @@
     mobileMenu.classList.add('-translate-x-full');
   });
 </script>
+
 
 
 
